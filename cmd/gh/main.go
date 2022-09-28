@@ -109,9 +109,9 @@ func execute() {
 	case "sync":
 		gh.Sync()
 	case "branch":
-		branch()
+		gh.Branch()
 	case "switch":
-		switchBranch()
+		gh.SwitchBranch()
 	case "repo":
 		repo()
 	case "pr":
@@ -127,47 +127,6 @@ func execute() {
 			fmt.Printf(`Error: '%[1]s' is not a valid command. See %[2]s help.
             `, subcommand, command)
 		}
-	}
-}
-
-func branch() {
-	args := os.Args[2:]
-
-	if len(args) > 0 {
-		branch := args[0]
-
-		fmt.Println("Creating branch " + branch + "...")
-		git("branch", branch)
-
-		fmt.Println("Switching to " + branch + "...")
-		git("switch", branch)
-
-		showBranch()
-	} else {
-		showBranch()
-	}
-}
-
-func showBranch() {
-	branch := gitStr("branch", "--show-current")
-
-	fmt.Println("On branch " + branch)
-	fmt.Println()
-	fmt.Println("List branch:")
-
-	git("branch")
-}
-
-func switchBranch() {
-	args := os.Args[2:]
-
-	message := gitStr("switch", args...)
-	error := strings.Contains(message, "fatal:")
-
-	if error {
-		fmt.Println(message)
-	} else {
-		showBranch()
 	}
 }
 
