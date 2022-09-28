@@ -12,7 +12,31 @@ var (
 )
 
 func Git(command string, args ...string) {
-	fmt.Println(GitStr(command, args...))
+	response := GitStr(command, args...)
+	notGit := strings.Contains(response, "fatal: not a git repository")
+
+	if notGit {
+		fmt.Printf(`
+fatal: This project is not a Git repository. 
+
+
+Use the following command to start a Git repository:
+
+    %[1]s new 
+
+
+It will init the project as a Git repository, then automatically add all files into staging and do an initial commit.
+
+
+Use '%[1]s init' if you only want to init a Git repository.
+
+Use '%[1]s +' if you only want to init and add files into staging.
+
+Use '%[1]s save' if you want to init, add all files, and commit with a specific message.
+`, Command)
+	} else {
+		fmt.Println(response)
+	}
 }
 
 func GitStr(command string, args ...string) string {
@@ -26,42 +50,24 @@ func GitStr(command string, args ...string) string {
 	cmd.Stderr = &err
 
 	if cmd.Run() != nil {
-		error := err.String()
-		notGit := strings.Contains(error, "not a git repository")
-
-		if notGit {
-			error = fmt.Sprintf(`
-%[1]s
-Use the following command to create a new Git repository:
-
-    %[2]s new 
-
-
-Note:
-The '%[2]s new' will initialize a Git repository, then add all files into staging, and do initial commit.
-
-Use '%[2]s init' if you only want to initialize.
-Use '%[2]s +' if you only want to initialize and add files into staging.
-Use '%[2]s save' if you only want to initialize, add all files, and commit with your own message.`, error, Command)
-		}
-
-		return error
+		return err.String()
 	} else {
 		return out.String()
 	}
 }
 
 func NotGit() bool {
-	status := GitStr("status")
-	result := strings.Contains(status, "not a git repository")
+	response := GitStr("status")
+	notGit := strings.Contains(response, "not a git repository")
 
-	return result
+	return notGit
 }
 
 func HasUpdate() bool {
-	status := GitStr("status")
-	untracked := strings.Contains(status, "Untracked files:")
-	unstaged := strings.Contains(status, "Changes not staged for commit:")
+	response := GitStr("status")
+
+	untracked := strings.Contains(response, "Untracked files:")
+	unstaged := strings.Contains(response, "Changes not staged for commit:")
 
 	return untracked || unstaged
 }

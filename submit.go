@@ -13,7 +13,7 @@ func Submit() {
 
 	if NotGit() {
 		fmt.Println()
-		fmt.Println("This is not a Git repository.")
+		fmt.Println("This project is not a Git repository.")
 		fmt.Println()
 		fmt.Print("Do you want to init a Git repository? (y/n) ")
 
@@ -74,7 +74,7 @@ func Submit() {
 
 	if HasUpdate() {
 		fmt.Println()
-		fmt.Println("There are some changes in your project.")
+		fmt.Println("There are some unsaved changes in your project.")
 
 		Git("status")
 
