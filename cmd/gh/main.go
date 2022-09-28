@@ -90,7 +90,7 @@ func execute() {
 	case "new":
 		new()
 	case "+":
-		add()
+		gh.Add()
 	case "-":
 		del()
 	case "del":
@@ -162,24 +162,6 @@ This action will initialize a new Git repository, then add all files into stagin
 			git("commit", "-m", "Initial commit")
 		}
 	}
-}
-
-// Add untracked files into staging.
-// Automatically initialize if the repo is not initialized.
-func add() {
-	args := os.Args[2:]
-
-	if notGit() {
-		git("init")
-	}
-
-	if len(args) > 0 {
-		git("add", args...)
-	} else {
-		git("add", ".")
-	}
-
-	git("status")
 }
 
 // Remove file(s)
