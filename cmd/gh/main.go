@@ -122,7 +122,7 @@ func execute() {
 	case "help":
 		gh.Help()
 	default:
-		if contains(gitCommands, subcommand) {
+		if gh.Contains(gitCommands, subcommand) {
 			git(subcommand, args...)
 		} else {
 			fmt.Printf(`Error: '%[1]s' is not a valid command. See %[2]s help.
@@ -243,7 +243,7 @@ func copy() {
 
 func save() {
 	args := os.Args[2:]
-	params := remove(args, "-m")
+	params := gh.Remove(args, "-m")
 	message := ""
 
 	status := gitStr("status")
@@ -514,22 +514,4 @@ func pr() {
 	args := os.Args[2:]
 
 	git("request-pull", args...)
-}
-
-func contains(s []string, str string) bool {
-	for _, v := range s {
-		if v == str {
-			return true
-		}
-	}
-	return false
-}
-
-func remove(s []string, str string) []string {
-	for i, v := range s {
-		if v == str {
-			return append(s[:i], s[i+1:]...)
-		}
-	}
-	return s
 }
