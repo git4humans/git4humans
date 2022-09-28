@@ -40,8 +40,8 @@ func Execute() {
 		Copy()
 	case "save":
 		Save()
-	case "push":
-		Push()
+	case "submit":
+		Submit()
 	case "sync":
 		Sync()
 	case "branch":

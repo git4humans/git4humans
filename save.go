@@ -12,11 +12,8 @@ func Save() {
 	params := remove(args, "-m")
 	message := ""
 
-	status := GitStr("status")
-	noCommit := strings.Contains(status, "nothing to commit")
-
-	if noCommit {
-		fmt.Println(status)
+	if NoCommit() {
+		fmt.Println(GitStr("status"))
 		return
 	}
 
@@ -44,6 +41,18 @@ func Save() {
 
 		Git("commit", "-m", message)
 	} else {
-		fmt.Println("\nUnable to save a commit without message.")
+		fmt.Println()
+		fmt.Println("Error: Cannot save a commit without message.")
 	}
+}
+
+func NoCommit() bool {
+	status := GitStr("status")
+	noCommit := strings.Contains(status, "nothing to commit")
+
+	return noCommit
+}
+
+func HasCommit() bool {
+	return !NoCommit()
 }

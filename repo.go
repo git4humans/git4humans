@@ -34,7 +34,7 @@ func Repo() {
 	}
 }
 
-func has(repo string) bool {
+func HasRepo(repo string) bool {
 	repos := GitStr("remote", "-v")
 	return strings.Contains(repos, repo)
 }
@@ -60,7 +60,7 @@ func add() {
 	}
 
 	if len(url) > 0 {
-		if has(name) {
+		if HasRepo(name) {
 			GitStr("remote", "rm", name)
 		}
 
@@ -78,7 +78,7 @@ func delete() {
 		name = args[0]
 	}
 
-	if has(name) {
+	if HasRepo(name) {
 		message := GitStr("remote", "rm", name)
 		error := strings.Contains(message, "fatal:")
 
@@ -90,7 +90,7 @@ func delete() {
 			Git("remote", "-v")
 		}
 	} else {
-		fmt.Println("Remote repository " + name + " is not defined.")
+		fmt.Println("Remote repository " + name + " is not found.")
 		fmt.Println()
 
 		Git("remote", "-v")
