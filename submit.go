@@ -74,7 +74,7 @@ func Submit() {
 
 	if HasUpdate() {
 		fmt.Println()
-		fmt.Println("There are some changes since the last time you commit.")
+		fmt.Println("There are some changes in your project.")
 		fmt.Println()
 		fmt.Print("Do you want to commit? (y/n) ")
 
