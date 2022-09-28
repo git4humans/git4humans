@@ -106,7 +106,7 @@ func execute() {
 	case "save":
 		save()
 	case "push":
-		push()
+		gh.Push()
 	case "sync":
 		gh.Sync()
 	case "branch":
@@ -170,10 +170,6 @@ func save() {
 	} else {
 		fmt.Println("\nUnable to save a commit without message.")
 	}
-}
-
-func push() {
-
 }
 
 func branch() {
