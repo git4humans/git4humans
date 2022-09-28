@@ -1,7 +1,6 @@
 package main
 
 import (
-	"bufio"
 	"bytes"
 	"fmt"
 	"os"
@@ -104,7 +103,7 @@ func execute() {
 	case "copy":
 		gh.Copy()
 	case "save":
-		save()
+		gh.Save()
 	case "push":
 		gh.Push()
 	case "sync":
@@ -128,47 +127,6 @@ func execute() {
 			fmt.Printf(`Error: '%[1]s' is not a valid command. See %[2]s help.
             `, subcommand, command)
 		}
-	}
-}
-
-func save() {
-	args := os.Args[2:]
-	params := gh.Remove(args, "-m")
-	message := ""
-
-	status := gitStr("status")
-	noCommit := strings.Contains(status, "nothing to commit")
-
-	if noCommit {
-		fmt.Println(status)
-		return
-	}
-
-	if len(params) > 0 {
-		message = params[0]
-	} else {
-		reader := bufio.NewReader(os.Stdin)
-		fmt.Print("\nMessage: ")
-
-		text, _, _ := reader.ReadLine()
-
-		if len(text) > 0 {
-			message = strings.Replace(string(text), "\n", "", -1)
-		}
-	}
-
-	if len(message) > 0 {
-		if notGit() {
-			git("init")
-		}
-
-		if hasUpdate() {
-			git("add", ".")
-		}
-
-		git("commit", "-m", message)
-	} else {
-		fmt.Println("\nUnable to save a commit without message.")
 	}
 }
 
