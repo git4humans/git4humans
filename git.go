@@ -46,3 +46,19 @@ Use '%[2]s save' if you only want to initialize, add all files, and commit with 
 		return out.String()
 	}
 }
+
+func NotGit() bool {
+	status := GitStr("status")
+	result := strings.Contains(status, "not a git repository")
+
+	return result
+}
+
+func HasUpdate() bool {
+	status := GitStr("status")
+
+	untracked := strings.Contains(status, "Untracked files:")
+	unstaged := strings.Contains(status, "Changes not staged for commit:")
+
+	return untracked || unstaged
+}
