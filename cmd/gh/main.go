@@ -116,7 +116,7 @@ func execute() {
 	case "repo":
 		repo()
 	case "pr":
-		pr()
+		gh.Pr()
 	case "user":
 		gh.User()
 	case "help":
@@ -508,10 +508,4 @@ Examples:
     %[1]s repo + origin https://github.com/pytorch/pytorch
     `, command)
 	}
-}
-
-func pr() {
-	args := os.Args[2:]
-
-	git("request-pull", args...)
 }
