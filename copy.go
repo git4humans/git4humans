@@ -20,18 +20,18 @@ func Copy() {
 
 		fmt.Print("\nRepository URL: ")
 
-		textUrl, _, _ := reader.ReadLine()
+		inputUrl, _, _ := reader.ReadLine()
 
-		if len(textUrl) > 0 {
-			url = strings.Replace(string(textUrl), "\n", "", -1)
+		if len(inputUrl) > 0 {
+			url = strings.Replace(string(inputUrl), "\n", "", -1)
 		}
 
 		fmt.Print("Target directory: ")
 
-		textDir, _, _ := reader.ReadLine()
+		inputDir, _, _ := reader.ReadLine()
 
-		if len(textDir) > 0 {
-			dir = strings.Replace(string(textDir), "\n", "", -1)
+		if len(inputDir) > 0 {
+			dir = strings.Replace(string(inputDir), "\n", "", -1)
 		}
 
 		fmt.Println("")

@@ -1,10 +1,9 @@
 dist/
 dist2/
+release/
 cmd/gh/dist/
 vendor/
 test/
 b.bat
 release.bat
-builder.bat 
-builder.sh
 .goreleaser.yaml

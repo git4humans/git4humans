@@ -21,10 +21,10 @@ func Delete() {
 
 		fmt.Print("\nFile(s) to delete: ")
 
-		text, _, _ := reader.ReadLine()
+		input, _, _ := reader.ReadLine()
 
-		if len(text) > 0 {
-			files = strings.Replace(string(text), "\n", "", -1)
+		if len(input) > 0 {
+			files = strings.Replace(string(input), "\n", "", -1)
 		}
 
 		if len(files) > 0 {

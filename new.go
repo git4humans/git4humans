@@ -24,10 +24,10 @@ This action will initialize a new Git repository, then add all files into stagin
 	fmt.Print("Continue? (y/n) ")
 
 	reader := bufio.NewReader(os.Stdin)
-	text, _, _ := reader.ReadLine()
+	input, _, _ := reader.ReadLine()
 
-	if len(text) > 0 {
-		confirm := strings.Replace(string(text), "\n", "", -1)
+	if len(input) > 0 {
+		confirm := strings.Replace(string(input), "\n", "", -1)
 		yes := confirm == "Y" || confirm == "y"
 
 		if yes {
