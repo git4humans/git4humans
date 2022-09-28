@@ -75,6 +75,9 @@ func Submit() {
 	if HasUpdate() {
 		fmt.Println()
 		fmt.Println("There are some changes in your project.")
+
+		Git("status")
+
 		fmt.Println()
 		fmt.Print("Do you want to commit? (y/n) ")
 
@@ -98,9 +101,10 @@ func Submit() {
 			}
 
 			if len(message) > 0 {
+				Git("add", ".")
 				Git("commit", "-m", message)
 			} else {
-				fmt.Println("Cannot commit without a message.")
+				fmt.Println("Cannot commit the changes without a message.")
 				fmt.Println()
 			}
 		}
