@@ -108,7 +108,7 @@ func execute() {
 	case "push":
 		push()
 	case "sync":
-		sync()
+		gh.Sync()
 	case "branch":
 		branch()
 	case "switch":
@@ -174,12 +174,6 @@ func save() {
 
 func push() {
 
-}
-
-func sync() {
-	args := os.Args[2:]
-
-	git("pull", args...)
 }
 
 func branch() {
