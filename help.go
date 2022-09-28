@@ -3,5 +3,5 @@ package git4humans
 import "fmt"
 
 func Help() {
-	fmt.Println("Git for Humans " + version)
+	fmt.Println("Git for Humans " + Version)
 }

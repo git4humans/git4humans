@@ -1,3 +1,3 @@
 package git4humans
 
-var version = "1.0"
+var Version = "1.0"
