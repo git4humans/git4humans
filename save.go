@@ -9,7 +9,7 @@ import (
 
 func Save() {
 	args := os.Args[2:]
-	params := Remove(args, "-m")
+	params := remove(args, "-m")
 	message := ""
 
 	status := GitStr("status")

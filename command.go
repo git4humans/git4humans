@@ -57,7 +57,7 @@ func Execute() {
 	case "help":
 		Help()
 	default:
-		if Contains(GitCommands, command) {
+		if contains(GitCommands, command) {
 			Git(command, args...)
 		} else {
 			fmt.Printf(`Error: '%[1]s' is not a valid command. See %[2]s help.

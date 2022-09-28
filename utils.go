@@ -1,6 +1,6 @@
 package git4humans
 
-func Contains(s []string, str string) bool {
+func contains(s []string, str string) bool {
 	for _, v := range s {
 		if v == str {
 			return true
@@ -9,7 +9,7 @@ func Contains(s []string, str string) bool {
 	return false
 }
 
-func Remove(s []string, str string) []string {
+func remove(s []string, str string) []string {
 	for i, v := range s {
 		if v == str {
 			return append(s[:i], s[i+1:]...)
