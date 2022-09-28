@@ -7,8 +7,8 @@ import (
 
 func User() {
 	args := os.Args[2:]
-	global := contains(args, "--global")
-	params := remove(args, "--global")
+	global := Contains(args, "--global")
+	params := Remove(args, "--global")
 
 	if len(params) >= 2 {
 		name := params[0]
@@ -44,22 +44,4 @@ Git user configuration (local):
 user.name   %[1]suser.email  %[2]s
         `, name, email)
 	}
-}
-
-func contains(s []string, str string) bool {
-	for _, v := range s {
-		if v == str {
-			return true
-		}
-	}
-	return false
-}
-
-func remove(s []string, str string) []string {
-	for i, v := range s {
-		if v == str {
-			return append(s[:i], s[i+1:]...)
-		}
-	}
-	return s
 }
