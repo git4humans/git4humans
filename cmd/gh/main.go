@@ -118,7 +118,7 @@ func execute() {
 	case "pr":
 		pr()
 	case "user":
-		user()
+		gh.User()
 	case "help":
 		gh.Help()
 	default:
@@ -514,47 +514,6 @@ func pr() {
 	args := os.Args[2:]
 
 	git("request-pull", args...)
-}
-
-func user() {
-	args := os.Args[2:]
-	global := contains(args, "--global")
-	params := remove(args, "--global")
-
-	if len(params) >= 2 {
-		name := params[0]
-		email := params[1]
-
-		if global {
-			git("config", "--global", "user.name", name)
-			git("config", "--global", "user.email", email)
-		} else {
-			git("config", "user.name", name)
-			git("config", "user.email", email)
-		}
-
-		fmt.Println()
-	}
-
-	if global {
-		name := gitStr("config", "--global", "user.name")
-		email := gitStr("config", "--global", "user.email")
-
-		fmt.Printf(`
-Git user configuration (global):
-
-user.name   %[1]suser.email  %[2]s
-        `, name, email)
-	} else {
-		name := gitStr("config", "user.name")
-		email := gitStr("config", "user.email")
-
-		fmt.Printf(`
-Git user configuration (local):
-
-user.name   %[1]suser.email  %[2]s
-        `, name, email)
-	}
 }
 
 func contains(s []string, str string) bool {
