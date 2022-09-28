@@ -1,8 +1,10 @@
 package git4humans
 
 import (
+	"bufio"
 	"bytes"
 	"fmt"
+	"os"
 	"os/exec"
 	"strings"
 )
@@ -29,11 +31,30 @@ It will init the project as a Git repository, then automatically add all files i
 
 
 Use '%[1]s init' if you only want to init a Git repository.
-
 Use '%[1]s +' if you only want to init and add files into staging.
+Use '%[1]s save' if you want to init, add all files, and commit with a specific message.`, Command)
 
-Use '%[1]s save' if you want to init, add all files, and commit with a specific message.
-`, Command)
+		fmt.Println()
+		fmt.Println()
+		fmt.Println()
+		fmt.Printf("Do you want to run '%[1]s new' now? (y/n) ", Command)
+
+		reader := bufio.NewReader(os.Stdin)
+
+		confirm := ""
+		input, _, _ := reader.ReadLine()
+
+		if len(input) > 0 {
+			confirm = strings.Replace(string(input), "\n", "", -1)
+		}
+
+		yes := confirm == "Y" || confirm == "y"
+
+		if yes {
+			Git("init")
+			Git("add", ".")
+			Git("commit", "-m", "Initial commit")
+		}
 	} else {
 		fmt.Println(response)
 	}
