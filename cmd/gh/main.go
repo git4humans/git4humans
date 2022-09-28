@@ -410,7 +410,7 @@ func addRepo() {
 	name := "origin"
 	url := ""
 
-	args := []string{}
+	var args []string
 
 	if command == "+" {
 		args = os.Args[3:]
