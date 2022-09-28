@@ -102,7 +102,7 @@ func execute() {
 	case "move":
 		gh.Move()
 	case "copy":
-		copy()
+		gh.Copy()
 	case "save":
 		save()
 	case "push":
@@ -160,45 +160,6 @@ This action will initialize a new Git repository, then add all files into stagin
 			git("init", args...)
 			git("add", ".")
 			git("commit", "-m", "Initial commit")
-		}
-	}
-}
-
-// Clone a remote repository
-func copy() {
-	args := os.Args[2:]
-
-	if len(args) > 0 {
-		git("clone", args...)
-	} else {
-		url := ""
-		dir := ""
-		reader := bufio.NewReader(os.Stdin)
-
-		fmt.Print("\nRepository URL: ")
-
-		textUrl, _, _ := reader.ReadLine()
-
-		if len(textUrl) > 0 {
-			url = strings.Replace(string(textUrl), "\n", "", -1)
-		}
-
-		fmt.Print("Target directory: ")
-
-		textDir, _, _ := reader.ReadLine()
-
-		if len(textDir) > 0 {
-			dir = strings.Replace(string(textDir), "\n", "", -1)
-		}
-
-		fmt.Println("")
-
-		if len(url) > 0 {
-			if len(dir) > 0 {
-				git("clone", url, dir)
-			} else {
-				git("clone", url)
-			}
 		}
 	}
 }
