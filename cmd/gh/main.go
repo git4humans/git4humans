@@ -98,9 +98,9 @@ func execute() {
 	case "delete":
 		del()
 	case "rename":
-		move()
+		gh.Move()
 	case "move":
-		move()
+		gh.Move()
 	case "copy":
 		copy()
 	case "save":
@@ -198,24 +198,6 @@ Examples:
     %[1]s %[2]s dir/file
     %[1]s %[2]s file1 dir/file2
             `, command, subcommand)
-		}
-	}
-}
-
-// Move or rename a file
-func move() {
-	command := os.Args[1]
-	args := os.Args[2:]
-
-	if len(args) >= 2 {
-		oldName := args[0]
-		newName := args[1]
-		options := args[2:]
-
-		if command == "rename" {
-			git("mv", append([]string{oldName, newName}, options...)...)
-		} else {
-			git("mv", oldName, newName)
 		}
 	}
 }
