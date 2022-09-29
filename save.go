@@ -15,19 +15,22 @@ func Save() {
 	params = remove(params, "-m")
 	params = remove(params, "--message")
 
-	Git("status")
-
-	if HasCommit() {
+	if HasUpdate() || HasCommit() {
 		if len(params) > 0 {
 			message = params[0]
 		} else {
-			fmt.Print("\nMessage: ")
+			Git("status")
+			fmt.Println()
+
+			fmt.Println("This action will add and commit all changes in your project...")
+			fmt.Print("\nSave with message: ")
 
 			reader := bufio.NewReader(os.Stdin)
 			input, _, _ := reader.ReadLine()
 
 			if len(input) > 0 {
 				message = strings.Replace(string(input), "\n", "", -1)
+				message = strings.Trim(message, "\n")
 			}
 		}
 
@@ -42,11 +45,15 @@ func Save() {
 				Git("add", ".")
 			}
 
-			Git("commit", "-m", message)
+			if HasCommit() {
+				Git("commit", "-m", message)
+			}
 		} else {
 			fmt.Println()
-			fmt.Println("Abort: cannot commit without a message.")
+			fmt.Println("Abort: cannot save without a message.")
 		}
+	} else {
+		Git("status")
 	}
 }
 
