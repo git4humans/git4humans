@@ -32,7 +32,7 @@ func Delete() {
 			Git("status")
 		} else {
 			fmt.Printf(`
-Error: You should specify file(s) to delete.
+Err: You should specify file(s) to delete.
 
 Examples:
     
