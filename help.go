@@ -46,6 +46,6 @@ Configurations
     user	Show or update Git user configuration (local or global)
 
 Also, you can use other standard commands that comes with Git. 
-As an example, 'gh push origin main' will work exactly as 'git push origin main' 
+As an example, '%[2]s push origin main' will work exactly as 'git push origin main' 
 	`, Version, Command)
 }
