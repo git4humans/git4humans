@@ -13,9 +13,9 @@ func Submit() {
 
 	if NotGit() {
 		fmt.Println()
-		fmt.Println("This project is not a Git repository.")
+		fmt.Println("Warn: this is not a Git repository.")
 		fmt.Println()
-		fmt.Print("Do you want to init a Git repository? (y/n) ")
+		fmt.Print("Do you want to start a new Git repository? (y/n) ")
 
 		confirm := ""
 		input, _, _ := reader.ReadLine()
@@ -49,7 +49,7 @@ func Submit() {
 		branch = GitStr("branch", "--show-current")
 	}
 
-	if !HasRepo(name) {
+	if NoRepo(name) {
 		fmt.Println()
 		fmt.Println("Remote repository " + name + " is not found.")
 		fmt.Println()
@@ -67,14 +67,14 @@ func Submit() {
 		}
 	}
 
-	if !HasRepo(name) {
+	if NoRepo(name) {
 		fmt.Println("Err: cannot submit to an undefined remote repository.")
 		return
 	}
 
 	if HasUpdate() {
 		fmt.Println()
-		fmt.Println("There are some unsaved changes in your project.")
+		fmt.Println("There are unsaved changes in your project.")
 
 		Git("status")
 
@@ -115,5 +115,7 @@ func Submit() {
 		return
 	}
 
+	fmt.Printf("Pushing changes into '%[1]s %[2]s'...", name, branch)
+	fmt.Println()
 	Git("push", name, branch)
 }
