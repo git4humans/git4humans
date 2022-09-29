@@ -57,14 +57,3 @@ func Save() {
 		fmt.Println("Abort: no changes to save in your project.")
 	}
 }
-
-func HasCommit() bool {
-	return !NoCommit()
-}
-
-func NoCommit() bool {
-	status := GitStr("status")
-	noCommit := strings.Contains(status, "nothing to commit")
-
-	return noCommit
-}

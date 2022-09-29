@@ -97,6 +97,17 @@ func HasUpdate() bool {
 	return untracked || unstaged
 }
 
+func HasCommit() bool {
+	response := GitStr("status")
+	hasCommit := strings.Contains(response, "Changes to be committed")
+
+	return hasCommit
+}
+
+func NoCommit() bool {
+	return !HasCommit()
+}
+
 func RefineStatus(status string) string {
 	status = strings.ReplaceAll(status, `use "git push" to publish`, fmt.Sprintf(`use "%[1]s publish" or "%[1]s pub" to publish`, Command))
 	status = strings.ReplaceAll(status, "git push", Command+" publish")
