@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"os/exec"
 	"strings"
 )
 
@@ -104,10 +105,11 @@ func Publish() {
 			}
 
 			if len(message) > 0 {
+				fmt.Println()
 				Git("add", ".")
 				Git("commit", "-m", message)
 			} else {
-				fmt.Println("Cannot commit without a message.")
+				fmt.Println("Cannot save without a message.")
 				fmt.Println()
 			}
 		}
@@ -117,7 +119,9 @@ func Publish() {
 		fmt.Printf("Publishing changes into '%[1]s %[2]s'...", name, branch)
 		fmt.Println()
 
-		Git("push", name, branch)
+		// Git("push", name, branch)
+		// Use a standard command to print results
+		exec.Command("git", "push", name, branch)
 	} else {
 		Git("status")
 	}
