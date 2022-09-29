@@ -38,5 +38,6 @@ examples:
     %[1]s + file.txt
     %[1]s + file1.txt file2.txt
     %[1]s + file1.txt dir2/file2.txt
+    %[1]s + file.txt dir/
 	`, Command)
 }
