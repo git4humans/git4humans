@@ -116,13 +116,16 @@ func Publish() {
 	}
 
 	if CanPublish() {
-		fmt.Printf("Publishing changes into '%[1]s %[2]s'...", name, branch)
+		fmt.Println()
+		fmt.Printf("Publishing into '%[1]s %[2]s'...", name, branch)
 		fmt.Println()
 
 		// Git("push", name, branch)
 		// Use a standard command to print results
 		cmd := exec.Command("git", "push", name, branch)
-		cmd.Run()
+		response, _ := cmd.CombinedOutput()
+
+		fmt.Println(string(response))
 	} else {
 		Git("status")
 	}
