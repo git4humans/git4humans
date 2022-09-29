@@ -37,8 +37,8 @@ Grow, mark, and tweak your common history
     tag 	Create, list, delete, or verify a tag object
 
 Examine history and state 
-    status 	Show the working tree status 
-    log 	Show commit logs 
+    status 	Show the working tree status (shortcut: 'gh s') 
+    log 	Show commit logs (shortcut: 'gh l')
     diff 	Show changes between commits, commit and working tree, etc.
 
 Configurations 
