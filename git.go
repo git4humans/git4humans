@@ -19,15 +19,13 @@ func Git(command string, args ...string) {
 
 	if notGit {
 		fmt.Printf(`
-Err: the project is not a Git repository.
+Err: this is not a Git repository.
 
-Use this command to start a Git repository:
+Run the following command to start a Git repository:
 
-    %[1]s new 
+    %[1]s start 
 
-
-It will init the project as a Git repository, then automatically add all files into staging and do an initial commit.
-
+It will init this directory as a Git repository, then automatically add all files into staging and do an initial commit.
 
 Use '%[1]s init' if you only want to init a Git repository.
 Use '%[1]s +' if you only want to init and add files into staging.
@@ -35,8 +33,7 @@ Use '%[1]s save' if you want to init, add all files, and commit with a specific 
 
 		fmt.Println()
 		fmt.Println()
-		fmt.Println()
-		fmt.Printf("Do you want to run '%[1]s new' now? (y/n) ", Command)
+		fmt.Printf("Do you want to run '%[1]s start' now? (y/n) ", Command)
 
 		reader := bufio.NewReader(os.Stdin)
 
@@ -50,12 +47,14 @@ Use '%[1]s save' if you want to init, add all files, and commit with a specific 
 		yes := confirm == "Y" || confirm == "y"
 
 		if yes {
+			fmt.Println()
+
 			Git("init")
 			Git("add", ".")
 			Git("commit", "-m", "Initial commit")
 		}
 	} else {
-		fmt.Println(response)
+		fmt.Print(response)
 	}
 }
 
