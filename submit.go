@@ -34,7 +34,7 @@ func Submit() {
 	}
 
 	if NotGit() {
-		fmt.Println("Abort: Cannot submit a non Git repository.")
+		fmt.Println("Err: cannot submit a non Git repository.")
 		return
 	}
 
@@ -68,7 +68,7 @@ func Submit() {
 	}
 
 	if !HasRepo(name) {
-		fmt.Println("Abort: Cannot submit to an undefined remote repository.")
+		fmt.Println("Err: cannot submit to an undefined remote repository.")
 		return
 	}
 
