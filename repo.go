@@ -165,12 +165,15 @@ func list() {
 	message := GitStr("remote", "-v")
 
 	if len(message) > 0 {
-		fmt.Println(message)
+		fmt.Println()
+		fmt.Println("Registered remote repositories:")
+		fmt.Println()
+		fmt.Print(message)
 	} else {
 		fmt.Printf(`
 Remote repositories are empty.
 
-Use the following command to add repository:
+Use the following command to add a repository:
     
     %[1]s repo <url>
     %[1]s repo <name> <url>
