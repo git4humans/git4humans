@@ -5,7 +5,7 @@ import (
 	"os"
 )
 
-var Command = "gh"
+var Command = "gt"
 
 func Handle() {
 	args := os.Args[1:]
