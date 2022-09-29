@@ -19,10 +19,9 @@ func Git(command string, args ...string) {
 
 	if notGit {
 		fmt.Printf(`
-Error: this project is not a Git repository. 
+Err: the project is not a Git repository.
 
-
-Use the following command to start a Git repository:
+Use this command to start a Git repository:
 
     %[1]s new 
 
