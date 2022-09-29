@@ -42,7 +42,8 @@ func New() {
 		fmt.Println()
 		fmt.Println("Err: you should specify directory for the new Git repository.")
 		fmt.Println()
-		fmt.Println("Use 'gh start' to initialize Git into this current working directory.")
+		fmt.Printf("Use '%[1]s start' to create a fresh Git in this current working directory.", Command)
+		fmt.Println()
 		return
 	}
 
@@ -64,10 +65,11 @@ func New() {
 }
 
 func NewUsage() {
-	fmt.Println(`
+	fmt.Printf(`
 Create a fresh Git repository in a new directory
 
-usage: gh new <directory>
+usage: %[1]s new <directory>
 
-This command will create a new directory (mkdir), then creates a fresh Git repository in the new directory (basically a .git directory with subdirectories for objects, refs/heads, refs/tags, and template files). Then adds an empty .gitignore file into the new directory.`)
+This command will create a new directory (mkdir), then creates a fresh Git repository in the new directory (basically a .git directory with subdirectories for objects, refs/heads, refs/tags, and template files). Then adds an empty .gitignore file into the new directory.
+	`, Command)
 }
