@@ -22,7 +22,7 @@ func Save() {
 			Git("status")
 			fmt.Println()
 
-			fmt.Println("This action will add and commit all changes in your project...")
+			fmt.Println("This will stage and commit all the changes in your project.")
 			fmt.Print("\nSave with message: ")
 
 			reader := bufio.NewReader(os.Stdin)
