@@ -42,7 +42,7 @@ func Save() {
 		Git("commit", "-m", message)
 	} else {
 		fmt.Println()
-		fmt.Println("Error: Cannot save a commit without message.")
+		fmt.Println("Err: Cannot save a commit without message.")
 	}
 }
 
