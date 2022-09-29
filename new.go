@@ -70,6 +70,6 @@ Create a fresh Git repository in a new directory
 
 usage: %[1]s new <directory>
 
-This command will create a new directory (mkdir), then creates a fresh Git repository in the new directory (basically a .git directory with subdirectories for objects, refs/heads, refs/tags, and template files). Then adds an empty .gitignore file into the new directory.
+This command will create a new directory (mkdir), then creates a fresh Git repository in the new directory (basically a .git directory with subdirectories for objects, refs/heads, refs/tags, and template files), and adds an empty .gitignore file into the new directory.
 	`, Command)
 }
