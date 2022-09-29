@@ -42,8 +42,10 @@ func Execute() {
 		Copy()
 	case "save":
 		Save()
-	case "submit":
-		Submit()
+	case "publish":
+		Publish()
+	case "pub":
+		Publish()
 	case "sync":
 		Sync()
 	case "branch":

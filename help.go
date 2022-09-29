@@ -25,9 +25,9 @@ Work on the current change
 
 Collaborate with others
     repo 	List, add, or delete remote repositories
-    sync 	Fetch from and integrate with another repository or a local branch 
-    submit 	Update changes into remote repository 
     fetch 	Download from another repository
+    sync 	Fetch from and integrate with another repository or a local branch 
+    publish     Publish changes to a remote repository (shortcut: '%[2]s pub')
 
 Grow, mark, and tweak your common history 
     branch 	List, create, or delete branches 
