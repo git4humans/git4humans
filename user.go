@@ -7,8 +7,14 @@ import (
 
 func User() {
 	args := os.Args[2:]
-	global := contains(args, "--global")
-	params := remove(args, "--global")
+	params := args
+
+	global := contains(args, "--global") || contains(args, "-g")
+
+	if global {
+		params = remove(params, "--global")
+		params = remove(params, "-g")
+	}
 
 	if len(params) >= 2 {
 		name := params[0]
