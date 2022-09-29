@@ -48,6 +48,7 @@ func Publish() {
 		branch = args[1]
 	} else {
 		branch = GitStr("branch", "--show-current")
+		branch = strings.Trim(branch, "\n")
 	}
 
 	if NoRepo(name) {
@@ -75,12 +76,13 @@ func Publish() {
 
 	if HasUpdate() {
 		fmt.Println()
-		fmt.Println("There are unsaved changes in your project.")
+		fmt.Println("There are unsaved changes in your project:")
+		fmt.Println()
 
 		Git("status")
 
 		fmt.Println()
-		fmt.Print("Do you want to commit? (y/n) ")
+		fmt.Print("Save the changes? (y/n) ")
 
 		input, _, _ := reader.ReadLine()
 		confirm := ""
@@ -111,12 +113,19 @@ func Publish() {
 		}
 	}
 
-	if NoCommit() {
-		Git("status")
-		return
-	}
+	if CanPublish() {
+		fmt.Printf("Publishing changes into '%[1]s %[2]s'...", name, branch)
+		fmt.Println()
 
-	fmt.Printf("Publishing changes into '%[1]s %[2]s'...", name, branch)
-	fmt.Println()
-	Git("push", name, branch)
+		Git("push", name, branch)
+	} else {
+		Git("status")
+	}
+}
+
+func CanPublish() bool {
+	status := GitStr("status")
+	canPublish := strings.Contains(status, "Your branch is ahead of")
+
+	return canPublish
 }
