@@ -67,3 +67,10 @@ func Execute() {
 		}
 	}
 }
+
+func IsHelp() bool {
+	args := os.Args[2:]
+	isHelp := contains(args, "--help") || contains(args, "-h")
+
+	return isHelp
+}
