@@ -80,6 +80,7 @@ func Publish() {
 		fmt.Println(RefineStatus(GitStr("status")))
 
 		fmt.Println("There are unstaged changes in your project.")
+		fmt.Println()
 		fmt.Print("Save the changes? (y/n) ")
 
 		input, _, _ := reader.ReadLine()
@@ -106,8 +107,8 @@ func Publish() {
 				Git("add", ".")
 				Git("commit", "-m", message)
 			} else {
-				fmt.Println("Cannot save without a message.")
 				fmt.Println()
+				fmt.Println("Cannot commit the changes without a message.")
 			}
 		}
 	}
@@ -126,7 +127,7 @@ func Publish() {
 		fmt.Println(string(response))
 	} else {
 		fmt.Println()
-		fmt.Print(RefineStatus(GitStr("status")))
+		fmt.Println("Your branch is up to date, nothing to publish.")
 	}
 }
 
