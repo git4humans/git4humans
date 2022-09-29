@@ -125,6 +125,7 @@ func Publish() {
 		cmd := exec.Command("git", "push", name, branch)
 		response, _ := cmd.CombinedOutput()
 
+		fmt.Println()
 		fmt.Println(string(response))
 	} else {
 		Git("status")
