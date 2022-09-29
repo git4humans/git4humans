@@ -124,7 +124,7 @@ func Publish() {
 		response, _ := cmd.CombinedOutput()
 
 		fmt.Println()
-		fmt.Println(string(response))
+		fmt.Print(string(response))
 	} else {
 		fmt.Println()
 		fmt.Println("Your branch is up to date, nothing to publish.")
