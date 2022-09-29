@@ -58,6 +58,8 @@ func Execute() {
 		Help()
 	case "pr":
 		Pr()
+	case "status":
+		Status()
 	case "s":
 		Status()
 	case "l":
