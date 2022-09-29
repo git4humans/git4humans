@@ -9,8 +9,11 @@ import (
 
 func Save() {
 	args := os.Args[2:]
-	params := remove(args, "-m")
 	message := ""
+
+	params := args
+	params = remove(params, "-m")
+	params = remove(params, "--message")
 
 	if NoCommit() {
 		fmt.Println(GitStr("status"))
@@ -42,7 +45,7 @@ func Save() {
 		Git("commit", "-m", message)
 	} else {
 		fmt.Println()
-		fmt.Println("Err: Cannot save a commit without message.")
+		fmt.Println("Abort: cannot save commit without a message.")
 	}
 }
 
