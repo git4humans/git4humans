@@ -14,7 +14,7 @@ git add .
 git commit -m "Initial commit"
 ```
 
-Or when you need to face another long commands for publishing some changes into a remote repository:
+Or when you need to face another long commands for publishing some changes to a remote repository:
 
 ```shell
 git add .
@@ -32,6 +32,8 @@ gt start
 ```shell 
 gt publish
 ```
+
+### Principles
 
 The basic principle of **Git for Humans** is conventions over configurations.
 
