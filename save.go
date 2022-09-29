@@ -53,7 +53,8 @@ func Save() {
 			fmt.Println("Abort: cannot save without a message.")
 		}
 	} else {
-		Git("status")
+		fmt.Println()
+		fmt.Println("Abort: no changes to save in this project.")
 	}
 }
 
