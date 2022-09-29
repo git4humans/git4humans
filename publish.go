@@ -121,7 +121,8 @@ func Publish() {
 
 		// Git("push", name, branch)
 		// Use a standard command to print results
-		exec.Command("git", "push", name, branch)
+		cmd := exec.Command("git", "push", name, branch)
+		cmd.Run()
 	} else {
 		Git("status")
 	}
