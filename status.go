@@ -1,9 +1,19 @@
 package git4humans
 
-import "os"
+import (
+	"fmt"
+	"os"
+	"strings"
+)
 
 func Status() {
 	args := os.Args[2:]
 
-	Git("status", args...)
+	status := GitStr("status", args...)
+	status = strings.ReplaceAll(status, "git push", Command+" submit")
+	status = strings.ReplaceAll(status, "git add", Command+" +")
+	status = strings.ReplaceAll(status, "git restore", Command+" restore")
+	status = strings.ReplaceAll(status, "git commit -a", Command+" save")
+
+	fmt.Println(status)
 }
