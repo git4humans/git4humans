@@ -35,6 +35,8 @@ gt publish
 
 The basic principle of Git for Humans is conventions over configurations.
 
+Another principle is interactivity and guidance.
+
 ## Installation 
 
 Installation is easy in any operating system of your choice.
