@@ -54,6 +54,12 @@ Use '%[1]s save' if you want to init, add all files, and commit with a specific 
 			Git("commit", "-m", "Initial commit")
 		}
 	} else {
+		isStatus := command == "status" || command == "s"
+
+		if isStatus {
+			response = RefineStatus(response)
+		}
+
 		fmt.Print(response)
 	}
 }
@@ -89,4 +95,13 @@ func HasUpdate() bool {
 	unstaged := strings.Contains(response, "Changes not staged for commit:")
 
 	return untracked || unstaged
+}
+
+func RefineStatus(status string) string {
+	status = strings.ReplaceAll(status, "git push", Command+" publish")
+	status = strings.ReplaceAll(status, "git add", Command+" +")
+	status = strings.ReplaceAll(status, "git restore", Command+" restore")
+	status = strings.ReplaceAll(status, "git commit -a", Command+" save")
+
+	return status
 }

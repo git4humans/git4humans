@@ -77,7 +77,8 @@ func Publish() {
 
 	if HasUpdate() {
 		fmt.Println()
-		fmt.Println(RefineStatus(GitStr("status")))
+		Git("status")
+		fmt.Println()
 
 		fmt.Println("There are unstaged changes in your project.")
 		fmt.Println()
@@ -127,7 +128,8 @@ func Publish() {
 		fmt.Print(string(response))
 	} else {
 		fmt.Println()
-		fmt.Println("Your branch is up to date, nothing to publish.")
+		fmt.Printf("Your branch has nothing to publish. See %[1]s status.", Command)
+		fmt.Println()
 	}
 }
 
