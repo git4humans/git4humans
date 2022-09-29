@@ -24,6 +24,8 @@ func Execute() {
 	switch command {
 	case "new":
 		New()
+	case "start":
+		Start()
 	case "+":
 		Add()
 	case "-":
