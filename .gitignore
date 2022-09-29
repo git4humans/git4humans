@@ -1,11 +1,8 @@
 dist/
-dist2/
 release/
-cmd/gh/dist/
 vendor/
 test/
 .goreleaser.yaml
 b.bat
 release.bat
-gh.exe
 gt.exe
