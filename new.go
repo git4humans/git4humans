@@ -65,7 +65,7 @@ func New() {
 
 func NewUsage() {
 	fmt.Println(`
-Create an Git repository in a new directory
+Create a fresh Git repository in a new directory
 
 usage: gh new <directory>
 
