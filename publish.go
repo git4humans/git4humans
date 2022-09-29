@@ -15,7 +15,7 @@ func Publish() {
 
 	if NotGit() {
 		fmt.Println()
-		fmt.Println("Warn: this is not a Git repository.")
+		fmt.Println("This is not a Git repository.")
 		fmt.Println()
 		fmt.Print("Start a fresh Git repository? (y/n) ")
 
@@ -80,7 +80,7 @@ func Publish() {
 		Git("status")
 		fmt.Println()
 
-		fmt.Println("You have several changes in this project...")
+		fmt.Println("You have some changes in this project.")
 		fmt.Println()
 		fmt.Print("Save the changes? (y/n) ")
 
