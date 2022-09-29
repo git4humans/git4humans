@@ -1,6 +1,6 @@
 # Git for Humans
 
-An Intuitive [Git](https://git-scm.com/) CLI Commands for Humans
+An Intuitive [Git](https://git-scm.com/) Commands for Humans
 
 ## Introduction
 
