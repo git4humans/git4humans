@@ -14,11 +14,11 @@ import (
 // git commit -m "Initial commit"
 func Start() {
 	fmt.Print(`
-This will create a fresh Git repository in the current working directory, then add all files into staging and do initial commit.
+This will create a fresh Git repository in the current working directory, then add all files into staging area and do an initial commit.
 
-An equivalent of running:
+Equivalent of running:
 
-    git init 
+    git init
     git add .
     git commit -m "Initial commit"
 
@@ -44,8 +44,5 @@ An equivalent of running:
 			Git("add", ".")
 			Git("commit", "-m", "Initial commit")
 		}
-	} else {
-		fmt.Println()
-		fmt.Println("Abort: start operation is cancelled.")
 	}
 }
