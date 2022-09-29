@@ -23,7 +23,7 @@ git remote add origin https://github.com/git4humans/git4humans
 git push origin main
 ```
 
-Using Git for Humans, the above two scenarios can be done in a more succinct way (and let the tool guide you in a more friendly way):
+Using **Git for Humans**, the above two scenarios can be done in a more succinct way (and let the tool guide you in a more friendly way):
 
 ```shell 
 gt start 
@@ -33,17 +33,15 @@ gt start
 gt publish
 ```
 
-The basic principle of Git for Humans is conventions over configurations.
+The basic principle of **Git for Humans** is conventions over configurations.
 
 Another principle is interactivity and guidance.
 
 ## Installation 
 
-Installation is easy in any operating system of your choice.
+Installation is easy in any operating system of your choice. The only requirement is you have already installed [Git](https://git-scm.com/downloads) in your system.
 
 ### Linux & macOS 
-
-
 
 ### Windows
 
