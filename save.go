@@ -34,6 +34,8 @@ func Save() {
 	}
 
 	if len(message) > 0 {
+		fmt.Println()
+
 		if NotGit() {
 			Git("init")
 		}
