@@ -7,6 +7,12 @@ import (
 	"strings"
 )
 
+// Create a working directory for a new project.
+// Then intialize the directory as a Git repository.
+//
+// mdkir <project>
+// cd <project>
+// git init
 func New() {
 	args := os.Args[2:]
 	dir := ""
@@ -27,14 +33,14 @@ func New() {
 	}
 
 	if len(dir) <= 0 {
-		fmt.Println("Error: you should specify a working directory for the new Git repository.")
+		fmt.Println("Err: you should specify a working directory for the new Git repository.")
 		return
 	}
 
 	err := os.Mkdir(dir, os.ModePerm)
 
 	if err != nil {
-		fmt.Println("Error: failed creating directory for the new Git repository.")
+		fmt.Println("Err: failed creating directory for the new Git repository.")
 		return
 	}
 
