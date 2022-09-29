@@ -37,8 +37,11 @@ This will create a Git repository in your current working directory, then add al
 		args := os.Args[2:]
 
 		Git("init", args...)
-		Git("add", ".")
-		Git("commit", "-m", "Initial commit")
+
+		if HasUpdate() {
+			Git("add", ".")
+			Git("commit", "-m", "Initial commit")
+		}
 	} else {
 		fmt.Println()
 		fmt.Println("Abort: start command is cancelled.")
