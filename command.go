@@ -8,6 +8,7 @@ import (
 var Command = "gt"
 
 func Handle() {
+	Command = os.Args[0]
 	args := os.Args[1:]
 
 	if len(args) > 0 {
