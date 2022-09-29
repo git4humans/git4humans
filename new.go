@@ -69,5 +69,5 @@ Create an Git repository in a new directory
 
 usage: gh new <directory>
 
-This command will create a new directory (mkdir), then creates an empty Git repository - basically a .git directory with subdirectories for objects, refs/heads, refs/tags, and template files. It will also add an empty .gitignore file into the new directory.`)
+This command will create a new directory (mkdir), then creates a fresh Git repository in the new directory (basically a .git directory with subdirectories for objects, refs/heads, refs/tags, and template files). Then adds an empty .gitignore file into the new directory.`)
 }
