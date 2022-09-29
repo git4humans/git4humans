@@ -7,6 +7,11 @@ import (
 	"strings"
 )
 
+// Start a new git repository:
+//
+// git init
+// git add .
+// git commit -m "Initial commit"
 func Start() {
 	fmt.Print(`
 This action will initialize a new Git repository, then add all files into staging and do initial commit:
