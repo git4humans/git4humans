@@ -52,12 +52,16 @@ func Execute() {
 		SwitchBranch()
 	case "repo":
 		Repo()
-	case "pr":
-		Pr()
 	case "user":
 		User()
 	case "help":
 		Help()
+	case "pr":
+		Pr()
+	case "s":
+		Status()
+	case "l":
+		Log()
 	default:
 		if contains(GitCommands, command) {
 			Git(command, args...)
