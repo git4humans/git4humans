@@ -8,12 +8,17 @@ import (
 )
 
 // Create a working directory for a new project.
-// Then intialize the directory as a Git repository.
+// Then intialize a fresh Git repository into the working directory.
 //
 // mdkir <project>
 // cd <project>
 // git init
 func New() {
+	if IsHelp() {
+		NewUsage()
+		return
+	}
+
 	args := os.Args[2:]
 	dir := ""
 
@@ -22,7 +27,8 @@ func New() {
 	}
 
 	if len(dir) <= 0 {
-		fmt.Print("Working directory: ")
+		fmt.Println()
+		fmt.Print("Directory: ")
 
 		reader := bufio.NewReader(os.Stdin)
 		input, _, _ := reader.ReadLine()
@@ -33,7 +39,10 @@ func New() {
 	}
 
 	if len(dir) <= 0 {
-		fmt.Println("Err: you should specify a working directory for the new Git repository.")
+		fmt.Println()
+		fmt.Println("Err: you should specify directory for the new Git repository.")
+		fmt.Println()
+		fmt.Println("Use 'gh start' to initialize Git into this current working directory.")
 		return
 	}
 
@@ -52,4 +61,14 @@ func New() {
 		Git("init")
 		os.OpenFile(".gitignore", os.O_RDONLY|os.O_CREATE, 0666)
 	}
+}
+
+func NewUsage() {
+	fmt.Println(`
+Create an Git repository in a new directory
+
+usage: gh new <directory>
+
+This command will create a new directory (mkdir), then creates an empty Git repository - basically a .git directory with subdirectories for objects, refs/heads, refs/tags, and template files.
+	`)
 }
