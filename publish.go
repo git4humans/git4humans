@@ -77,12 +77,9 @@ func Publish() {
 
 	if HasUpdate() {
 		fmt.Println()
-		fmt.Println("There are unsaved changes in your project:")
-		fmt.Println()
+		fmt.Println(RefineStatus(GitStr("status")))
 
-		Git("status")
-
-		fmt.Println()
+		fmt.Println("There are unstaged changes in your project.")
 		fmt.Print("Save the changes? (y/n) ")
 
 		input, _, _ := reader.ReadLine()
@@ -117,7 +114,7 @@ func Publish() {
 
 	if CanPublish() {
 		fmt.Println()
-		fmt.Printf("Publishing into '%[1]s %[2]s'...", name, branch)
+		fmt.Printf("Publishing into %[1]s %[2]s...", name, branch)
 		fmt.Println()
 
 		// Git("push", name, branch)
@@ -128,7 +125,8 @@ func Publish() {
 		fmt.Println()
 		fmt.Println(string(response))
 	} else {
-		Git("status")
+		fmt.Println()
+		fmt.Print(RefineStatus(GitStr("status")))
 	}
 }
 
