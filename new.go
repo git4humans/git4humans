@@ -50,5 +50,6 @@ func New() {
 		panic(err)
 	} else {
 		Git("init")
+		os.OpenFile(".gitignore", os.O_RDONLY|os.O_CREATE, 0666)
 	}
 }
