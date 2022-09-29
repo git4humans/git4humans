@@ -14,7 +14,7 @@ import (
 // git commit -m "Initial commit"
 func Start() {
 	fmt.Print(`
-This will initialize a new Git repository into your current working directory, then add all files into staging and do initial commit:
+This will create a Git repository in your current working directory, then add all files into staging and do initial commit:
 
     git init 
     git add .
@@ -25,17 +25,22 @@ This will initialize a new Git repository into your current working directory, t
 
 	reader := bufio.NewReader(os.Stdin)
 	input, _, _ := reader.ReadLine()
+	confirm := ""
 
 	if len(input) > 0 {
-		confirm := strings.Replace(string(input), "\n", "", -1)
-		yes := confirm == "Y" || confirm == "y"
+		confirm = strings.Replace(string(input), "\n", "", -1)
+	}
 
-		if yes {
-			args := os.Args[2:]
+	yes := confirm == "Y" || confirm == "y"
 
-			Git("init", args...)
-			Git("add", ".")
-			Git("commit", "-m", "Initial commit")
-		}
+	if yes {
+		args := os.Args[2:]
+
+		Git("init", args...)
+		Git("add", ".")
+		Git("commit", "-m", "Initial commit")
+	} else {
+		fmt.Println()
+		fmt.Println("Abort: start command is cancelled.")
 	}
 }
