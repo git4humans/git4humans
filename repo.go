@@ -34,9 +34,13 @@ func Repo() {
 	}
 }
 
-func HasRepo(repo string) bool {
+func HasRepo(name string) bool {
 	repos := GitStr("remote", "-v")
-	return strings.Contains(repos, repo)
+	return strings.Contains(repos, name)
+}
+
+func NoRepo(name string) bool {
+	return !HasRepo(name)
 }
 
 func add() {
