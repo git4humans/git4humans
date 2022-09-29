@@ -94,6 +94,7 @@ func Publish() {
 		yes := confirm == "Y" || confirm == "y"
 
 		if yes {
+			fmt.Println()
 			fmt.Print("Message: ")
 
 			input, _, _ := reader.ReadLine()
