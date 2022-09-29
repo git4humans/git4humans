@@ -4,6 +4,7 @@ release/
 cmd/gh/dist/
 vendor/
 test/
+.goreleaser.yaml
 b.bat
 release.bat
-.goreleaser.yaml
+gh.exe
