@@ -19,16 +19,16 @@ func Git(command string, args ...string) {
 
 	if notGit {
 		fmt.Printf(`
-Err: this is not a Git repository.
+Err: not a Git repository
 
 Run the following command to start a Git repository:
 
     %[1]s start 
 
-It will init this directory as a Git repository, then automatically add all files into staging and do an initial commit.
+It will init a fresh Git repository in this directory, then add all files into staging area and do an initial commit.
 
 Use '%[1]s init' if you only want to init a Git repository.
-Use '%[1]s +' if you only want to init and add files into staging.
+Use '%[1]s + .' if you only want to init and add files into staging.
 Use '%[1]s save' if you want to init, add all files, and commit with a specific message.`, Command)
 
 		fmt.Println()
