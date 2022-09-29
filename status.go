@@ -15,5 +15,5 @@ func Status() {
 	status = strings.ReplaceAll(status, "git restore", Command+" restore")
 	status = strings.ReplaceAll(status, "git commit -a", Command+" save")
 
-	fmt.Println(status)
+	fmt.Print(status)
 }
