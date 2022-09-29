@@ -20,7 +20,7 @@ archives:
       386: 32bit
       amd64: 64bit
     format: zip
-    name_template: "{{ .ProjectName }}-{{ .Os }}-{{ .Arch }}-{{ .Version }}"
+    name_template: "{{ .ProjectName }}-{{ .Os }}-{{ .Version }}-{{ .Arch }}"
     files:
       - none*
 checksum:
