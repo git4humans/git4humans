@@ -14,7 +14,9 @@ import (
 // git commit -m "Initial commit"
 func Start() {
 	fmt.Print(`
-This will create a Git repository in your current working directory, then add all files into staging and do initial commit:
+This will create a fresh Git repository in the current working directory, then add all files into staging and do initial commit.
+
+An equivalent of running:
 
     git init 
     git add .
@@ -44,6 +46,6 @@ This will create a Git repository in your current working directory, then add al
 		}
 	} else {
 		fmt.Println()
-		fmt.Println("Abort: start command is cancelled.")
+		fmt.Println("Abort: start operation is cancelled.")
 	}
 }
