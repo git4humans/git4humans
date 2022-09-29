@@ -6,7 +6,7 @@ func Help() {
 	fmt.Printf(`
 Git for Humans version %[1]s
 
-usage: gh [<options>] <command> [<args]
+usage: %[2]s [<options>] <command> [<args]
 
 These are common commands you will most likely use in everyday situation.
 
@@ -37,8 +37,8 @@ Grow, mark, and tweak your common history
     tag 	Create, list, delete, or verify a tag object
 
 Examine history and state 
-    status 	Show the working tree status (shortcut: 'gh s') 
-    log 	Show commit logs (shortcut: 'gh l')
+    status 	Show the working tree status (shortcut: '%[2]s s') 
+    log 	Show commit logs (shortcut: '%[2]s l')
     diff 	Show changes between commits, commit and working tree, etc.
 
 Configurations 
@@ -47,5 +47,5 @@ Configurations
 
 Also, you can use other standard commands that comes with Git. 
 As an example, 'gh push origin main' will work exactly as 'git push origin main' 
-	`, Version)
+	`, Version, Command)
 }
