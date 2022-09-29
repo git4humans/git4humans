@@ -23,9 +23,9 @@ func Save() {
 	if len(params) > 0 {
 		message = params[0]
 	} else {
-		reader := bufio.NewReader(os.Stdin)
 		fmt.Print("\nMessage: ")
 
+		reader := bufio.NewReader(os.Stdin)
 		input, _, _ := reader.ReadLine()
 
 		if len(input) > 0 {
