@@ -68,7 +68,7 @@ func Submit() {
 	}
 
 	if NoRepo(name) {
-		fmt.Println("Err: cannot submit to an undefined remote repository.")
+		fmt.Println("Err: cannot submit to an unregistered remote repository.")
 		return
 	}
 
@@ -104,7 +104,7 @@ func Submit() {
 				Git("add", ".")
 				Git("commit", "-m", message)
 			} else {
-				fmt.Println("Cannot commit the changes without a message.")
+				fmt.Println("Cannot commit without a message.")
 				fmt.Println()
 			}
 		}
@@ -115,7 +115,7 @@ func Submit() {
 		return
 	}
 
-	fmt.Printf("Pushing changes into '%[1]s %[2]s'...", name, branch)
+	fmt.Printf("Publishing changes into '%[1]s %[2]s'...", name, branch)
 	fmt.Println()
 	Git("push", name, branch)
 }
