@@ -28,11 +28,11 @@ func Delete() {
 		}
 
 		if len(files) > 0 {
-			Git("rm", files)
+			Git("rm", strings.Fields(files)...)
 			Git("status")
 		} else {
 			fmt.Printf(`
-Err: You should specify file(s) to delete.
+You should specify file(s) to delete.
 
 Examples:
     
