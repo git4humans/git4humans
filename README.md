@@ -122,7 +122,7 @@ gt repo add origin https://github.com/pytorch/pytorch
 
 Since we all know, unless you are working in a big, complex project, you mostly need to add a default remote repository under the default name `origin`. 
 
-No need to explicitly state it. The tool will understand.
+No need to state it explicitly. The tool will understand.
 
 For an advanced and more complex use, you can always fallback to the [original Git commands](https://git-scm.com/docs). Every [standard Git commands](https://git-scm.com/docs) is applicable in **Git for Humans**.
 
