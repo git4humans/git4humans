@@ -34,7 +34,7 @@ gt publish
 ```
 ## Installation 
 
-Installation is easy in any operating system of your choice. The only requirement is you have already installed [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) in your system.
+Installation is easy. The only requirement is you have already installed [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) in your system.
 
 ### Linux & macOS 
 
