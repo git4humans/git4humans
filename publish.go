@@ -80,7 +80,7 @@ func Publish() {
 		Git("status")
 		fmt.Println()
 
-		fmt.Println("You have some recent changes in this branch.")
+		fmt.Println("You have some unstaged changes in this branch.")
 		fmt.Println()
 		fmt.Print("Do you want to save all the changes? (y/n) ")
 
