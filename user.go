@@ -12,18 +12,16 @@ func User() {
 	}
 
 	args := os.Args[2:]
-	params := args
-
-	global := contains("--global", args) || contains("-g", args)
+	global := HasOption("--global", args) || HasOption("-g", args)
 
 	if global {
-		params = remove("--global", params)
-		params = remove("-g", params)
+		args = RemoveOption("--global", args)
+		args = RemoveOption("-g", args)
 	}
 
-	if len(params) >= 2 {
-		name := params[0]
-		email := params[1]
+	if len(args) >= 2 {
+		name := args[0]
+		email := args[1]
 
 		if global {
 			Git("config", "--global", "user.name", name)
