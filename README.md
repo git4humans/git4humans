@@ -39,7 +39,7 @@ Installation is easy. The only requirement is you have already installed [Git](h
 
 ### Linux & macOS 
 
-You can install on Linux & macOS by downloading appropriate zip file from the [release page](https://github.com/git4humans/git4humans/releases). Then unzip it at any location of your choice.
+You can install on Linux & macOS by downloading appropriate zip file from the [release page](https://github.com/git4humans/git4humans/releases). Then unzip it into any location of your choice.
 
 Then add the path of your **git4humans** directory to the **PATH** environment variable:
 
@@ -64,7 +64,7 @@ gt
 
 Another is a manual install by downloading appropriate zip file from the [release page](https://github.com/git4humans/git4humans/releases). 
 
-Then unzip it at any location of your choice. And add the path of your **git4humans** directory to the **PATH** environment variable. For example, you may unzip at the root of drive C, then the path will be **C:\git4humans**. 
+Then unzip the file into any location of your choice. Then add the path of your **git4humans** directory to the **PATH** environment variable. For example, you may unzip at the root of drive C, then the path will be **C:\git4humans**. 
 
 For a guide to add to the **PATH** environment variable, [read the following instructions](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/).
 
