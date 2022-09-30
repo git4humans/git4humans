@@ -31,7 +31,7 @@ git add .
 git commit -m "fix save message"
 ```
 
-Using **Git for Humans**, the above scenarios can be done in a more succinct way (and the tool will guide you in a friendly interactive way):
+Using **Git for Humans**, the above scenarios can be done in a more succinct way (and the tool will guide you in an interactive friendly way):
 
 ```shell 
 gt start 
