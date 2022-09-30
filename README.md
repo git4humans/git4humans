@@ -107,7 +107,6 @@ Then add the **git4humans** directory to your **PATH** environment variable.
 
 ## Principles
 
-### Conventions
 The basic principle of **Git for Humans** is **conventions over configurations**. It means the tool will make an educated guess (based on conventions) for your simple everyday use. 
 
 As an example, when dealing with remote repositories, **Git for Humans** will use `origin` as the default name for your remote repository. Unless you state it spesifically, the tool will assume you want to use `origin`. 
