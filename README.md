@@ -69,6 +69,30 @@ Then add the path of your **git4humans** directory to the **PATH** environment v
 
 ### From Source
 
+To install from source, you need to have [Go](https://go.dev/dl/) installed in your system.
+
+Copy the source project:
+
+```shell
+git clone https://github.com/git4humans/git4humans
+cd git4humans 
+```
+Build it:
+
+Linux / macOS
+
+```shell
+go build -o gt cmd/gt/main.go
+```
+
+Windows 
+
+```shell
+go build -o gt.exe cmd/gt/main.go
+```
+
+Then copy the output (gt or gt.exe) into any directory of your choice. Then add that directory to your **PATH** environment variable.
+
 ## Principles
 
 The basic principle of **Git for Humans** is **conventions over configurations**. It means the tool will make an educated guess based on conventions for your simple everyday use. 
