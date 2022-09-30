@@ -24,7 +24,14 @@ git commit -m "Add publish functionality"
 git push origin main
 ```
 
-Using **Git for Humans**, the above two scenarios can be done in a more succinct way (and let the tool guide you in a friendly interactive way):
+Or you simply want to save all your recent changes locally:
+
+```shell
+git add .
+git commit -m "fix save message"
+```
+
+Using **Git for Humans**, the above scenarios can be done in a more succinct way (and let the tool guide you in a friendly interactive way):
 
 ```shell 
 gt start 
@@ -32,6 +39,10 @@ gt start
 
 ```shell 
 gt publish
+```
+
+```shell
+gt save
 ```
 ## Installation 
 
