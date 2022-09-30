@@ -95,7 +95,7 @@ func Publish() {
 
 		if yes {
 			fmt.Println()
-			fmt.Print("Message: ")
+			fmt.Print("Save with message: ")
 
 			input, _, _ := reader.ReadLine()
 			message := ""
