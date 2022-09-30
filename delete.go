@@ -24,7 +24,8 @@ func Delete() {
 		files := ""
 		reader := bufio.NewReader(os.Stdin)
 
-		fmt.Print("\nFile(s) to delete: ")
+		fmt.Println()
+		fmt.Print("File(s) to delete: ")
 
 		input, _, _ := reader.ReadLine()
 
