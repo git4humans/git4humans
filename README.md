@@ -128,7 +128,7 @@ gt repo + origin https://github.com/pytorch/pytorch
 gt repo add origin https://github.com/pytorch/pytorch
 ```
 
-Since we all know, unless you are working on a big, complex project, you mostly will add a default remote repository under the default name `origin`. 
+Since we all know, unless you are working on a big, complex project, you mostly will add your remote repository under the default name `origin`. 
 
 No need to state it explicitly. The tool will understand.
 
