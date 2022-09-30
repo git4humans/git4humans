@@ -1,9 +1,17 @@
 package git4humans
 
-import "os"
+import (
+	"fmt"
+	"os"
+)
 
 // Move or rename a file
 func Move() {
+	if IsHelp() {
+		MoveUsage()
+		return
+	}
+
 	command := os.Args[1]
 	args := os.Args[2:]
 
@@ -18,4 +26,8 @@ func Move() {
 			Git("mv", oldName, newName)
 		}
 	}
+}
+
+func MoveUsage() {
+	fmt.Println()
 }
