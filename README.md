@@ -140,7 +140,7 @@ Another principle is **interactivity and guidance**. It means the tool will guid
 
 As an example, when you publish changes to a remote repository using `gt publish`, **Git for Humans** will check the status of your project. 
 
-If you have some new or modified files that has not been committed, the tool will ask for confirmation whether you want to save and include the changes in this publish command. It will also show details of the changes so you can easily decide.
+If you have some new or modified files that is not committed, the tool will ask for confirmation whether you want to save and include the changes in this publish command. It will also show details so you can easily decide.
 
 ```shell
 On branch main
