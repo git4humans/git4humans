@@ -44,7 +44,7 @@ func RepoUsage() {
 }
 
 func HasRepo(name string) bool {
-	repos := GitStr("remote", "-v")
+	repos := GitStr("remote")
 	return strings.Contains(repos, name)
 }
 
