@@ -154,7 +154,7 @@ Changes not staged for commit:
 
 no changes added to commit (use "gt +" and/or "gt save")
 
-You have some recent changes in this branch.
+You have some unstaged changes in this branch.
 
 Do you want to save all the changes? (y/n) _
 ```
