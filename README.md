@@ -92,7 +92,7 @@ Windows
 go build -o gt.exe cmd/gt/main.go
 ```
 
-Then copy the output (gt or gt.exe) into any directory of your choice. Then add that directory to your **PATH** environment variable.
+Then add the **git4humans** directory to your **PATH** environment variable.
 
 ## Principles
 
