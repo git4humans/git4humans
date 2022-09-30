@@ -55,7 +55,7 @@ You can install on Linux & macOS by downloading the appropriate zip file from th
 Then add the path of your **git4humans** directory to the **PATH** environment variable:
 
 ```shell
-PATH=/path/to/your/git4humans:$PATH
+PATH=/path/to/git4humans:$PATH
 ```
 You may verify by typing the following shell command:
 
