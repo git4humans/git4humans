@@ -9,6 +9,11 @@ import (
 
 // Remove file(s)
 func Delete() {
+	if IsHelp() {
+		DeleteUsage()
+		return
+	}
+
 	command := os.Args[1]
 	args := os.Args[2:]
 
@@ -43,4 +48,8 @@ Examples:
             `, Command, command)
 		}
 	}
+}
+
+func DeleteUsage() {
+	fmt.Println()
 }
