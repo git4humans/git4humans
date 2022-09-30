@@ -128,11 +128,11 @@ gt repo + origin https://github.com/pytorch/pytorch
 gt repo add origin https://github.com/pytorch/pytorch
 ```
 
-Since we all know, unless you are working on a big, complex project, you mostly will add your remote repository under the default name `origin`. 
+Since we all know, unless you are working on a big, complex project, you most likely will use a single shared remote repository with the default name `origin`. 
 
-You don't need to state it explicitly. The tool will understand.
+No need to state it explicitly. The tool will understand.
 
-Besides, for more complex and advanced use, you can always fallback to the [original Git commands](https://git-scm.com/docs). Every [standard Git commands](https://git-scm.com/docs) is applicable in **Git for Humans**.
+Besides, for more complex use, you can always fallback to the [original Git commands](https://git-scm.com/docs). Every [standard Git commands](https://git-scm.com/docs) is applicable in **Git for Humans**.
 
 ### Interactivity & Guidance
 
