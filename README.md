@@ -153,7 +153,7 @@ Do you want to save all the changes? (y/n) y
 Save with message: _
 ```
 
-**Git for Humans** will try its best to guide you in an interactive way to make your Git experience more fun and enjoyable.
+In this way, **Git for Humans** will try its best to guide you to make your Git experience more fun and enjoyable.
 
 ## Usage 
 
