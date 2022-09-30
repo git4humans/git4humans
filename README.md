@@ -135,7 +135,7 @@ Besides, for more complex use, you can always fallback to the [original Git comm
 
 ### Interactivity & Guidance
 
-Another principle is **interactivity and guidance**, which means the tool will guide you in an interactive way for some process that needs confirmation (or additional input, such as file name or commit message).
+Another principle is **interactivity and guidance**, which means the tool will guide you in an interactive way for some process that needs your confirmation (or an additional input, such as file name or commit message).
 
 As an example, when you publish changes to a remote repository using `gt publish`, **Git for Humans** will check the status of your project. If you have some new or modified files that is not committed, the tool will ask for confirmation whether you want to save and include them with this publish command. It will also show the changes so you can easily decide.
 
