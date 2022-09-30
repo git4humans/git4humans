@@ -46,22 +46,22 @@ func Publish() {
 	}
 
 	args := os.Args[2:]
-	name := "origin"
-	branch := ""
+	remote := "origin"
+	remoteBranch := ""
+	localBranch := strings.Trim(GitStr("branch", "--show-current"), "\n")
 
 	if len(args) >= 2 {
-		name = args[0]
-		branch = args[1]
+		remote = args[0]
+		remoteBranch = args[1]
 	} else {
-		branch = GitStr("branch", "--show-current")
-		branch = strings.Trim(branch, "\n")
+		remoteBranch = localBranch
 	}
 
-	if NoRepo(name) {
+	if NoRepo(remote) {
 		fmt.Println()
-		fmt.Println("Remote repository " + name + " is not found.")
+		fmt.Println("Remote repository " + remote + " is not found.")
 		fmt.Println()
-		fmt.Print("Add URL for " + name + ": ")
+		fmt.Print("Add URL for " + remote + ": ")
 
 		url := ""
 		input, _, _ := reader.ReadLine()
@@ -71,11 +71,11 @@ func Publish() {
 		}
 
 		if len(url) > 0 {
-			Git("remote", "add", name, url)
+			Git("remote", "add", remote, url)
 		}
 	}
 
-	if NoRepo(name) {
+	if NoRepo(remote) {
 		fmt.Println("Abort: you should add remote repository to publish.")
 		return
 	}
@@ -125,12 +125,12 @@ func Publish() {
 
 	if CanPublish() {
 		fmt.Println()
-		fmt.Printf("Publishing into %[1]s %[2]s...", name, branch)
+		fmt.Printf("Publishing from local %[1]s into remote %[2]s %[3]s...", localBranch, remote, remoteBranch)
 		fmt.Println()
 
 		// Git("push", name, branch)
 		// Use a standard command to print results
-		cmd := exec.Command("git", "push", name, branch)
+		cmd := exec.Command("git", "push", remote, remoteBranch)
 		response, _ := cmd.CombinedOutput()
 
 		fmt.Println()
