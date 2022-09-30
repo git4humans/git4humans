@@ -19,7 +19,9 @@ func Save() {
 	if HasFlag("-m", args) {
 		message = GetFlag("-m", args)
 		args = RemoveFlag("-m", args)
-	} else if HasFlag("--message", args) {
+	}
+
+	if HasFlag("--message", args) {
 		message = GetFlag("--message", args)
 		args = RemoveFlag("--message", args)
 	}
