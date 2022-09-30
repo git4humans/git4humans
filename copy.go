@@ -9,6 +9,11 @@ import (
 
 // Clone a remote repository
 func Copy() {
+	if IsHelp() {
+		CopyUsage()
+		return
+	}
+
 	args := os.Args[2:]
 
 	if len(args) > 0 {
@@ -44,4 +49,8 @@ func Copy() {
 			}
 		}
 	}
+}
+
+func CopyUsage() {
+	fmt.Println()
 }
