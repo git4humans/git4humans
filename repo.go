@@ -7,6 +7,11 @@ import (
 )
 
 func Repo() {
+	if IsHelp() {
+		RepoUsage()
+		return
+	}
+
 	args := os.Args[2:]
 
 	if len(args) > 0 {
@@ -32,6 +37,10 @@ func Repo() {
 	} else {
 		list()
 	}
+}
+
+func RepoUsage() {
+	fmt.Println()
 }
 
 func HasRepo(name string) bool {
