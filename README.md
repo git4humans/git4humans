@@ -38,14 +38,14 @@ Installation is easy in any operating system of your choice. The only requiremen
 
 ### Linux & macOS 
 
-You can install on Linux & macOS by downloading appropriate zip file from the [release page](releases). Then unzip it at any location of your choice.
+You can install on Linux & macOS by downloading appropriate zip file from the [release page](https://github.com/git4humans/git4humans/releases). Then unzip it at any location of your choice.
 
-The last thing to do is add the path of your **git4humans** directory to the **PATH** environment variable:
+Then add the path of your **git4humans** directory to the **PATH** environment variable:
 
 ```shell
 PATH=/path/to/your/git4humans:$PATH
 ```
-You can check if it's successfully installed by typing the following shell command:
+You can check your installation by typing the following shell command:
 
 ```shell
 gt
@@ -53,21 +53,19 @@ gt
 
 ### Windows
 
-The easiest way to install for Windows is download the installer from the [release page](releases) and run it.
+The easiest way to install for Windows is download the installer from the [release page](https://github.com/git4humans/git4humans/releases) and run it. The file is small and installation process is fast. 
 
-The file is small and installation process is fast. You can check if it's successfully installed by running the following command in your cmd:
+You can check your installation by running the following command in cmd:
 
 ```shell
 gt
 ```
 
-Another is a manual install by downloading appropriate zip file from the [release page](releases). Then unzip it at any location of your choice.
+Another is a manual install by downloading appropriate zip file from the [release page](https://github.com/git4humans/git4humans/releases). Then unzip it at any location of your choice.
 
 For example, you may unzip it at the root of drive C.
 
-The last thing to do is add the path of your **git4humans** directory to the **PATH** environment variable. If you unzip it at the root drive C, the path will be **C:\git4humans**.
-
-For a guide to add to the **PATH** environment variable, you can [read the following instructions](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/).
+Then add the path of your **git4humans** directory to the **PATH** environment variable. If you unzip it at the root drive C, the path will be **C:\git4humans**. For a guide to add to the **PATH** environment variable, you can [read the following instructions](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/).
 
 ### From Source
 
