@@ -57,7 +57,7 @@ Then add the path of your **git4humans** directory to the **PATH** environment v
 ```shell
 PATH=/path/to/your/git4humans:$PATH
 ```
-You can verify by typing the following shell command:
+You may verify by typing the following shell command:
 
 ```shell
 gt
@@ -67,17 +67,17 @@ gt
 
 The easiest way to install for Windows is download the installer from the [release page](https://github.com/git4humans/git4humans/releases) and run it. The file is small and installation process is fast. 
 
-You can check by running the following command in cmd:
+You may verify by running the following cmd command:
 
 ```shell
 gt
 ```
 
-Another is manual installation by downloading appropriate zip file from the [release page](https://github.com/git4humans/git4humans/releases). 
+Another is manual installation by downloading the appropriate zip file from the [release page](https://github.com/git4humans/git4humans/releases). 
 
 Unzip the file into any location of your choice. Then add the path of your **git4humans** directory to the **PATH** environment variable. For example, if you unzip at the root drive C, then the path will be **C:\git4humans**.
 
-For a guide to add path to the **PATH** environment variable, [read the following instructions](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/).
+For a guide to add path to environment variable, [read the following instructions](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/).
 
 ### From Source
 
