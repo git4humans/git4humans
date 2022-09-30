@@ -172,7 +172,7 @@ This way, **Git for Humans** will try its best to guide you, to make your experi
 
 The infamous [80/20 Pareto Principle](https://en.wikipedia.org/wiki/Pareto_principle) can be found to apply with Git commands. Roughly 80% of your experience with Git will be around 20% of the [complete commands](https://git-scm.com/docs).
 
-**Git for Humans** is focusing on these 20% commands that you will likely touch for everyday use. For more complex and advanced use, you can always fallback to the [original Git commands](https://git-scm.com/docs), since every [standard Git commands](https://git-scm.com/docs) is applicable in **Git for Humans** (e.g., you can use `git bisect` and `gt bisect` interchangeably).
+**Git for Humans** is focusing on these 20% commands that you will likely touch in everyday use. For more complex and advanced use, you can always fallback to the [original Git commands](https://git-scm.com/docs), since every [standard Git commands](https://git-scm.com/docs) is applicable in **Git for Humans** (e.g., you can use `git bisect` and `gt bisect` interchangeably).
 
 **new** 
 
