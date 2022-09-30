@@ -46,7 +46,7 @@ Then add the path of your **git4humans** directory to the **PATH** environment v
 ```shell
 PATH=/path/to/your/git4humans:$PATH
 ```
-You can check your installation by typing the following shell command:
+You can check by typing the following shell command:
 
 ```shell
 gt
@@ -56,7 +56,7 @@ gt
 
 The easiest way to install for Windows is download the installer from the [release page](https://github.com/git4humans/git4humans/releases) and run it. The file size is small and installation process is fast. 
 
-You can check your installation by running the following command in cmd:
+You can check by running the following command in cmd:
 
 ```shell
 gt
