@@ -80,9 +80,9 @@ func Publish() {
 		Git("status")
 		fmt.Println()
 
-		fmt.Println("You have some recent changes in this project.")
+		fmt.Println("You have some recent changes in this branch.")
 		fmt.Println()
-		fmt.Print("Save the changes? (y/n) ")
+		fmt.Print("Do you want to save all the changes? (y/n) ")
 
 		input, _, _ := reader.ReadLine()
 		confirm := ""
