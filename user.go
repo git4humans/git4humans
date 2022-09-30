@@ -6,6 +6,11 @@ import (
 )
 
 func User() {
+	if IsHelp() {
+		UserUsage()
+		return
+	}
+
 	args := os.Args[2:]
 	params := args
 
@@ -50,4 +55,8 @@ Git user configuration (local):
 user.name   %[1]suser.email  %[2]s
         `, name, email)
 	}
+}
+
+func UserUsage() {
+	fmt.Println()
 }
