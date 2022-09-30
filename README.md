@@ -64,9 +64,9 @@ gt
 
 Another is a manual install by downloading appropriate zip file from the [release page](https://github.com/git4humans/git4humans/releases). 
 
-Then unzip it at any location of your choice. And add the path of your **git4humans** directory to the **PATH** environment variable. For example, you may unzip file at the root of drive C, then the path will be **C:\git4humans**. 
+Then unzip it at any location of your choice. And add the path of your **git4humans** directory to the **PATH** environment variable. For example, you may unzip at the root of drive C, then the path will be **C:\git4humans**. 
 
-For a guide to add to the **PATH** environment variable, you can [read the following instructions](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/).
+For a guide to add to the **PATH** environment variable, [read the following instructions](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/).
 
 ### From Source
 
