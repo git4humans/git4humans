@@ -7,6 +7,11 @@ import (
 )
 
 func Branch() {
+	if IsHelp() {
+		BranchUsage()
+		return
+	}
+
 	args := os.Args[2:]
 
 	if len(args) > 0 {
@@ -25,6 +30,11 @@ func Branch() {
 }
 
 func SwitchBranch() {
+	if IsHelp() {
+		SwitchUsage()
+		return
+	}
+
 	args := os.Args[2:]
 
 	message := GitStr("switch", args...)
@@ -45,4 +55,12 @@ func showBranch() {
 	fmt.Println("List branch:")
 
 	Git("branch")
+}
+
+func BranchUsage() {
+	fmt.Println()
+}
+
+func SwitchUsage() {
+	fmt.Println()
 }
