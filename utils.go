@@ -9,7 +9,7 @@ func indexOf(element string, data []string) int {
 	return -1
 }
 
-func contains(data []string, element string) bool {
+func contains(element string, data []string) bool {
 	index := indexOf(element, data)
 	return index >= 0
 }

@@ -68,7 +68,7 @@ func Execute() {
 	case "l":
 		Log()
 	default:
-		if contains(GitCommands, command) {
+		if contains(command, GitCommands) {
 			Git(command, args...)
 		} else {
 			fmt.Printf(`Err: '%[1]s' is not a valid command. See %[2]s help.
@@ -79,7 +79,7 @@ func Execute() {
 
 func IsHelp() bool {
 	args := os.Args[2:]
-	isHelp := contains(args, "--help") || contains(args, "-h")
+	isHelp := contains("--help", args) || contains("-h", args)
 
 	return isHelp
 }

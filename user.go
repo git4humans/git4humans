@@ -14,7 +14,7 @@ func User() {
 	args := os.Args[2:]
 	params := args
 
-	global := contains(args, "--global") || contains(args, "-g")
+	global := contains("--global", args) || contains("-g", args)
 
 	if global {
 		params = remove(params, "--global")
