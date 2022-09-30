@@ -16,19 +16,29 @@ func Save() {
 	args := os.Args[2:]
 	message := ""
 
-	params := args
-	params = remove("-m", params)
-	params = remove("--message", params)
+	if HasFlag("-m", args) {
+		message = GetFlag("-m", args)
+		args = RemoveFlag("-m", args)
+	} else if HasFlag("--message", args) {
+		message = GetFlag("--message", args)
+		args = RemoveFlag("--message", args)
+	}
+
+	if NotGit() {
+		Git("init")
+	}
 
 	if HasUpdate() || HasCommit() {
-		if len(params) > 0 {
-			message = params[0]
-		} else {
-			Git("status")
-			fmt.Println()
+		if len(message) <= 0 {
+			if len(args) <= 0 && HasUpdate() {
+				Git("status")
 
-			fmt.Println("This will save all changes in your branch.")
-			fmt.Print("\nSave with message: ")
+				fmt.Println()
+				fmt.Println("This will save all changes in your branch.")
+			}
+
+			fmt.Println()
+			fmt.Print("Save with message: ")
 
 			reader := bufio.NewReader(os.Stdin)
 			input, _, _ := reader.ReadLine()
@@ -42,11 +52,9 @@ func Save() {
 		if len(message) > 0 {
 			fmt.Println()
 
-			if NotGit() {
-				Git("init")
-			}
-
-			if HasUpdate() {
+			if len(args) > 0 {
+				Git("add", args...)
+			} else if HasUpdate() {
 				Git("add", ".")
 			}
 
