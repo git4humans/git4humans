@@ -49,8 +49,8 @@ Examples:
     %[1]s + file1.txt file2.txt file3.txt
     %[1]s + file1.txt dir2/file2.txt
     %[1]s + file.txt dir/
-	%[1]s + --all 
-	%[1]s + .
+    %[1]s + --all 
+    %[1]s + .
             `, Command)
 		}
 	}
@@ -67,7 +67,7 @@ examples:
     %[1]s + file1.txt file2.txt file3.txt
     %[1]s + file1.txt dir2/file2.txt
     %[1]s + file.txt dir/
-	%[1]s + --all
-	%[1]s + .
+    %[1]s + --all
+    %[1]s + .
 	`, Command)
 }
