@@ -50,14 +50,14 @@ Installing **Git for Humans** is easy, the only prerequisite is you already have
 
 ### Linux & macOS 
 
-You can install on Linux & macOS by downloading appropriate zip file from the [release page](https://github.com/git4humans/git4humans/releases). Then unzip it into any location of your choice.
+You can install on Linux & macOS by downloading the appropriate zip file from the [release page](https://github.com/git4humans/git4humans/releases), then unzip it into any location of your choice.
 
 Then add the path of your **git4humans** directory to the **PATH** environment variable:
 
 ```shell
 PATH=/path/to/your/git4humans:$PATH
 ```
-You can check by typing the following shell command:
+You can verify by typing the following shell command:
 
 ```shell
 gt
