@@ -125,7 +125,7 @@ func Publish() {
 
 	if CanPublish() {
 		fmt.Println()
-		fmt.Printf("Publishing from local %[1]s into remote %[2]s %[3]s...", localBranch, remote, remoteBranch)
+		fmt.Printf("Publishing from local %[1]s to remote %[2]s %[3]s...", localBranch, remote, remoteBranch)
 		fmt.Println()
 
 		// Git("push", name, branch)
