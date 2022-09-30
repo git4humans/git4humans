@@ -161,8 +161,6 @@ Do you want to save all the changes? (y/n) _
 You may type `y` to confirm that yes, you want to include all the changes with your current publish. Then the tool will ask you to input the commit message.
 
 ```shell
-You have some recent changes in this branch.
-
 Do you want to save all the changes? (y/n) y
 
 Save with message: _
