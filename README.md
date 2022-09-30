@@ -46,7 +46,7 @@ gt save
 ```
 ## Installation 
 
-Installing **Git for Humans** is easy. The only requirement is you have already installed [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) in your system.
+Installing **Git for Humans** is easy. The only requirement is you already have [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) installed in your system.
 
 ### Linux & macOS 
 
