@@ -184,6 +184,8 @@ The infamous [80/20 Pareto Principle](https://en.wikipedia.org/wiki/Pareto_princ
 
 ## Contribute 
 
+You may contribute into advancing **Git for Humans** in any way you choose. That includes [reporting issues](https://github.com/git4humans/git4humans/issues), [pull requests](https://github.com/git4humans/git4humans/pulls), suggesting ideas, and everything else.
+
 ## License 
 
 **Git for Humans** is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
