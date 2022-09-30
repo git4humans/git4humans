@@ -123,7 +123,7 @@ For an advanced and more complex use, you can always fallback to the [original G
 
 Another principle is **interactivity and guidance**. 
 
-It means the tool will guide you in an interactive way for some process that need confirmation (or an additional input, such as filename, or commit message).
+It means the tool will guide you in an interactive way for some process that needs confirmation (or an additional input, such as filename or commit message).
 
 As an example, when you publish changes to a remote repository using `gt publish`, **Git for Humans** will check the status of your project. 
 
