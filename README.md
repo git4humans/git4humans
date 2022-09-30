@@ -185,7 +185,7 @@ The infamous [80/20 Pareto Principle](https://en.wikipedia.org/wiki/Pareto_princ
 
 ## Contribute 
 
-You may contribute into improving **Git for Humans** in any way you choose. That includes [reporting issues](https://github.com/git4humans/git4humans/issues), [pull requests](https://github.com/git4humans/git4humans/pulls), [suggesting ideas](https://github.com/git4humans/git4humans/issues), and everything else.
+You may contribute to improve **Git for Humans** in any way you choose. That includes [reporting issues](https://github.com/git4humans/git4humans/issues), [pull requests](https://github.com/git4humans/git4humans/pulls), [suggesting ideas](https://github.com/git4humans/git4humans/issues), and everything else.
 
 To play with the source, you need to install [Go](https://go.dev/dl/) and build the project as follow.
 
