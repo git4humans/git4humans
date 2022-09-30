@@ -65,7 +65,7 @@ gt
 
 ### Windows
 
-The easiest way to install for Windows is download the installer from the [release page](https://github.com/git4humans/git4humans/releases) and run it. The file size is small and installation process is fast. 
+The easiest way to install for Windows is download the installer from the [release page](https://github.com/git4humans/git4humans/releases) and run it. The file is small and installation process is fast. 
 
 You can check by running the following command in cmd:
 
