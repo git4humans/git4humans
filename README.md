@@ -121,9 +121,7 @@ No need to state it explicitly. The tool will understand.
 
 For an advanced and more complex use, you can always fallback to the [original Git commands](https://git-scm.com/docs). Every [standard Git commands](https://git-scm.com/docs) is applicable in **Git for Humans**.
 
-Another principle is **interactivity and guidance**. 
-
-It means the tool will guide you in an interactive way for some process that needs confirmation (or an additional input, such as filename or commit message).
+Another principle is **interactivity and guidance**. It means the tool will guide you in an interactive way for some process that needs confirmation (or an additional input, such as filename or commit message).
 
 As an example, when you publish changes to a remote repository using `gt publish`, **Git for Humans** will check the status of your project. 
 
