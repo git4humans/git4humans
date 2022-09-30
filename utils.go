@@ -14,7 +14,7 @@ func contains(element string, data []string) bool {
 	return index >= 0
 }
 
-func remove(data []string, element string) []string {
+func remove(element string, data []string) []string {
 	index := indexOf(element, data)
 
 	if index >= 0 {

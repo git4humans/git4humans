@@ -17,8 +17,8 @@ func Save() {
 	message := ""
 
 	params := args
-	params = remove(params, "-m")
-	params = remove(params, "--message")
+	params = remove("-m", params)
+	params = remove("--message", params)
 
 	if HasUpdate() || HasCommit() {
 		if len(params) > 0 {

@@ -17,8 +17,8 @@ func User() {
 	global := contains("--global", args) || contains("-g", args)
 
 	if global {
-		params = remove(params, "--global")
-		params = remove(params, "-g")
+		params = remove("--global", params)
+		params = remove("-g", params)
 	}
 
 	if len(params) >= 2 {
