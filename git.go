@@ -33,7 +33,7 @@ Use '%[1]s save' if you want to init, add all files, and commit with a specific 
 
 		fmt.Println()
 		fmt.Println()
-		fmt.Printf("Do you want to run '%[1]s start' now? (y/n) ", Command)
+		fmt.Printf("Run '%[1]s start' now? (y/n) ", Command)
 
 		reader := bufio.NewReader(os.Stdin)
 
