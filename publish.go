@@ -71,7 +71,7 @@ func Publish() {
 	}
 
 	if NoRepo(name) {
-		fmt.Println("Err: cannot publish to an unregistered remote repository.")
+		fmt.Println("Err: cannot publish to an unidentified remote repository.")
 		return
 	}
 
@@ -80,7 +80,7 @@ func Publish() {
 		Git("status")
 		fmt.Println()
 
-		fmt.Println("You have some changes in this project.")
+		fmt.Println("You have some recent changes in this project.")
 		fmt.Println()
 		fmt.Print("Save the changes? (y/n) ")
 
