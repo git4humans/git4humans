@@ -66,6 +66,7 @@ func Save() {
 				Git("status")
 
 				fmt.Println()
+				fmt.Println()
 				fmt.Println("Warn: this will save all changes in your branch.")
 			}
 
