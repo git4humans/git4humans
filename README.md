@@ -121,7 +121,39 @@ No need to state it explicitly. The tool will understand.
 
 For an advanced and more complex use, you can always fallback to the [original Git commands](https://git-scm.com/docs). Every [standard Git commands](https://git-scm.com/docs) is applicable in **Git for Humans**.
 
-Another principle is **interactivity and guidance**.
+Another principle is **interactivity and guidance**. It means the tool will guide you in an interactive way for some operations that need a confirmation (or an additional input, such as filename, or commit message).
+
+As an example, when you publish changes to a remote repository using `gt publish`, **Git for Humans** will check the status of your project. 
+
+If you have some untracked or modified files that has not been committed, it will ask for confirmation if you want to save and include it with your current publish command. The tool will also show details of the changes so you can easily decide.
+
+```shell
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "gt + <file>..." to update what will be committed)
+  (use "gt restore <file>..." to discard changes in working directory)
+        modified:   README.md
+        modified:   start.go
+
+no changes added to commit (use "gt +" and/or "gt save")
+
+You have some recent changes in this branch.
+
+Do you want to save all the changes? (y/n) _
+```
+You may type `y` to confirm that yes, you want to include all the changes with your current publish. Then the tool will ask you to input the commit message.
+
+```shell
+You have some recent changes in this branch.
+
+Do you want to save all the changes? (y/n) y
+
+Save with message: _
+```
+
+This way, the tool will try its best to guide you to make your Git experience more fun and enjoyable.
 
 ## Usage 
 
