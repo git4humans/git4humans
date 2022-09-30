@@ -6,7 +6,7 @@ An Intuitive [Git](https://git-scm.com/) Commands for Humans
 
 [Git](https://git-scm.com/) is cool. It makes teamwork and collaborations easy.
 
-But have you ever have to type unnecessary long commands like the following (only to start using Git in your project):
+But have you ever have to type unnecessarily long commands like so (only to start using Git in your project):
 
 ```shell
 git init 
@@ -14,7 +14,7 @@ git add .
 git commit -m "Initial commit"
 ```
 
-Or when you need to face another long commands for publishing changes to a remote repository:
+Or when you need to face another commands for publishing changes to a remote repository:
 
 ```shell
 git remote add origin https://github.com/git4humans/git4humans
