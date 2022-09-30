@@ -11,6 +11,11 @@ import (
 // Publish changes into remote repository
 // Another way of git push
 func Publish() {
+	if IsHelp() {
+		PublishUsage()
+		return
+	}
+
 	reader := bufio.NewReader(os.Stdin)
 
 	if NotGit() {
@@ -139,4 +144,8 @@ func CanPublish() bool {
 	canPublish := strings.Contains(status, "Your branch is ahead of")
 
 	return canPublish
+}
+
+func PublishUsage() {
+	fmt.Println()
 }
