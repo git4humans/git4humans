@@ -82,9 +82,12 @@ func Publish() {
 
 	if HasUpdate() {
 		fmt.Println()
-		Git("status")
-		fmt.Println()
 
+		Git("status")
+
+		fmt.Println()
+		fmt.Println()
+		fmt.Println()
 		fmt.Println("Warn: you have some unstaged changes in this branch.")
 		fmt.Println()
 		fmt.Print("Want to save this changes? (y/n) ")
