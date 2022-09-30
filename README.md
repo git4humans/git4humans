@@ -99,7 +99,7 @@ The basic principle of **Git for Humans** is **conventions over configurations**
 
 As an example, when dealing with remote repositories, **Git for Humans** will use `origin` as the default name for your remote repository. Unless you state it spesifically, the tool will assume you want to use `origin`. 
 
-As a result, when adding a remote repository, for example, you can use simple `gt repo` command:
+As a result, to add a remote repository, for example, you can use simple `gt repo` command:
 
 ```shell 
 gt repo https://github.com/pytorch/pytorch 
