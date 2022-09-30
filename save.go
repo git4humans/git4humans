@@ -13,6 +13,35 @@ func Save() {
 		return
 	}
 
+	if NotGit() {
+		fmt.Println()
+		fmt.Println("Warn: your project is not a Git repository.")
+		fmt.Println()
+		fmt.Print("Create a Git repository? (y/n) ")
+
+		reader := bufio.NewReader(os.Stdin)
+		input, _, _ := reader.ReadLine()
+
+		confirm := ""
+
+		if len(input) > 0 {
+			confirm = strings.Replace(string(input), "\n", "", -1)
+		}
+
+		yes := confirm == "Y" || confirm == "y"
+
+		if yes {
+			fmt.Println()
+			Git("init")
+		}
+	}
+
+	if NotGit() {
+		fmt.Println()
+		fmt.Println("Abort: not a Git repository, cannot save.")
+		return
+	}
+
 	args := os.Args[2:]
 	message := ""
 
@@ -26,17 +55,18 @@ func Save() {
 		args = RemoveFlag("--message", args)
 	}
 
-	if NotGit() {
-		Git("init")
-	}
-
 	if HasUpdate() || HasCommit() {
 		if len(message) <= 0 {
-			if len(args) <= 0 && HasUpdate() {
+			// only show details and warning
+			// if the branch has some changes
+			// and no additional arguments (containing the list of files to save)
+			if HasUpdate() && len(args) <= 0 {
+				fmt.Println()
+
 				Git("status")
 
 				fmt.Println()
-				fmt.Println("This will save all changes in your branch.")
+				fmt.Println("Warn: this will save all changes in your branch.")
 			}
 
 			fmt.Println()
@@ -69,7 +99,7 @@ func Save() {
 		}
 	} else {
 		fmt.Println()
-		fmt.Println("Abort: no changes to save in your project.")
+		fmt.Println("Abort: no changes to save in your branch.")
 	}
 }
 
