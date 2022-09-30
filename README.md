@@ -17,9 +17,10 @@ git commit -m "Initial commit"
 Or when you need to face another long commands for publishing changes to a remote repository:
 
 ```shell
+git remote add origin https://github.com/git4humans/git4humans
+
 git add .
-git commit -m "Add publish functionality"
-git remote add origin https://github.com/git4humans/git4humans 
+git commit -m "Add publish functionality" 
 git push origin main
 ```
 
