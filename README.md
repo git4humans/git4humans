@@ -200,7 +200,7 @@ Windows
 go build -o gt.exe cmd/gt/main.go
 ```
 
-We also include a [default configuration](.goreleaser.yaml) to build the project using [Goreleaser](https://goreleaser.com/).
+We also include a [default configuration](.goreleaser.yaml) to build the project with [Goreleaser](https://goreleaser.com/).
 
 ```shell
 goreleaser release --snapshot --skip-publish --rm-dist
