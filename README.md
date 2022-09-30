@@ -136,7 +136,7 @@ Besides, for an advanced and more complex use, you can always fallback to the [o
 
 ### Interactivity & Guidance
 
-Another principle is **interactivity and guidance**. It means the tool will guide you in an interactive way for some process that needs confirmation (or an additional input, such as filename or commit message).
+Another principle is **interactivity and guidance**. It means the tool will guide you in an interactive way for some process that needs confirmation (or additional input, such as file name or commit message).
 
 As an example, when you publish changes to a remote repository using `gt publish`, **Git for Humans** will check the status of your project. 
 
