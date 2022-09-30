@@ -118,7 +118,7 @@ As a result, to add a remote repository, you can use simple `gt repo` command:
 gt repo https://github.com/pytorch/pytorch 
 ```
 
-instead of the long command:
+instead of the long ones:
 
 ```
 git remote add origin https://github.com/pytorch/pytorch
