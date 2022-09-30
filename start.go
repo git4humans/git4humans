@@ -14,9 +14,7 @@ import (
 // git commit -m "Initial commit"
 func Start() {
 	fmt.Print(`
-This will create a fresh Git repository in the current working directory, then add all files into staging area and do an initial commit.
-
-Equivalent of running:
+This will create a Git repository in your working directory, then add all files into staging  and do an initial commit:
 
     git init
     git add .
