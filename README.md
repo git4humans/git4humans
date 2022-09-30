@@ -104,11 +104,6 @@ As a result, to add a remote repository, for example, you can use simple `gt rep
 ```shell 
 gt repo https://github.com/pytorch/pytorch 
 ```
-or 
-
-```shell 
-gt repo + https://github.com/pytorch/pytorch 
-```
 
 instead of the long command:
 
