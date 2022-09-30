@@ -20,9 +20,9 @@ func Publish() {
 
 	if NotGit() {
 		fmt.Println()
-		fmt.Println("This is not a Git repository.")
+		fmt.Println("Warn: this project is not a Git repository.")
 		fmt.Println()
-		fmt.Print("Start a fresh Git repository? (y/n) ")
+		fmt.Print("Create a Git repository? (y/n) ")
 
 		confirm := ""
 		input, _, _ := reader.ReadLine()
@@ -41,7 +41,7 @@ func Publish() {
 	}
 
 	if NotGit() {
-		fmt.Println("Err: cannot publish a non Git repository.")
+		fmt.Println("Abort: not a Git repository, cannot publish.")
 		return
 	}
 
@@ -76,7 +76,7 @@ func Publish() {
 	}
 
 	if NoRepo(name) {
-		fmt.Println("Err: cannot publish to an unidentified remote repository.")
+		fmt.Println("Abort: you should add remote repository to publish.")
 		return
 	}
 
@@ -85,9 +85,9 @@ func Publish() {
 		Git("status")
 		fmt.Println()
 
-		fmt.Println("You have unstaged changes in this branch.")
+		fmt.Println("Warn: you have some unstaged changes in this branch.")
 		fmt.Println()
-		fmt.Print("Do you want to save all the changes? (y/n) ")
+		fmt.Print("Want to save this changes? (y/n) ")
 
 		input, _, _ := reader.ReadLine()
 		confirm := ""
@@ -111,11 +111,12 @@ func Publish() {
 
 			if len(message) > 0 {
 				fmt.Println()
+
 				Git("add", ".")
 				Git("commit", "-m", message)
 			} else {
 				fmt.Println()
-				fmt.Println("Cannot commit the changes without a message.")
+				fmt.Println("Cannot save without a message.")
 			}
 		}
 	}
