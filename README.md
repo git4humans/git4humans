@@ -24,7 +24,7 @@ git commit -m "Add publish functionality"
 git push origin main
 ```
 
-Or you simply want to save all your recent changes locally:
+Or simply want to save all your recent changes locally:
 
 ```shell
 git add .
