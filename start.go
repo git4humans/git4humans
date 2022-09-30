@@ -19,14 +19,14 @@ func Start() {
 	}
 
 	fmt.Print(`
-This will create a Git repository in your working directory, then add all files into staging  and do an initial commit:
+Warn: this will create a fresh Git repository in your project, then automatically staging all files and do initial commit, equivalent as the following:
 
     git init
     git add .
     git commit -m "Initial commit"
 
 `)
-	fmt.Print("Continue? (y/n) ")
+	fmt.Print("Do you want to continue? (y/n) ")
 
 	reader := bufio.NewReader(os.Stdin)
 	input, _, _ := reader.ReadLine()
