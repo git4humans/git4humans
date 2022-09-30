@@ -174,7 +174,7 @@ The infamous [80/20 Pareto Principle](https://en.wikipedia.org/wiki/Pareto_princ
 
 **Git for Humans** is focusing into these 20% commands that you will likely touch in your everyday use. 
 
-For more complex and advanced use, you can always fallback to the [original Git commands](https://git-scm.com/docs). Every [standard Git commands](https://git-scm.com/docs) is applicable in **Git for Humans** (e.g., you can use `git bisect` and `gt bisect` command interchangeably).
+For more complex and advanced use, you can always fallback to the [original Git commands](https://git-scm.com/docs). Every [standard Git commands](https://git-scm.com/docs) is applicable in **Git for Humans** (e.g., you can use `git bisect` and `gt bisect` interchangeably).
 
 **gt new** 
 
