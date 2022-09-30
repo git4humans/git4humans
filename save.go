@@ -8,6 +8,11 @@ import (
 )
 
 func Save() {
+	if IsHelp() {
+		SaveUsage()
+		return
+	}
+
 	args := os.Args[2:]
 	message := ""
 
@@ -56,4 +61,8 @@ func Save() {
 		fmt.Println()
 		fmt.Println("Abort: no changes to save in your project.")
 	}
+}
+
+func SaveUsage() {
+	fmt.Println()
 }
