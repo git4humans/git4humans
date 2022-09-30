@@ -23,7 +23,7 @@ git remote add origin https://github.com/git4humans/git4humans
 git push origin main
 ```
 
-Using **Git for Humans**, the above two scenarios can be done in a more succinct way (and let the tool guide you in a friendly way):
+Using **Git for Humans**, the above two scenarios can be done in a more succinct way (and let the tool guide you in a friendly interactive way):
 
 ```shell 
 gt start 
