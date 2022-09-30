@@ -13,6 +13,11 @@ import (
 // git add .
 // git commit -m "Initial commit"
 func Start() {
+	if IsHelp() {
+		StartUsage()
+		return
+	}
+
 	fmt.Print(`
 This will create a Git repository in your working directory, then add all files into staging  and do an initial commit:
 
@@ -43,4 +48,8 @@ This will create a Git repository in your working directory, then add all files 
 			Git("commit", "-m", "Initial commit")
 		}
 	}
+}
+
+func StartUsage() {
+	fmt.Println()
 }
