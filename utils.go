@@ -1,19 +1,25 @@
 package git4humans
 
-func contains(s []string, str string) bool {
-	for _, v := range s {
-		if v == str {
-			return true
+func indexOf(element string, data []string) int {
+	for index, v := range data {
+		if element == v {
+			return index
 		}
 	}
-	return false
+	return -1
 }
 
-func remove(s []string, str string) []string {
-	for i, v := range s {
-		if v == str {
-			return append(s[:i], s[i+1:]...)
-		}
+func contains(data []string, element string) bool {
+	index := indexOf(element, data)
+	return index >= 0
+}
+
+func remove(data []string, element string) []string {
+	index := indexOf(element, data)
+
+	if index >= 0 {
+		return append(data[:index], data[index+1:]...)
 	}
-	return s
+
+	return data
 }
