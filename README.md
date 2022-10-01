@@ -164,7 +164,7 @@ Want to save this changes? (y/n) y
 Save with message: _
 ```
 
-This way, **Git for Humans** will try its best to guide you, to make your experience with Git more fun and enjoyable.
+This way, **Git for Humans** will try its best to guide you, and make your experience with Git more fun and enjoyable.
 
 ## Usage 
 
