@@ -62,7 +62,7 @@ func Publish() {
 		fmt.Printf("Warn: remote repository %[1]s is not found.", remote)
 		fmt.Println()
 		fmt.Println()
-		fmt.Printf("URL for remote %[1]s: ", remote)
+		fmt.Printf("Add URL for remote %[1]s: ", remote)
 
 		url := ""
 		input, _, _ := reader.ReadLine()
@@ -72,11 +72,13 @@ func Publish() {
 		}
 
 		if len(url) > 0 {
+			fmt.Println()
 			Git("remote", "add", remote, url)
 		}
 	}
 
 	if NoRepo(remote) {
+		fmt.Println()
 		fmt.Println("Abort: you should add remote repository to publish.")
 		return
 	}
