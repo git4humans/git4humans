@@ -83,29 +83,29 @@ func Publish() {
 		return
 	}
 
-	if len(args) < 2 {
-		url := GitStr("remote", "get-url", remote)
-		url = strings.Trim(url, "\n")
+	/* if len(args) < 2 {
+			url := GitStr("remote", "get-url", remote)
+			url = strings.Trim(url, "\n")
 
-		fmt.Printf(`
-Warn: this will publish your local %[1]s branch to the %[2]s branch of remote repository %[3]s (%[4]s)
-		`, localBranch, remoteBranch, remote, url)
-		fmt.Println()
-		fmt.Print("Continue? (y/n) ")
+			fmt.Printf(`
+	Warn: this will publish your local %[1]s branch to the %[2]s branch of remote repository %[3]s (%[4]s)
+			`, localBranch, remoteBranch, remote, url)
+			fmt.Println()
+			fmt.Print("Continue? (y/n) ")
 
-		input, _, _ := reader.ReadLine()
-		confirm := ""
+			input, _, _ := reader.ReadLine()
+			confirm := ""
 
-		if len(input) > 0 {
-			confirm = strings.Replace(string(input), "\n", "", -1)
-		}
+			if len(input) > 0 {
+				confirm = strings.Replace(string(input), "\n", "", -1)
+			}
 
-		abort := confirm != "Y" && confirm != "y"
+			abort := confirm != "Y" && confirm != "y"
 
-		if abort {
-			return
-		}
-	}
+			if abort {
+				return
+			}
+		} */
 
 	if HasUpdate() {
 		fmt.Println()
@@ -145,14 +145,17 @@ Warn: this will publish your local %[1]s branch to the %[2]s branch of remote re
 				Git("commit", "-m", message)
 			} else {
 				fmt.Println()
-				fmt.Println("Cannot save without a message.")
+				fmt.Println("Cannot save the changes without a message.")
 			}
 		}
 	}
 
 	if CanPublish() {
+		url := GitStr("remote", "get-url", remote)
+		url = strings.Trim(url, "\n")
+
 		fmt.Println()
-		fmt.Printf("Publishing from local %[1]s to remote %[2]s %[3]s...", localBranch, remote, remoteBranch)
+		fmt.Printf("Publishing local branch %[1]s to remote branch %[2]s of %[3]s (%[4]s)...", localBranch, remoteBranch, remote, url)
 		fmt.Println()
 
 		// Git("push", name, branch)
