@@ -41,16 +41,25 @@ func Delete() {
 You should specify file(s) to delete.
 
 Examples:
-    
-    %[1]s %[2]s file
-    %[1]s %[2]s file1 file2 file3
-    %[1]s %[2]s dir/file
-    %[1]s %[2]s file1 dir/file2
+
+    %[1]s - file.txt
+    %[1]s - file1.txt file2.txt file3.txt
+    %[1]s - file1.txt dir2/file2.txt
             `, Command, command)
 		}
 	}
 }
 
 func DeleteHelp() {
-	fmt.Printf(``)
+	fmt.Printf(`
+Delete file(s) from the directory and the staging area.
+
+usage: %[1]s - [<file>]
+
+examples:
+
+    %[1]s - file.txt
+    %[1]s - file1.txt file2.txt file3.txt
+    %[1]s - file1.txt dir2/file2.txt
+	`, Command)
 }
