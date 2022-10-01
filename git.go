@@ -132,8 +132,9 @@ func ListChanges() {
 		useAdd := strings.Contains(line, `use "git add <file>`)
 		useRestore := strings.Contains(line, `use "git restore <file>`)
 		useRemove := strings.Contains(line, `use "git rm`)
+		usePush := strings.Contains(line, `use "git push"`)
 
-		hide := (onBranch || isUptodate || noCommit || noChanges || noAdded || useAdd || useRestore || useRemove)
+		hide := (onBranch || isUptodate || noCommit || noChanges || noAdded || useAdd || useRestore || useRemove || usePush)
 		show := !hide
 
 		if show {
