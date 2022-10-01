@@ -14,7 +14,7 @@ import (
 // git commit -m "Initial commit"
 func Start() {
 	if IsHelp() {
-		StartUsage()
+		StartHelp()
 		return
 	}
 
@@ -50,6 +50,16 @@ Warn: this will create a fresh Git repository in your project, then automaticall
 	}
 }
 
-func StartUsage() {
-	fmt.Println()
+func StartHelp() {
+	fmt.Printf(`
+Start a Git repository in your project.
+
+usage: %[1]s start
+
+The command will create a fresh Git repository in this current working directory, then automatically staging all files and do initial commit, equivalent as:
+
+    git init
+    git add .
+    git commit -m "Initial commit"
+	`, Command)
 }
