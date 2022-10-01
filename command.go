@@ -94,13 +94,7 @@ func HasOption(option string, args []string) bool {
 }
 
 func RemoveOption(option string, args []string) []string {
-	index := indexOf(option, args)
-
-	if index >= 0 {
-		return append(args[:index], args[index+1:]...)
-	} else {
-		return args
-	}
+	return remove(option, args)
 }
 
 func HasFlag(key string, args []string) bool {
