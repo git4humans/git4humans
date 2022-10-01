@@ -29,9 +29,23 @@ func Move() {
 }
 
 func MoveHelp() {
-	fmt.Printf(``)
+	command := os.Args[1]
+
+	if command == "rename" {
+		RenameHelp()
+	} else {
+		fmt.Printf(`
+Move a file, a directory, or a symlink into another location.
+
+usage: %[1]s move <file> <target>
+		`, Command)
+	}
 }
 
 func RenameHelp() {
-	fmt.Printf(``)
+	fmt.Printf(`
+Rename a file, a directory, or a symlink.
+
+usage: %[1]s rename <oldname> <newname>
+	`, Command)
 }
