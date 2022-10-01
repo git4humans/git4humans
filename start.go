@@ -26,7 +26,7 @@ Warn: this will create a fresh Git repository in your project, then automaticall
     git commit -m "Initial commit"
 
 `)
-	fmt.Print("Do you want to continue? (y/n) ")
+	fmt.Print("Enter to continue, q to quit: ")
 
 	reader := bufio.NewReader(os.Stdin)
 	input, _, _ := reader.ReadLine()
@@ -36,10 +36,10 @@ Warn: this will create a fresh Git repository in your project, then automaticall
 		confirm = strings.Replace(string(input), "\n", "", -1)
 	}
 
-	yes := confirm == "Y" || confirm == "y"
-
-	if yes {
+	if confirm != "q" {
 		args := os.Args[2:]
+
+		fmt.Println()
 
 		Git("init", args...)
 
