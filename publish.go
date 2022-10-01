@@ -143,7 +143,7 @@ func Publish() {
 				Git("commit", "-m", message)
 			} else {
 				fmt.Println()
-				fmt.Println("Cannot save the changes without a message.")
+				fmt.Println("Cannot save changes without a message.")
 			}
 		}
 	}

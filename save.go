@@ -61,13 +61,7 @@ func Save() {
 			// if the branch has some changes
 			// and no additional arguments (containing the list of files to save)
 			if HasUpdate() && len(args) <= 0 {
-				fmt.Println()
-
-				Git("status")
-
-				fmt.Println()
-				fmt.Println()
-				fmt.Println("Warn: this will save all changes in your branch.")
+				ListChanges()
 			}
 
 			fmt.Println()
@@ -96,7 +90,7 @@ func Save() {
 			}
 		} else {
 			fmt.Println()
-			fmt.Println("Abort: cannot save without a message.")
+			fmt.Println("Abort: cannot save changes without a message.")
 		}
 	} else {
 		fmt.Println()
