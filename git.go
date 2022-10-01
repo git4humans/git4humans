@@ -80,7 +80,7 @@ func GitStr(command string, args ...string) string {
 }
 
 func NotGit() bool {
-	response := GitStr("status")
+	response := GitStr("branch", "--show-current")
 	notGit := strings.Contains(response, "not a git repository")
 
 	return notGit
