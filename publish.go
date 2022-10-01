@@ -58,9 +58,17 @@ func Publish() {
 	}
 
 	if len(args) < 2 {
+		url := ""
+
+		if HasRepo(remote) {
+			url = GitStr("remote", "get-url", remote)
+			url = strings.Trim(url, "\n")
+			url = "(" + url + ")"
+		}
+
 		fmt.Printf(`
-Warn: this will publish your local branch %[1]s to the branch %[2]s of remote %[3]s 
-		`, localBranch, remoteBranch, remote)
+Warn: this will publish your local branch %[1]s to the branch %[2]s of remote %[3]s %[4]s 
+		`, localBranch, remoteBranch, remote, url)
 		fmt.Println()
 		fmt.Print("Continue? (y/n) ")
 
