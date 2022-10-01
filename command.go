@@ -73,7 +73,8 @@ func Execute() {
 		if contains(command, GitCommands) {
 			Git(command, args...)
 		} else {
-			fmt.Printf(`Err: '%[1]s' is not a valid command. See %[2]s help.
+			fmt.Println()
+			fmt.Printf(`Error: '%[1]s' is not a valid command. See %[2]s help.
             `, command, Command)
 		}
 	}
