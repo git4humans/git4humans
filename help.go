@@ -12,21 +12,22 @@ These are common commands you will most likely use in everyday situation.
 
 Start a working area
     copy  	Copy an existing repository to a new directory
-    new		Create an Git repository in a new directory 
-    start	Initialize an fresh Git repository in the current working directory
+    new		Create a Git repository in a new directory 
+    start	Start a fresh Git repository in the current directory
+    refresh     Refresh or reinitialize the existing Git repository in the current directory
 
 Work on the current change 
-    + 		Add file contents to the index 
-    - 		Delete file(s) from the directory and from the index 
+    + 		Add file contents to the staging area 
+    - 		Delete file(s) from the directory and the staging area
     move 	Move a file, a directory, or a symlink 
     rename 	Rename a file, a directory, or a symlink 
     restore	Restore deleted file(s)
-    save 	Record changes to the repository
+    save 	Record changes to the repository (staging and committing file(s))
 
 Collaborate with others
-    repo 	List, add, or delete remote repositories
-    fetch 	Download from another repository
-    sync 	Fetch from and integrate with another repository or a local branch 
+    repo 	Manage remote repositories (e.g., list, add, delete)
+    fetch 	Download contents from another repository
+    sync 	Fetch from and integrate with a remote repository or a local branch 
     publish     Publish changes to a remote repository (shortcut: '%[2]s pub')
 
 Grow, mark, and tweak your common history 
@@ -37,15 +38,15 @@ Grow, mark, and tweak your common history
     tag 	Create, list, delete, or verify a tag object
 
 Examine history and state 
-    status 	Show the working tree status (shortcut: '%[2]s s') 
+    status 	Show current status of the branch (shortcut: '%[2]s s') 
     log 	Show commit logs (shortcut: '%[2]s l')
     diff 	Show changes between commits, commit and working tree, etc.
 
 Configurations 
-    config	Show or update Git configuration
-    user	Show or update Git user configuration (local or global)
+    config	Show or update configuration
+    user	Show or update user configuration (local or global)
 
-Also, you can use other standard commands that comes with Git. 
-As an example, '%[2]s push origin main' will work exactly as 'git push origin main' 
+You may use other original commands from Git.
+Ex: you can use '%[2]s push origin main' and 'git push origin main' interchangeably.
 	`, Version, Command)
 }

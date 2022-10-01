@@ -27,6 +27,8 @@ func Execute() {
 		New()
 	case "start":
 		Start()
+	case "refresh":
+		Refresh()
 	case "+":
 		Add()
 	case "-":
