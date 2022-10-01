@@ -22,12 +22,12 @@ Work on the current change
     move 	Move a file, a directory, or a symlink 
     rename 	Rename a file, a directory, or a symlink 
     restore	Restore deleted file(s)
-    save 	Record changes to the repository (staging and committing file(s))
+    save 	Record changes in your local repository
 
 Collaborate with others
     repo 	Manage remote repositories (e.g., list, add, delete)
-    fetch 	Fetch everything from a remote repository
-    sync 	Fetch from and integrate with a remote repository or a local branch 
+    fetch 	Fetch everything from every branches in a remote repository
+    sync 	Fetch from and integrate with a repository or a local branch 
     publish     Publish changes to a remote repository (shortcut: '%[2]s pub')
 
 Grow, mark, and tweak your common history 
