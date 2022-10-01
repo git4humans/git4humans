@@ -26,7 +26,7 @@ Work on the current change
 
 Collaborate with others
     repo 	Manage remote repositories (e.g., list, add, delete)
-    fetch 	Download contents from another repository
+    fetch 	Fetch everything from a remote repository
     sync 	Fetch from and integrate with a remote repository or a local branch 
     publish     Publish changes to a remote repository (shortcut: '%[2]s pub')
 
