@@ -108,15 +108,13 @@ func Publish() {
 		} */
 
 	if HasUpdate() {
-		fmt.Println()
+		ListChanges()
 
-		Git("status")
-
-		fmt.Println()
+		/* fmt.Println()
 		fmt.Println()
 		fmt.Println("Warn: you have some unstaged changes in this branch.")
-		fmt.Println()
-		fmt.Print("Save this changes? (y/n) ")
+		fmt.Println() */
+		fmt.Print("Save all changes? (y/n) ")
 
 		input, _, _ := reader.ReadLine()
 		confirm := ""
@@ -155,7 +153,7 @@ func Publish() {
 		url = strings.Trim(url, "\n")
 
 		fmt.Println()
-		fmt.Printf("Publishing local branch %[1]s to remote branch %[2]s of %[3]s (%[4]s)...", localBranch, remoteBranch, remote, url)
+		fmt.Printf("Publishing your branch %[1]s to the branch %[2]s of remote %[3]s (%[4]s)...", localBranch, remoteBranch, remote, url)
 		fmt.Println()
 
 		// Git("push", name, branch)
