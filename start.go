@@ -19,7 +19,7 @@ func Start() {
 	}
 
 	fmt.Print(`
-Warn: this will create a fresh Git repository in your project, then automatically staging all files and do initial commit, equivalent as the following:
+Warn: this will create a fresh Git repository in your project, then automatically stage all files and do initial commit, equivalent as the following:
 
     git init
     git add .
@@ -56,7 +56,7 @@ Start a Git repository in your project.
 
 usage: %[1]s start
 
-The command will create a fresh Git repository in this current working directory, then automatically staging all files and do initial commit, equivalent as:
+The command creates a fresh Git repository in this current working directory, then automatically stage all files and do initial commit, equivalent as:
 
     git init
     git add .
