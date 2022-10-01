@@ -51,6 +51,8 @@ Examples:
 }
 
 func DeleteHelp() {
+	command := os.Args[1]
+
 	fmt.Printf(`
 Delete file(s) from the directory and the staging area.
 
@@ -58,8 +60,8 @@ usage: %[1]s - [<file>]
 
 examples:
 
-    %[1]s - file.txt
-    %[1]s - file1.txt file2.txt file3.txt
-    %[1]s - file1.txt dir2/file2.txt
-	`, Command)
+    %[1]s %[2]s file.txt
+    %[1]s %[2]s file1.txt file2.txt file3.txt
+    %[1]s %[2]s file1.txt dir2/file2.txt
+	`, Command, command)
 }
