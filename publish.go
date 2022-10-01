@@ -67,7 +67,7 @@ func Publish() {
 		}
 
 		fmt.Printf(`
-Warn: this will publish your local branch %[1]s to the branch %[2]s of remote %[3]s %[4]s 
+Warn: this will publish your local %[1]s branch to the remote %[2]s branch of %[3]s repository %[4]s 
 		`, localBranch, remoteBranch, remote, url)
 		fmt.Println()
 		fmt.Print("Continue? (y/n) ")
