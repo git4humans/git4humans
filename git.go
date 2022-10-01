@@ -110,8 +110,36 @@ func RefineStatus(status string) string {
 	status = strings.ReplaceAll(status, `use "git push" to publish`, fmt.Sprintf(`use "%[1]s publish" or "%[1]s pub" to publish`, Command))
 	status = strings.ReplaceAll(status, "git push", Command+" publish")
 	status = strings.ReplaceAll(status, "git add", Command+" +")
+	status = strings.ReplaceAll(status, "git rm", Command+" -")
 	status = strings.ReplaceAll(status, "git restore", Command+" restore")
 	status = strings.ReplaceAll(status, "git commit -a", Command+" save")
 
 	return status
+}
+
+func ListChanges() {
+	status := GitStr("status")
+
+	lines := strings.Split(strings.ReplaceAll(status, "\r\n", "\n"), "\n")
+	result := []string{}
+
+	for _, line := range lines {
+		onBranch := strings.HasPrefix(line, "On branch")
+		isUptodate := strings.HasPrefix(line, "Your branch is up to date")
+		noCommit := strings.HasPrefix(line, "No commits yet")
+		noChanges := strings.HasPrefix(line, "no changes added to commit")
+		noAdded := strings.HasPrefix(line, "nothing added to commit")
+		useAdd := strings.Contains(line, `use "git add <file>`)
+		useRestore := strings.Contains(line, `use "git restore <file>`)
+		useRemove := strings.Contains(line, `use "git rm`)
+
+		hide := (onBranch || isUptodate || noCommit || noChanges || noAdded || useAdd || useRestore || useRemove)
+		show := !hide
+
+		if show {
+			result = append(result, line)
+		}
+	}
+
+	fmt.Print(strings.Join(result, "\n"))
 }
