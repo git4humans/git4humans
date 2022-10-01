@@ -31,17 +31,17 @@ func Copy() {
 			url = strings.Replace(string(inputUrl), "\n", "", -1)
 		}
 
-		fmt.Print("Target directory: ")
-
-		inputDir, _, _ := reader.ReadLine()
-
-		if len(inputDir) > 0 {
-			dir = strings.Replace(string(inputDir), "\n", "", -1)
-		}
-
-		fmt.Println("")
-
 		if len(url) > 0 {
+			fmt.Print("Copy into directory: ")
+
+			inputDir, _, _ := reader.ReadLine()
+
+			if len(inputDir) > 0 {
+				dir = strings.Replace(string(inputDir), "\n", "", -1)
+			}
+
+			fmt.Println("")
+
 			if len(dir) > 0 {
 				Git("clone", url, dir)
 			} else {
