@@ -57,6 +57,30 @@ func Publish() {
 		remoteBranch = localBranch
 	}
 
+	if len(args) < 2 {
+		url := GitStr("remote", "get-url", remote)
+		url = strings.Trim(url, "\n")
+
+		fmt.Printf(`
+Warn: this will publish your local %[1]s branch to the %[2]s branch of remote %[3]s (%[4]s)
+		`, localBranch, remoteBranch, remote, url)
+		fmt.Println()
+		fmt.Print("Continue? (y/n) ")
+
+		input, _, _ := reader.ReadLine()
+		confirm := ""
+
+		if len(input) > 0 {
+			confirm = strings.Replace(string(input), "\n", "", -1)
+		}
+
+		abort := confirm != "Y" && confirm != "y"
+
+		if abort {
+			return
+		}
+	}
+
 	if NoRepo(remote) {
 		fmt.Println()
 		fmt.Println("Remote repository " + remote + " is not found.")
