@@ -12,7 +12,7 @@ func Refresh() {
 
 func RefreshHelp() {
 	fmt.Printf(`
-Refresh or reinitialize the existing Git repository in your project
+Refresh the existing Git repository in your project.
 
 usage: %[1]s refresh
 	`, Command)
