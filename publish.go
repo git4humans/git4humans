@@ -110,7 +110,7 @@ Warn: this will publish your local branch %[1]s to the branch %[2]s of remote %[
 		fmt.Println()
 		fmt.Println("Warn: you have some unstaged changes in this branch.")
 		fmt.Println()
-		fmt.Print("Want to save this changes? (y/n) ")
+		fmt.Print("Save this changes? (y/n) ")
 
 		input, _, _ := reader.ReadLine()
 		confirm := ""
