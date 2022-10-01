@@ -59,7 +59,7 @@ func Publish() {
 
 	if len(args) < 2 {
 		fmt.Printf(`
-Warn: this will publish your local %[1]s branch to the %[2]s branch of remote %[3]s
+Warn: this will publish your local branch %[1]s to the branch %[2]s of remote %[3]s 
 		`, localBranch, remoteBranch, remote)
 		fmt.Println()
 		fmt.Print("Continue? (y/n) ")
