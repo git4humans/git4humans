@@ -10,7 +10,7 @@ import (
 // Remove file(s)
 func Delete() {
 	if IsHelp() {
-		DeleteUsage()
+		DeleteHelp()
 		return
 	}
 
@@ -51,6 +51,6 @@ Examples:
 	}
 }
 
-func DeleteUsage() {
-	fmt.Println()
+func DeleteHelp() {
+	fmt.Printf(``)
 }

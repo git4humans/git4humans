@@ -11,7 +11,7 @@ import (
 // Automatically initialize if the repo is not initialized.
 func Add() {
 	if IsHelp() {
-		AddUsage()
+		AddHelp()
 		return
 	}
 
@@ -56,7 +56,7 @@ Examples:
 	}
 }
 
-func AddUsage() {
+func AddHelp() {
 	fmt.Printf(`
 Add file contents to the index
 

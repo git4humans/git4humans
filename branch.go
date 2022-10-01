@@ -8,7 +8,7 @@ import (
 
 func Branch() {
 	if IsHelp() {
-		BranchUsage()
+		BranchHelp()
 		return
 	}
 
@@ -31,7 +31,7 @@ func Branch() {
 
 func SwitchBranch() {
 	if IsHelp() {
-		SwitchUsage()
+		SwitchHelp()
 		return
 	}
 
@@ -57,10 +57,10 @@ func showBranch() {
 	Git("branch")
 }
 
-func BranchUsage() {
-	fmt.Println()
+func BranchHelp() {
+	fmt.Printf(``)
 }
 
-func SwitchUsage() {
-	fmt.Println()
+func SwitchHelp() {
+	fmt.Printf(``)
 }

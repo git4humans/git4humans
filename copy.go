@@ -10,7 +10,7 @@ import (
 // Clone a remote repository
 func Copy() {
 	if IsHelp() {
-		CopyUsage()
+		CopyHelp()
 		return
 	}
 
@@ -51,6 +51,6 @@ func Copy() {
 	}
 }
 
-func CopyUsage() {
-	fmt.Println()
+func CopyHelp() {
+	fmt.Printf(``)
 }

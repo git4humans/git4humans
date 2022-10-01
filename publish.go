@@ -12,7 +12,7 @@ import (
 // Another way of git push
 func Publish() {
 	if IsHelp() {
-		PublishUsage()
+		PublishHelp()
 		return
 	}
 
@@ -149,6 +149,6 @@ func CanPublish() bool {
 	return canPublish
 }
 
-func PublishUsage() {
-	fmt.Println()
+func PublishHelp() {
+	fmt.Printf(``)
 }

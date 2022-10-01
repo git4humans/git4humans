@@ -8,7 +8,7 @@ import (
 // Move or rename a file
 func Move() {
 	if IsHelp() {
-		MoveUsage()
+		MoveHelp()
 		return
 	}
 
@@ -28,6 +28,10 @@ func Move() {
 	}
 }
 
-func MoveUsage() {
-	fmt.Println()
+func MoveHelp() {
+	fmt.Printf(``)
+}
+
+func RenameHelp() {
+	fmt.Printf(``)
 }

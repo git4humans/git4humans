@@ -7,7 +7,7 @@ import (
 
 func User() {
 	if IsHelp() {
-		UserUsage()
+		UserHelp()
 		return
 	}
 
@@ -55,6 +55,6 @@ user.name   %[1]suser.email  %[2]s
 	}
 }
 
-func UserUsage() {
-	fmt.Println()
+func UserHelp() {
+	fmt.Printf(``)
 }

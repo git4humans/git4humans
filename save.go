@@ -9,7 +9,7 @@ import (
 
 func Save() {
 	if IsHelp() {
-		SaveUsage()
+		SaveHelp()
 		return
 	}
 
@@ -104,6 +104,6 @@ func Save() {
 	}
 }
 
-func SaveUsage() {
-	fmt.Println()
+func SaveHelp() {
+	fmt.Printf(``)
 }
