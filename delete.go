@@ -56,7 +56,7 @@ func DeleteHelp() {
 	fmt.Printf(`
 Delete file(s) from the directory and the staging area.
 
-usage: %[1]s - [<file>]
+usage: %[1]s %[2]s [<file>]
 
 examples:
 
