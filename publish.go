@@ -83,37 +83,33 @@ func Publish() {
 		return
 	}
 
-	/* if len(args) < 2 {
-			url := GitStr("remote", "get-url", remote)
-			url = strings.Trim(url, "\n")
+	if len(args) < 2 {
+		url := GitStr("remote", "get-url", remote)
+		url = strings.Trim(url, "\n")
 
-			fmt.Printf(`
-	Warn: this will publish your local %[1]s branch to the %[2]s branch of remote repository %[3]s (%[4]s)
-			`, localBranch, remoteBranch, remote, url)
-			fmt.Println()
-			fmt.Print("Continue? (y/n) ")
+		fmt.Printf(`
+Warn: this will publish your local branch %[1]s to the branch %[2]s of remote %[3]s (%[4]s)
+		`, localBranch, remoteBranch, remote, url)
+		fmt.Println()
+		fmt.Print("Enter to continue, q to quit: ")
 
-			input, _, _ := reader.ReadLine()
-			confirm := ""
+		input, _, _ := reader.ReadLine()
+		confirm := ""
 
-			if len(input) > 0 {
-				confirm = strings.Replace(string(input), "\n", "", -1)
-			}
+		if len(input) > 0 {
+			confirm = strings.Replace(string(input), "\n", "", -1)
+		}
 
-			abort := confirm != "Y" && confirm != "y"
-
-			if abort {
-				return
-			}
-		} */
+		if confirm == "q" {
+			return
+		}
+	}
 
 	if HasUpdate() {
+		fmt.Println()
+
 		ListChanges()
 
-		/* fmt.Println()
-		fmt.Println()
-		fmt.Println("Warn: you have some unstaged changes in this branch.")
-		fmt.Println() */
 		fmt.Print("Save all changes? (y/n) ")
 
 		input, _, _ := reader.ReadLine()
@@ -149,11 +145,8 @@ func Publish() {
 	}
 
 	if CanPublish() {
-		url := GitStr("remote", "get-url", remote)
-		url = strings.Trim(url, "\n")
-
 		fmt.Println()
-		fmt.Printf("Publishing your branch %[1]s to the branch %[2]s of remote %[3]s (%[4]s)...", localBranch, remoteBranch, remote, url)
+		fmt.Printf("Publishing %[1]s to %[2]s/%[3]s...", localBranch, remote, remoteBranch)
 		fmt.Println()
 
 		// Git("push", name, branch)
