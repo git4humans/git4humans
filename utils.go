@@ -19,7 +19,7 @@ func remove(element string, data []string) []string {
 
 	if index >= 0 {
 		return append(data[:index], data[index+1:]...)
+	} else {
+		return data
 	}
-
-	return data
 }
