@@ -137,29 +137,24 @@ Besides, for more complex use, you can always fallback to the [original Git comm
 
 Another principle is **interactivity and guidance**, which means the tool will guide you in an interactive way for some process that needs your confirmation (or an additional input, such as file name or commit message).
 
-As an example, when you publish changes to a remote repository using `gt publish`, **Git for Humans** will check the status of your project. If you have some new or modified files that is not committed, the tool will ask for confirmation whether you want to save and include them with this publish command. It will also show the changes so you can easily decide.
+As an example, when you publish changes to a remote repository using `gt publish`, **Git for Humans** will check the status of your project. If you have some new or modified files that is not committed, the tool will ask for confirmation whether you want to save and publish them. It will also show the list of changes so you can easily decide.
 
 ```shell
 On branch main
 Your branch is up to date with 'origin/main'.
 
 Changes not staged for commit:
-  (use "gt + <file>..." to update what will be committed)
-  (use "gt restore <file>..." to discard changes in working directory)
-        modified:   README.md
-        modified:   start.go
+    modified:   README.md
+    modified:   command.go
+    modified:   git.go
+    modified:   publish.go
 
-no changes added to commit (use "gt +" and/or "gt save")
-
-
-Warn: you have some unstaged changes in this branch.
-
-Want to save this changes? (y/n) _
+Save all changes? (y/n) _
 ```
-You may type `y` to confirm that yes, you want to include all the changes with your publish. Then the tool will ask you to type a commit message.
+You may type `y` to confirm that yes, you want to save and publish the changes. Then the tool will ask you to type a commit message.
 
 ```shell
-Want to save this changes? (y/n) y
+Save all changes? (y/n) y
 
 Save with message: _
 ```
@@ -177,6 +172,8 @@ The infamous [Pareto Principle](https://en.wikipedia.org/wiki/Pareto_principle) 
 **start**
 
 **copy**
+
+**refresh**
 
 ## Tutorial for Everyday Use
 
