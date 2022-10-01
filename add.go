@@ -58,7 +58,7 @@ Examples:
 
 func AddHelp() {
 	fmt.Printf(`
-Add file contents to the index
+Add file contents to the staging area.
 
 usage: %[1]s + [<file>]
 
