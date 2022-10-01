@@ -52,9 +52,7 @@ Use '%[1]s save' if you want to start Git, stage all files, and commit with a sp
 			Git("commit", "-m", "Initial commit")
 		} */
 	} else {
-		isStatus := command == "status" || command == "s"
-
-		if isStatus {
+		if command == "status" || command == "s" {
 			response = RefineStatus(response)
 		}
 
