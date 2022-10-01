@@ -1,7 +1,6 @@
 package git4humans
 
 import (
-	"bytes"
 	"fmt"
 	"os/exec"
 	"strings"
@@ -30,27 +29,6 @@ Use '%[1]s + .' if you only want to start Git and stage all files in your projec
 Use '%[1]s save' if you want to start Git, stage all files, and commit with a specific message.`, Command)
 
 		fmt.Println()
-		/* fmt.Println()
-		fmt.Printf("Run '%[1]s start' now? (y/n) ", Command)
-
-		reader := bufio.NewReader(os.Stdin)
-
-		confirm := ""
-		input, _, _ := reader.ReadLine()
-
-		if len(input) > 0 {
-			confirm = strings.Replace(string(input), "\n", "", -1)
-		}
-
-		yes := confirm == "Y" || confirm == "y"
-
-		if yes {
-			fmt.Println()
-
-			Git("init")
-			Git("add", ".")
-			Git("commit", "-m", "Initial commit")
-		} */
 	} else {
 		if command == "status" || command == "s" {
 			response = RefineStatus(response)
@@ -64,17 +42,10 @@ func GitStr(command string, args ...string) string {
 	params := append([]string{command}, args...)
 	cmd := exec.Command("git", params...)
 
-	var out bytes.Buffer
-	var err bytes.Buffer
+	out, _ := cmd.CombinedOutput()
+	result := string(out)
 
-	cmd.Stdout = &out
-	cmd.Stderr = &err
-
-	if cmd.Run() != nil {
-		return err.String()
-	} else {
-		return out.String()
-	}
+	return result
 }
 
 func NotGit() bool {
