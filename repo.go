@@ -103,7 +103,7 @@ func delete() {
 			Git("remote", "-v")
 		}
 	} else {
-		fmt.Println("Err: remote repository " + name + " is not found.")
+		fmt.Println("Abort: remote repository " + name + " is not found.")
 		fmt.Println()
 
 		Git("remote", "-v")
@@ -175,7 +175,7 @@ func list() {
 
 	if len(message) > 0 {
 		fmt.Println()
-		fmt.Println("Registered remote repositories:")
+		fmt.Println("List remote repositories:")
 		fmt.Println()
 		fmt.Print(message)
 	} else {

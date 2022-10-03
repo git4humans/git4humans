@@ -66,7 +66,7 @@ func New() {
 
 func NewHelp() {
 	fmt.Printf(`
-Create a fresh Git repository in a new directory.
+Create a new Git repository in a new directory.
 
 usage: %[1]s new <directory>
 

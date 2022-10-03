@@ -5,6 +5,5 @@ test/
 cmd/test/
 b.bat
 release.bat
-gt.exe
 test.go
 test.bat

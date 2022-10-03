@@ -54,7 +54,7 @@ func DeleteHelp() {
 	command := os.Args[1]
 
 	fmt.Printf(`
-Delete file(s) from the directory and the staging area.
+Delete file(s) at the given path(s), then stages the deletion for the next commit.
 
 usage: %[1]s %[2]s [<file>]
 

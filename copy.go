@@ -23,7 +23,7 @@ func Copy() {
 		dir := ""
 		reader := bufio.NewReader(os.Stdin)
 
-		fmt.Print("\nRepository URL: ")
+		fmt.Print("\nRepository URL to copy: ")
 
 		inputUrl, _, _ := reader.ReadLine()
 
@@ -32,7 +32,7 @@ func Copy() {
 		}
 
 		if len(url) > 0 {
-			fmt.Print("Copy into directory: ")
+			fmt.Print("Target directory: ")
 
 			inputDir, _, _ := reader.ReadLine()
 
@@ -53,13 +53,14 @@ func Copy() {
 
 func CopyHelp() {
 	fmt.Printf(`
-Copy an existing repository into a new directory.
+Copy an existing Git repository to a new directory.
 
 usage: %[1]s copy <url> <directory>
 
-Using the command without specifying a target directory will copy the repository into a new directory with the name specified in the repository URL.
+Using the command without specifying a target directory will copy the repository into a new directory with the name specified in the URL.
 
 examples:
+
     %[1]s copy https://github.com/pytorch/pytorch
     %[1]s copy https://github.com/pytorch/pytorch torch
 	`, Command)

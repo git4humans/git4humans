@@ -58,11 +58,12 @@ Examples:
 
 func AddHelp() {
 	fmt.Printf(`
-Add file contents to the staging area.
+Adds new or modified file(s) to the staging area for inclusion in the next commit.
 
 usage: %[1]s + [<file>]
 
 examples:
+
     %[1]s + file.txt
     %[1]s + file1.txt file2.txt file3.txt
     %[1]s + file1.txt dir2/file2.txt
