@@ -110,7 +110,7 @@ Warn: this will publish your local branch %[1]s to the branch %[2]s of remote %[
 
 		ListChanges()
 
-		fmt.Print("Save all changes? (y/n) ")
+		fmt.Print("Save all changes (Y/N)? ")
 
 		input, _, _ := reader.ReadLine()
 		confirm := ""
