@@ -45,7 +45,7 @@ func Execute() {
 		Upload()
 	case "sync":
 		Sync()
-	case "branch":
+	case "branch", "br":
 		Branch()
 	case "switch":
 		SwitchBranch()
