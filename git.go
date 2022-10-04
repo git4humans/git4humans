@@ -76,7 +76,7 @@ func NoCommit() bool {
 }
 
 func RefineStatus(status string) string {
-	status = strings.ReplaceAll(status, `use "git push" to publish`, fmt.Sprintf(`use "%[1]s publish" or "%[1]s pub" to publish`, Command))
+	status = strings.ReplaceAll(status, `use "git push" to publish`, fmt.Sprintf(`use "%[1]s up" to upload`, Command))
 	status = strings.ReplaceAll(status, "git push", Command+" publish")
 	status = strings.ReplaceAll(status, "git add", Command+" +")
 	status = strings.ReplaceAll(status, "git rm", Command+" -")
