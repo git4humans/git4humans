@@ -51,7 +51,7 @@ func Execute() {
 		SwitchBranch()
 	case "repo", "rp":
 		Repo()
-	case "user":
+	case "user", "u":
 		User()
 	case "help":
 		Help()
