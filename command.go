@@ -29,7 +29,7 @@ func Execute() {
 		Start()
 	case "refresh", "r":
 		Refresh()
-	case "+":
+	case "+", "add":
 		Add()
 	case "-", "del", "delete":
 		Delete()
