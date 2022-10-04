@@ -49,7 +49,7 @@ func Execute() {
 		Branch()
 	case "switch", "sw":
 		SwitchBranch()
-	case "repo":
+	case "repo", "rp":
 		Repo()
 	case "user":
 		User()
