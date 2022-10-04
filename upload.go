@@ -8,11 +8,11 @@ import (
 	"strings"
 )
 
-// Publish changes into remote repository
+// Upload changes into remote repository
 // Another way of git push
-func Publish() {
+func Upload() {
 	if IsHelp() {
-		PublishHelp()
+		UploadHelp()
 		return
 	}
 
@@ -88,7 +88,7 @@ func Publish() {
 		url = strings.Trim(url, "\n")
 
 		fmt.Printf(`
-Warn: this will publish your local branch %[1]s to the branch %[2]s of remote %[3]s (%[4]s)
+Warn: this will upload your local branch %[1]s to the branch %[2]s of remote %[3]s (%[4]s)
 		`, localBranch, remoteBranch, remote, url)
 		fmt.Println()
 		fmt.Print("Enter to continue, q to quit: ")
@@ -110,7 +110,7 @@ Warn: this will publish your local branch %[1]s to the branch %[2]s of remote %[
 
 		ListChanges()
 
-		fmt.Print("Save all changes (Y/N)? ")
+		fmt.Print("Save all your changes (Y/N)? ")
 
 		input, _, _ := reader.ReadLine()
 		confirm := ""
@@ -123,7 +123,7 @@ Warn: this will publish your local branch %[1]s to the branch %[2]s of remote %[
 
 		if yes {
 			fmt.Println()
-			fmt.Print("Save with message: ")
+			fmt.Print("Saving with message: ")
 
 			input, _, _ := reader.ReadLine()
 			message := ""
@@ -144,9 +144,9 @@ Warn: this will publish your local branch %[1]s to the branch %[2]s of remote %[
 		}
 	}
 
-	if CanPublish() {
+	if CanUpload() {
 		fmt.Println()
-		fmt.Printf("Publishing %[1]s to %[2]s/%[3]s...", localBranch, remote, remoteBranch)
+		fmt.Printf("Uploading %[1]s to %[2]s/%[3]s...", localBranch, remote, remoteBranch)
 		fmt.Println()
 
 		// Git("push", name, branch)
@@ -158,18 +158,18 @@ Warn: this will publish your local branch %[1]s to the branch %[2]s of remote %[
 		fmt.Print(string(response))
 	} else {
 		fmt.Println()
-		fmt.Printf("Your branch has nothing to publish. See %[1]s status.", Command)
+		fmt.Printf("Your branch has nothing to upload. See %[1]s status.", Command)
 		fmt.Println()
 	}
 }
 
-func CanPublish() bool {
+func CanUpload() bool {
 	status := GitStr("status")
 	canPublish := strings.Contains(status, "Your branch is ahead of")
 
 	return canPublish
 }
 
-func PublishHelp() {
+func UploadHelp() {
 	fmt.Printf(``)
 }
