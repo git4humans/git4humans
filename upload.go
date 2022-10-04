@@ -91,39 +91,40 @@ func Upload() {
 Warn: this will upload your local branch %[1]s to the branch %[2]s of remote %[3]s (%[4]s)
 		`, localBranch, remoteBranch, remote, url)
 		fmt.Println()
-		fmt.Print("Enter to continue, q to quit: ")
+		fmt.Print("Press enter to continue, c to cancel: ")
 
 		input, _, _ := reader.ReadLine()
 		confirm := ""
 
 		if len(input) > 0 {
 			confirm = strings.Replace(string(input), "\n", "", -1)
+			confirm = strings.ToLower(confirm)
 		}
 
-		if confirm == "q" {
+		if confirm == "c" {
 			return
 		}
 	}
 
 	if HasUpdate() {
 		fmt.Println()
+		fmt.Println("You have some unstaged changes in your project:")
+		Git("status", "-s")
 
-		ListChanges()
-
-		fmt.Print("Save all your changes (Y/N)? ")
+		fmt.Println()
+		fmt.Print("Save all the changes (Y/N)? ")
 
 		input, _, _ := reader.ReadLine()
 		confirm := ""
 
 		if len(input) > 0 {
 			confirm = strings.Replace(string(input), "\n", "", -1)
+			confirm = strings.ToLower(confirm)
 		}
 
-		yes := confirm == "Y" || confirm == "y"
-
-		if yes {
+		if confirm == "y" {
 			fmt.Println()
-			fmt.Print("Saving with message: ")
+			fmt.Print("Saving changes with message: ")
 
 			input, _, _ := reader.ReadLine()
 			message := ""
