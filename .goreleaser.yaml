@@ -10,8 +10,8 @@ builds:
       - linux
       - windows
       - darwin
-    main: ./cmd/gt
-    binary: git4humans/gt
+    main: ./cmd/g
+    binary: git4humans/g
 archives:
   - replacements:
       darwin: macOS
