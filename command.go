@@ -23,7 +23,7 @@ func Execute() {
 	args := os.Args[2:]
 
 	switch command {
-	case "new":
+	case "new", "n":
 		New()
 	case "start":
 		Start()
