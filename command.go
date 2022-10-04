@@ -37,7 +37,7 @@ func Execute() {
 		Move()
 	case "move", "mv":
 		Move()
-	case "copy":
+	case "copy", "cp":
 		Copy()
 	case "save":
 		Save()
