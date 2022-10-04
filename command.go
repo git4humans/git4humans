@@ -65,7 +65,7 @@ func Execute() {
 		Pr()
 	case "status", "st":
 		Status()
-	case "l":
+	case "log", "lg":
 		Log()
 	default:
 		if contains(command, GitCommands) {
