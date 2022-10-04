@@ -37,9 +37,9 @@ func Execute() {
 		Delete()
 	case "delete":
 		Delete()
-	case "rename":
+	case "rename", "ren":
 		Move()
-	case "move":
+	case "move", "mv":
 		Move()
 	case "copy":
 		Copy()
