@@ -39,7 +39,7 @@ func Execute() {
 		Move()
 	case "copy", "cp":
 		Copy()
-	case "save":
+	case "save", "sv":
 		Save()
 	case "publish":
 		Publish()
