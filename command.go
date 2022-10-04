@@ -59,6 +59,8 @@ func Execute() {
 		Pr()
 	case "status", "st":
 		Status()
+	case "shortstatus", "sst":
+		ShortStatus()
 	case "log", "lg":
 		Log()
 	default:

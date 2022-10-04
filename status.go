@@ -7,3 +7,7 @@ func Status() {
 
 	Git("status", args...)
 }
+
+func ShortStatus() {
+	Git("status", "-s")
+}
