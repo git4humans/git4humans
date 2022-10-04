@@ -31,7 +31,7 @@ func Execute() {
 		Refresh()
 	case "+", "a", "add":
 		Add()
-	case "-", "del", "delete":
+	case "-", "d", "del", "delete":
 		Delete()
 	case "rename", "ren":
 		Move()
