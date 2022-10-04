@@ -19,16 +19,16 @@ func Start() {
 	}
 
 	fmt.Print(`
-Warn: this will create a fresh Git repository in your project, then automatically stage all files and do initial commit.
+Warn: this will create a Git repository in your project, then automatically stage all files and do an initial commit.
 
-An equivalent of:
+Equivalent of:
 
     git init
     git add .
     git commit -m "Initial commit"
 
 `)
-	fmt.Print("Enter to continue, q to quit: ")
+	fmt.Print("Press enter to continue, c to cancel: ")
 
 	reader := bufio.NewReader(os.Stdin)
 	input, _, _ := reader.ReadLine()
@@ -38,7 +38,7 @@ An equivalent of:
 		confirm = strings.Replace(string(input), "\n", "", -1)
 	}
 
-	if confirm != "q" {
+	if confirm != "c" {
 		args := os.Args[2:]
 
 		fmt.Println()
@@ -58,9 +58,9 @@ Start a Git repository for your project.
 
 usage: %[1]s start
 
-The command creates a fresh Git repository in your current working directory, then automatically stage all files and do initial commit. 
+The command creates a Git repository in your current working directory, then automatically stage all files and do an initial commit. 
 
-An equivalent of:
+Equivalent of:
 
     git init
     git add .
