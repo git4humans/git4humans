@@ -25,7 +25,7 @@ func Execute() {
 	switch command {
 	case "new", "n":
 		New()
-	case "start":
+	case "start", "s":
 		Start()
 	case "refresh":
 		Refresh()
