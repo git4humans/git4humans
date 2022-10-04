@@ -25,23 +25,23 @@ Managing changes
     save 	Record changes in your local repository (short: '%[2]s sv')
 
 Collaborations
-    repo 	Manage remote repositories (list, add, delete, etc.)
+    repo 	Manage remote repositories (list, add, delete, etc.) (short: '%[2]s rp')
     sync 	Download from and integrate with a repository or a local branch 
     up          Upload your local changes to a remote repository
 
-Branches and history 
-    branch 	Manage branches (list, create, delete, etc.) 
-    switch 	Switch from your current branch to another branch 
-    merge 	Join two or more branches
-    reset 	Reset current HEAD to a specified state
-    tag 	Create, list, delete, or verify a tag object
+Versioning 
+    branch 	Manage branches (list, create, delete, etc.) (short: '%[2]s br')
+    switch 	Switch to another branch (short: '%[2]s sw')
+    merge 	Join two or more branches (short: '%[2]s mrg')
+    reset 	Reset current HEAD to a specified state (short: '%[2]s rst')
+    tag 	Create, list, delete, or verify a tag object (short: '%[2]s t')
 
-Examine history and state 
-    st 	    Show the status of the current working project
-    sst     Show the short status of the current working project 
-    lg 	    Show a reversed-ordered list of commits (logs)
-    slg     Show a list of commits in a simple oneline format (simple logs)
-    last    Show the last commit in the log history
+History and state 
+    st 	        Show the status of the current working project
+    sst         Show the short status of the current working project 
+    lg 	        Show a reversed-ordered list of commits (logs)
+    slg         Show a list of commits in a simple oneline format (simple logs)
+    last        Show the last commit in the log history
 
 Configurations 
     config	Show or update configuration
