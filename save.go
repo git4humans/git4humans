@@ -65,7 +65,7 @@ func Save() {
 			}
 
 			fmt.Println()
-			fmt.Print("Save with message: ")
+			fmt.Print("Saving changes with message: ")
 
 			reader := bufio.NewReader(os.Stdin)
 			input, _, _ := reader.ReadLine()
