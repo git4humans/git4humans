@@ -18,7 +18,32 @@ func Add() {
 	args := os.Args[2:]
 
 	if NotGit() {
-		Git("init")
+		fmt.Println()
+		fmt.Println("Warn: your project is not a Git repository.")
+		fmt.Println()
+		fmt.Print("Create a Git repository? (y/n) ")
+
+		reader := bufio.NewReader(os.Stdin)
+		input, _, _ := reader.ReadLine()
+
+		confirm := ""
+
+		if len(input) > 0 {
+			confirm = strings.Replace(string(input), "\n", "", -1)
+		}
+
+		yes := confirm == "Y" || confirm == "y"
+
+		if yes {
+			fmt.Println()
+			Git("init")
+		}
+	}
+
+	if NotGit() {
+		fmt.Println()
+		fmt.Println("Abort: not a Git repository, cannot stage your file(s).")
+		return
 	}
 
 	if len(args) > 0 {
