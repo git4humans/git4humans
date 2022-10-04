@@ -47,7 +47,7 @@ func Execute() {
 		Sync()
 	case "branch", "br":
 		Branch()
-	case "switch":
+	case "switch", "sw":
 		SwitchBranch()
 	case "repo":
 		Repo()
