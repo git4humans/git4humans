@@ -63,6 +63,8 @@ func Execute() {
 		ShortStatus()
 	case "log", "lg":
 		Log()
+	case "simplelog", "slg":
+		Log()
 	default:
 		if contains(command, GitCommands) {
 			Git(command, args...)

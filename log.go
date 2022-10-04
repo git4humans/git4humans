@@ -7,3 +7,7 @@ func Log() {
 
 	Git("log", args...)
 }
+
+func SimpleLog() {
+	Git("log", "--pretty=oneline")
+}

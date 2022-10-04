@@ -40,7 +40,7 @@ Examine history and state
     st 	    Show the status of the current working project
     sst     Show the short status of the current working project 
     lg 	    Show a reversed-ordered list of commits (logs)
-    slg     Show a list of commits in a short oneline format (short logs)
+    slg     Show a list of commits in a simple oneline format (simple logs)
     last    Show the last commit in the log history
 
 Configurations 
