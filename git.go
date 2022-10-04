@@ -94,7 +94,8 @@ func ListChanges() {
 
 	for _, line := range lines {
 		//onBranch := strings.HasPrefix(line, "On branch")
-		//isUptodate := strings.HasPrefix(line, "Your branch is up to date")
+		isUptodate := strings.HasPrefix(line, "Your branch is up to date")
+		isAhead := strings.HasPrefix(line, "Your branch is ahead of")
 		noCommit := strings.HasPrefix(line, "No commits yet")
 		noChanges := strings.HasPrefix(line, "no changes added to commit")
 		noAdded := strings.HasPrefix(line, "nothing added to commit")
@@ -103,7 +104,7 @@ func ListChanges() {
 		useRemove := strings.Contains(line, `use "git rm`)
 		usePush := strings.Contains(line, `use "git push"`)
 
-		hide := (noCommit || noChanges || noAdded || useAdd || useRestore || useRemove || usePush)
+		hide := (noCommit || noChanges || noAdded || useAdd || useRestore || useRemove || usePush || isUptodate || isAhead)
 		show := !hide
 
 		if show {
