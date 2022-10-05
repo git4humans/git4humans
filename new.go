@@ -68,7 +68,10 @@ func NewHelp() {
 	fmt.Printf(`
 Create a new Git repository in a new directory.
 
-Usage: %[1]s new <directory>
+Usage: 
+
+    %[1]s new <directory>
+    %[1]s n <directory>
 
 The command creates a new directory (mkdir), then creates a Git repository in the new directory (basically a .git directory with subdirectories for objects, refs/heads, refs/tags, and template files) and adds an empty .gitignore file into the new directory.
 	`, Command)
