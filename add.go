@@ -90,7 +90,6 @@ Adds new or modified file(s) to the staging area for inclusion in the next commi
 Usage: 
 
     %[1]s + [<file>]
-    %[1]s a [<file>]
     %[1]s add [<file>]
 
 Examples:
