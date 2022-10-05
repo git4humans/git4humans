@@ -45,7 +45,7 @@ History and state
 
 Configurations 
     config	Show or update configuration
-    user	Show or update user configuration (local or global)
+    user	Show or update user configuration (local or global) (short: '%[2]s u')
 
 You may also run all the original commands from Git. For example, '%[2]s push origin main' and 'git push origin main' can be used interchangeably in your project.
 	`, Version, Command)
