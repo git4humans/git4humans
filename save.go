@@ -17,7 +17,7 @@ func Save() {
 		fmt.Println()
 		fmt.Println("Warn: your project is not a Git repository.")
 		fmt.Println()
-		fmt.Print("Create a Git repository? (y/n) ")
+		fmt.Print("Create a Git repository (Y/N)? ")
 
 		reader := bufio.NewReader(os.Stdin)
 		input, _, _ := reader.ReadLine()
@@ -26,11 +26,10 @@ func Save() {
 
 		if len(input) > 0 {
 			confirm = strings.Replace(string(input), "\n", "", -1)
+			confirm = strings.Trim(confirm, "\n")
 		}
 
-		yes := confirm == "Y" || confirm == "y"
-
-		if yes {
+		if confirm == "y" {
 			fmt.Println()
 			Git("init")
 		}
