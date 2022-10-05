@@ -94,7 +94,43 @@ func showBranch() {
 }
 
 func BranchHelp() {
-	fmt.Printf(``)
+	command := os.Args[1]
+
+	fmt.Printf(`
+Manage branches of your project (list, create, delete, etc.)
+
+Usage:
+
+    %[1]s branch
+    %[1]s br
+
+    %[1]s branch <new-branch>
+    %[1]s br <new-branch>
+
+    %[1]s branch delete <branch>
+    %[1]s branch del <branch>
+    %[1]s branch - <branch>
+
+    %[1]s br delete <branch>
+    %[1]s br del <branch>
+    %[1]s br - <branch>
+
+Examples 
+
+Show the list of existing branch: 
+
+    %[1]s %[2]s
+
+Add a new branch: 
+
+    %[1]s %[2]s test
+
+Delete an existing branch:
+
+    %[1]s %[2]s delete test
+    %[1]s %[2]s d test
+    %[1]s %[2]s - test
+	`, Command, command)
 }
 
 func SwitchHelp() {
