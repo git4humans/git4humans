@@ -17,6 +17,12 @@ func Branch() {
 
 	if len(args) > 0 {
 		branch := args[0]
+		invalid := strings.HasPrefix(branch, "-") || strings.HasPrefix(branch, "--")
+
+		if invalid {
+			Git("branch", args...)
+			return
+		}
 
 		fmt.Println("Creating branch " + branch + "...")
 		Git("branch", branch)
@@ -128,7 +134,7 @@ Add a new branch:
 Delete an existing branch:
 
     %[1]s %[2]s delete test
-    %[1]s %[2]s d test
+    %[1]s %[2]s del test
     %[1]s %[2]s - test
 	`, Command, command)
 }
