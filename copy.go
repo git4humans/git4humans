@@ -55,13 +55,24 @@ func CopyHelp() {
 	fmt.Printf(`
 Copy an existing Git repository to a new directory.
 
-usage: %[1]s copy <url> <directory>
+Usage: 
 
-Using the command without specifying a target directory will copy the repository into a new directory with the name specified in the URL.
+    %[1]s copy <url>
+    %[1]s copy <url> <directory>
 
-examples:
+    %[1]s cp <url>
+    %[1]s cp <url> <directory>
+
+Note: 
+
+Using this command without specifying a target directory will copy the repository into a new directory with the name specified in the URL.
+
+Examples:
 
     %[1]s copy https://github.com/pytorch/pytorch
     %[1]s copy https://github.com/pytorch/pytorch torch
+
+    %[1]s cp https://github.com/pytorch/pytorch
+    %[1]s cp https://github.com/pytorch/pytorch torch
 	`, Command)
 }
