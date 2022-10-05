@@ -187,6 +187,9 @@ Usage:
     %[1]s up <remote> <branch>
     %[1]s upload <remote> <branch>
 
+    %[1]s up <remote> <local-branch>:<remote-branch>
+    %[1]s upload <remote> <local-branch>:<remote-branch>
+
 
 Using the command without specifying remote and branch name will make it use origin as the remote name and your current branch as the branch name. 
 
@@ -199,5 +202,6 @@ Examples:
     %[1]s %[2]s
     %[1]s %[2]s origin 
     %[1]s %[2]s origin main
+    %[1]s %[2]s origin main:master
 	`, Command, command)
 }
