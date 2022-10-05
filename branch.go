@@ -37,9 +37,10 @@ func Branch() {
 		if confirm == "y" {
 			GitStr("switch", branch)
 		}
+
+		fmt.Println()
 	}
 
-	fmt.Println()
 	showBranch()
 }
 
@@ -83,9 +84,11 @@ func SwitchBranch() {
 }
 
 func showBranch() {
-	fmt.Println("On branch " + CurrentBranch())
-	fmt.Println()
-	fmt.Println("List branch:")
+	if isGit() {
+		fmt.Println("On branch " + CurrentBranch())
+		fmt.Println()
+		fmt.Println("List branch:")
+	}
 
 	Git("branch")
 }
