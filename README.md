@@ -14,7 +14,7 @@ git add .
 git commit -m "Initial commit"
 ```
 
-Or when you need to face another commands for uploading changes to a remote repository:
+Or when you face another commands to upload your changes to a remote repository:
 
 ```shell
 git remote add origin https://github.com/git4humans/git4humans
