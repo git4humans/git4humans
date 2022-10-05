@@ -150,7 +150,7 @@ You have some unstaged changes in your project:
 
 Save the changes (Y/N)? _
 ```
-You may type `y` to confirm that yes, you want to save and publish the changes. Then the tool will ask you to type a commit message.
+You may type `y` to confirm that yes, you want to save and upload the changes. Then the tool will ask you to type a commit message.
 
 ```shell
 Save the changes (Y/N)? y
