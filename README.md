@@ -6,7 +6,7 @@ An Intuitive [Git](https://git-scm.com/) Commands for Humans
 
 [Git](https://git-scm.com/) is cool. It makes teamwork and collaborations easy.
 
-But have you ever have to type unnecessarily long commands like so (only to start using Git in your project):
+But have you ever have to type unnecessarily long commands (only to start using Git in your project):
 
 ```shell
 git init 
