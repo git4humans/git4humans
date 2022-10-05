@@ -12,7 +12,7 @@ func Refresh() {
 
 func RefreshHelp() {
 	fmt.Printf(`
-Refresh an existing Git repository in the current working directory.
+Refresh (reinitialize) an existing Git repository in the current working directory.
 
 Usage: 
 
