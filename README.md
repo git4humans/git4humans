@@ -81,7 +81,7 @@ For a guide to add path to environment variable, [read the following instruction
 
 ### From Source
 
-To install from source, you need to have [Go](https://go.dev/dl/) installed in your system.
+To install from source, you need to have [Go installed](https://go.dev/dl/) in your system.
 
 Copy the source project:
 
