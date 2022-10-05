@@ -20,7 +20,7 @@ func Move() {
 		newName := args[1]
 		options := args[2:]
 
-		if command == "rename" {
+		if command == "rename" || command == "ren" {
 			Git("mv", append([]string{oldName, newName}, options...)...)
 		} else {
 			Git("mv", oldName, newName)
@@ -31,7 +31,7 @@ func Move() {
 func MoveHelp() {
 	command := os.Args[1]
 
-	if command == "rename" {
+	if command == "rename" || command == "ren" {
 		RenameHelp()
 	} else {
 		fmt.Printf(`
