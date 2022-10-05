@@ -138,7 +138,7 @@ Besides, for more complex use, you can always fallback to the original Git comma
 
 Another principle is **interactivity and guidance**, which means the tool will guide you in an interactive way for some operations that needs your confirmation (or an additional input, such as file name or commit message).
 
-As an example, when you upload changes to a remote repository using `g up` command, **Git for Humans** will check the status of your project. If you have some new or modified files that is not committed, the tool will ask for confirmation whether you want to save and upload them. It will also show the list of changes so you can easily decide.
+As an example, when you upload changes to a remote repository using `g up` command, **Git for Humans** will check the status of your project. If you have some new or modified files, the tool will ask for confirmation whether you want to save and upload them. It will also show the list of changes so you can easily decide.
 
 ```shell
 On branch main
