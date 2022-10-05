@@ -117,7 +117,7 @@ func Upload() {
 		Git("status", "-s")
 
 		fmt.Println()
-		fmt.Print("Save all the changes (Y/N)? ")
+		fmt.Print("Save the changes (Y/N)? ")
 
 		input, _, _ := reader.ReadLine()
 		confirm := ""
