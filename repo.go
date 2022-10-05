@@ -186,15 +186,23 @@ Use the following command to add a repository:
     
     %[1]s repo <url>
     %[1]s repo <name> <url>
+
     %[1]s repo + <url>
     %[1]s repo + <name> <url>
+
+    %[1]s repo add <url>
+    %[1]s repo add <name> <url>
 
 Examples:
 
     %[1]s repo https://github.com/pytorch/pytorch
     %[1]s repo origin https://github.com/pytorch/pytorch
+
     %[1]s repo + https://github.com/pytorch/pytorch
     %[1]s repo + origin https://github.com/pytorch/pytorch
+
+    %[1]s repo add https://github.com/pytorch/pytorch
+    %[1]s repo add origin https://github.com/pytorch/pytorch
     `, Command)
 	}
 }
