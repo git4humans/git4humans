@@ -14,6 +14,9 @@ func RefreshHelp() {
 	fmt.Printf(`
 Refresh an existing Git repository in the current working directory.
 
-usage: %[1]s refresh
+Usage: 
+
+    %[1]s refresh
+    %[1]s r
 	`, Command)
 }
