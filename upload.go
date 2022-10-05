@@ -22,7 +22,7 @@ func Upload() {
 		fmt.Println()
 		fmt.Println("Warn: this project is not a Git repository.")
 		fmt.Println()
-		fmt.Print("Create a Git repository? (y/n) ")
+		fmt.Print("Create a Git repository (Y/N)? ")
 
 		confirm := ""
 		input, _, _ := reader.ReadLine()
@@ -84,11 +84,16 @@ func Upload() {
 	}
 
 	if len(args) < 2 {
+		branch := GitStr("branch", "--show-current")
+		branch = strings.Trim(branch, "\n")
 		url := GitStr("remote", "get-url", remote)
 		url = strings.Trim(url, "\n")
 
-		fmt.Printf(`
-Warn: this will upload your local branch %[1]s to the branch %[2]s of remote %[3]s (%[4]s)
+		fmt.Println("On branch " + branch)
+		fmt.Println()
+
+		fmt.Println("Warn:")
+		fmt.Printf(`This will upload your branch %[1]s to the branch %[2]s of remote %[3]s (%[4]s)
 		`, localBranch, remoteBranch, remote, url)
 		fmt.Println()
 		fmt.Print("Press enter to continue, c to cancel: ")
