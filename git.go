@@ -16,17 +16,17 @@ func Git(command string, args ...string) {
 
 	if notGit {
 		fmt.Printf(`
-Err: this project is not a Git repository
+This project is not a Git repository.
 
-Use the following command to start a Git repository:
+Run the following command to start a Git repository:
 
     %[1]s start 
 
-That will create a fresh Git repository in your project, then automatically stage all files and do initial commit.
+That will create a Git repository in your project, then automatically stage all files and do initial commit.
 
-Use '%[1]s init' if you only want to start a fresh Git repository.
-Use '%[1]s + .' if you only want to start Git and stage all files in your project.
-Use '%[1]s save' if you want to start Git, stage all files, and commit with a specific message.`, Command)
+Use '%[1]s init' if you only want to create a Git repository.
+Use '%[1]s + .' if you only want to create Git and stage all files in your project.
+Use '%[1]s save' if you want to create Git, stage all files, and commit with a specific message.`, Command)
 
 		fmt.Println()
 	} else {
@@ -53,6 +53,10 @@ func NotGit() bool {
 	notGit := strings.Contains(response, "not a git repository")
 
 	return notGit
+}
+
+func isGit() bool {
+	return !NotGit()
 }
 
 func HasUpdate() bool {
