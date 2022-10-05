@@ -134,5 +134,19 @@ Delete an existing branch:
 }
 
 func SwitchHelp() {
-	fmt.Printf(``)
+	command := os.Args[1]
+
+	fmt.Printf(`
+Switch from your current branch to another existing branch.
+
+Usage:
+
+    %[1]s switch <branch>
+    %[1]s sw <branch>
+
+Examples:
+
+    %[1]s switch test 
+    %[1]s sw test
+	`, Command, command)
 }
