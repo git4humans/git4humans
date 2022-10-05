@@ -56,7 +56,7 @@ func StartHelp() {
 	fmt.Printf(`
 Start a Git repository for your project.
 
-usage: %[1]s start
+Usage: %[1]s start
 
 The command creates a Git repository in your current working directory, then automatically stage all files and do an initial commit. 
 
