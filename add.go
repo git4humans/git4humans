@@ -30,11 +30,10 @@ func Add() {
 
 		if len(input) > 0 {
 			confirm = strings.Replace(string(input), "\n", "", -1)
+			confirm = strings.ToLower(confirm)
 		}
 
-		yes := confirm == "Y" || confirm == "y"
-
-		if yes {
+		if confirm == "y" {
 			fmt.Println()
 			Git("init")
 		}
