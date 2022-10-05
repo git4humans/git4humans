@@ -15,6 +15,7 @@ func Add() {
 		return
 	}
 
+	command := os.Args[1]
 	args := os.Args[2:]
 
 	if NotGit() {
@@ -69,30 +70,36 @@ You should specify file(s) to add.
 
 Examples:
     
-    %[1]s + file.txt
-    %[1]s + file1.txt file2.txt file3.txt
-    %[1]s + file1.txt dir2/file2.txt
-    %[1]s + file.txt dir/
-    %[1]s + --all 
-    %[1]s + .
-            `, Command)
+    %[1]s %[2]s file.txt
+    %[1]s %[2]s file1.txt file2.txt file3.txt
+    %[1]s %[2]s file1.txt dir2/file2.txt
+    %[1]s %[2]s file.txt dir/
+    %[1]s %[2]s --all 
+    %[1]s %[2]s .
+            `, Command, command)
 		}
 	}
 }
 
 func AddHelp() {
+	command := os.Args[1]
+
 	fmt.Printf(`
 Adds new or modified file(s) to the staging area for inclusion in the next commit.
 
-usage: %[1]s + [<file>]
+Usage: 
 
-examples:
+    %[1]s + [<file>]
+    %[1]s a [<file>]
+    %[1]s add [<file>]
 
-    %[1]s + file.txt
-    %[1]s + file1.txt file2.txt file3.txt
-    %[1]s + file1.txt dir2/file2.txt
-    %[1]s + file.txt dir/
-    %[1]s + --all
-    %[1]s + .
-	`, Command)
+Examples:
+
+    %[1]s %[2]s file.txt
+    %[1]s %[2]s file1.txt file2.txt file3.txt
+    %[1]s %[2]s file1.txt dir2/file2.txt
+    %[1]s %[2]s file.txt dir/
+    %[1]s %[2]s --all
+    %[1]s %[2]s .
+	`, Command, command)
 }
