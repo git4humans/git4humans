@@ -21,7 +21,7 @@ func Add() {
 		fmt.Println()
 		fmt.Println("Warn: your project is not a Git repository.")
 		fmt.Println()
-		fmt.Print("Create a Git repository? (y/n) ")
+		fmt.Print("Create a Git repository (Y/N)? ")
 
 		reader := bufio.NewReader(os.Stdin)
 		input, _, _ := reader.ReadLine()
