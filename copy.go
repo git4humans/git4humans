@@ -63,8 +63,6 @@ Usage:
     %[1]s cp <url>
     %[1]s cp <url> <directory>
 
-Note: 
-
 Using the command without specifying a directory will copy the repository into a new directory with the name specified in the URL.
 
 Examples:
