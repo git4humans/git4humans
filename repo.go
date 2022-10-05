@@ -8,7 +8,7 @@ import (
 
 func Repo() {
 	if IsHelp() {
-		RepoUsage()
+		RepoHelp()
 		return
 	}
 
@@ -39,8 +39,8 @@ func Repo() {
 	}
 }
 
-func RepoUsage() {
-	fmt.Println()
+func RepoHelp() {
+	fmt.Println(``)
 }
 
 func HasRepo(name string) bool {
