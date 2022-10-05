@@ -42,9 +42,9 @@ You should specify file(s) to delete.
 
 Examples:
 
-    %[1]s - file.txt
-    %[1]s - file1.txt file2.txt file3.txt
-    %[1]s - file1.txt dir2/file2.txt
+    %[1]s %[2]s file.txt
+    %[1]s %[2]s file1.txt file2.txt file3.txt
+    %[1]s %[2]s file1.txt dir2/file2.txt
             `, Command, command)
 		}
 	}
@@ -56,9 +56,14 @@ func DeleteHelp() {
 	fmt.Printf(`
 Delete file(s) at the given path(s), then stages the deletion for the next commit.
 
-usage: %[1]s %[2]s [<file>]
+Usage: 
 
-examples:
+    %[1]s - [<file>]
+    %[1]s d [<file>]
+    %[1]s del [<file>]
+    %[1]s delete [<file>]
+
+Examples:
 
     %[1]s %[2]s file.txt
     %[1]s %[2]s file1.txt file2.txt file3.txt
