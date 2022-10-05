@@ -40,7 +40,7 @@ func New() {
 
 	if len(dir) <= 0 {
 		fmt.Println()
-		fmt.Println("Err: you should specify directory for the new Git repository.")
+		fmt.Println("Abort: you should specify directory for the new Git repository.")
 		fmt.Println()
 		fmt.Printf("Use '%[1]s start' to create a fresh Git in this current working directory.", Command)
 		fmt.Println()
@@ -50,7 +50,7 @@ func New() {
 	err := os.Mkdir(dir, os.ModePerm)
 
 	if err != nil {
-		fmt.Println("Err: failed creating directory for the new Git repository.")
+		fmt.Println("Abort: failed creating directory for the new Git repository.")
 		return
 	}
 
@@ -68,7 +68,7 @@ func NewHelp() {
 	fmt.Printf(`
 Create a new Git repository in a new directory.
 
-usage: %[1]s new <directory>
+Usage: %[1]s new <directory>
 
 The command creates a new directory (mkdir), then creates a Git repository in the new directory (basically a .git directory with subdirectories for objects, refs/heads, refs/tags, and template files) and adds an empty .gitignore file into the new directory.
 	`, Command)
