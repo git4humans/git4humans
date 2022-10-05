@@ -177,5 +177,27 @@ func CanUpload() bool {
 }
 
 func UploadHelp() {
-	fmt.Printf(``)
+	command := os.Args[1]
+
+	fmt.Printf(`
+Upload your local changes to a remote repository.
+
+Usage: 
+    
+    %[1]s up <remote> <branch>
+    %[1]s upload <remote> <branch>
+
+
+Using the command without specifying remote and branch name will make it use origin as the remote name and your current branch as the branch name. 
+
+Likewise, if you use the command with only specifying remote name without the branch name, it will use the current branch as branch name. 
+
+When uploading with current status of your project contains some new or modified file(s), it will ask whether you want to save and include them with your upload command.
+
+Examples:
+
+    %[1]s %[2]s
+    %[1]s %[2]s origin 
+    %[1]s %[2]s origin main
+	`, Command, command)
 }
