@@ -98,5 +98,24 @@ func Save() {
 }
 
 func SaveHelp() {
-	fmt.Printf(``)
+	command := os.Args[1]
+
+	fmt.Printf(`
+Record changes in your current local repository.
+
+Usage: 
+
+    %[1]s save [<file>] <option>
+    %[1]s sv [<file>] <option>
+
+The command stages the file(s) into the staging area to be ready for commit, then commit with the specified message. If you use the command without -m option, it will ask to type the message.
+
+Examples: 
+
+    %[1]s %[2]s  
+    %[1]s %[2]s . 
+    %[1]s %[2]s -m "Commit message"
+    %[1]s %[2]s file1.txt file2.txt 
+    %[1]s %[2]s file1.txt -m "Describe the usage"
+	`, Command, command)
 }
