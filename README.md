@@ -174,6 +174,40 @@ The infamous [Pareto Principle](https://en.wikipedia.org/wiki/Pareto_principle) 
 
 **refresh**
 
+**add**
+
+**delete**
+
+**move**
+
+**rename**
+
+**restore**
+
+**save** 
+
+**repo** 
+
+**sync**
+
+**up**
+
+**branch** 
+
+**switch**
+
+**merge**
+
+**reset**
+
+**tag** 
+
+**status**
+
+**log**
+
+**last**
+
 ## Tutorial for Everyday Use
 
 ## Contribute 
