@@ -65,6 +65,8 @@ func Execute() {
 		Log()
 	case "simplelog", "slg":
 		SimpleLog()
+	case "last":
+		LastLog()
 	default:
 		if contains(command, GitCommands) {
 			Git(command, args...)

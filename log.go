@@ -11,3 +11,7 @@ func Log() {
 func SimpleLog() {
 	Git("log", "--pretty=oneline")
 }
+
+func LastLog() {
+	Git("log", "-1", "HEAD")
+}
