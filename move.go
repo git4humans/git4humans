@@ -37,7 +37,10 @@ func MoveHelp() {
 		fmt.Printf(`
 Move a file, a directory, or a symlink into another location.
 
-usage: %[1]s move <file> <target>
+Usage: 
+
+    %[1]s move <file> <target>
+    %[1]s mv <file> <target>
 		`, Command)
 	}
 }
@@ -46,6 +49,9 @@ func RenameHelp() {
 	fmt.Printf(`
 Rename a file, a directory, or a symlink.
 
-usage: %[1]s rename <oldname> <newname>
+Usage: 
+
+    %[1]s rename <oldname> <newname>
+    %[1]s ren <oldname> <newname>
 	`, Command)
 }
