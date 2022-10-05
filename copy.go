@@ -65,7 +65,7 @@ Usage:
 
 Note: 
 
-Using this command without specifying a target directory will copy the repository into a new directory with the name specified in the URL.
+Using the command without specifying a directory will copy the repository into a new directory with the name specified in the URL.
 
 Examples:
 
