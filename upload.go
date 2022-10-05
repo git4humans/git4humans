@@ -83,16 +83,16 @@ func Upload() {
 		return
 	}
 
+	branch := GitStr("branch", "--show-current")
+	branch = strings.Trim(branch, "\n")
+
+	fmt.Println("On branch " + branch)
+	fmt.Println()
+
 	if len(args) < 2 {
-		branch := GitStr("branch", "--show-current")
-		branch = strings.Trim(branch, "\n")
 		url := GitStr("remote", "get-url", remote)
 		url = strings.Trim(url, "\n")
 
-		fmt.Println("On branch " + branch)
-		fmt.Println()
-
-		fmt.Println("Warn:")
 		fmt.Printf(`This will upload your branch %[1]s to the branch %[2]s of remote %[3]s (%[4]s)
 		`, localBranch, remoteBranch, remote, url)
 		fmt.Println()
@@ -129,7 +129,7 @@ func Upload() {
 
 		if confirm == "y" {
 			fmt.Println()
-			fmt.Print("Saving changes with message: ")
+			fmt.Print("Saving with message: ")
 
 			input, _, _ := reader.ReadLine()
 			message := ""
