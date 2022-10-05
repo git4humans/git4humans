@@ -26,7 +26,7 @@ func Save() {
 
 		if len(input) > 0 {
 			confirm = strings.Replace(string(input), "\n", "", -1)
-			confirm = strings.Trim(confirm, "\n")
+			confirm = strings.ToLower(confirm)
 		}
 
 		if confirm == "y" {
