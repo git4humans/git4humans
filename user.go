@@ -56,5 +56,26 @@ user.name   %[1]suser.email  %[2]s
 }
 
 func UserHelp() {
-	fmt.Printf(``)
+	command := os.Args[1]
+
+	fmt.Printf(`
+Show or update user Git configuration (local or global).
+
+Usage:
+
+    %[1]s user <option> <name> <email>
+    %[1]s u <option> <name> <email>
+
+Using the command without --global or -g option will show or update user configuration for the local current working Git repository.
+
+Examples:
+
+    %[1]s %[2]s 
+    %[1]s %[2]s --global 
+    %[1]s %[2]s -g 
+    
+    %[1]s %[2]s "Salman S" "salkuadrat@gmail.com" 
+    %[1]s %[2]s --global "Salman S" "salkuadrat@gmail.com"
+    %[1]s %[2]s -g "Salman S" "salkuadrat@gmail.com"
+	`, Command, command)
 }
