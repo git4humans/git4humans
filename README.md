@@ -162,9 +162,9 @@ This way, **Git for Humans** tries its best to guide you, and make your experien
 
 ## Usage 
 
-The infamous [Pareto Principle](https://en.wikipedia.org/wiki/Pareto_principle) can be found to apply to [Git commands](https://git-scm.com/docs): roughly 80% of your experience with Git will be around 20% of all the commands. 
+The infamous [Pareto Principle](https://en.wikipedia.org/wiki/Pareto_principle) can be found to apply to [Git commands](https://git-scm.com/docs): roughly 80% of our experience with Git will be around 20% of all the commands. 
 
-**Git for Humans** is focusing on these 20% commands that you will most likely touch in an everyday use. For more complex use, you can always fallback to the original Git commands. [All Git commands](https://git-scm.com/docs) is applicable in **Git for Humans** (e.g., you can use `git fetch` and `g fetch` interchangeably).
+**Git for Humans** is focusing on these 20% commands that we will most likely touch in an everyday use. For more complex use, you can always fallback to the original Git commands. [All Git commands](https://git-scm.com/docs) is applicable in **Git for Humans** (e.g., you can use `git fetch` and `g fetch` interchangeably).
 
 **new** 
 
