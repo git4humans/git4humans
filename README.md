@@ -107,11 +107,11 @@ Then add the **git4humans** directory to your **PATH** environment variable.
 
 ## Principles
 
-The basic principle of **Git for Humans** is **conventions over configurations**. It means the tool will make an educated guess (based on conventions) for your simple everyday use. 
+The basic principle of **Git for Humans** is **conventions over configurations**. It means the tool will make an educated guess (based on conventions) for our simple everyday use. 
 
-As an example, when dealing with remote repositories, **Git for Humans** will use `origin` as the default name for your remote repository. Unless you state it spesifically, the tool will assume you want to use `origin`. 
+As an example, when dealing with remote repositories, **Git for Humans** will use `origin` as the default name for our remote repository. Unless we state it spesifically, the tool will assume we want to use `origin`. 
 
-As a result, to add a remote repository, you can use a simple `g repo` command:
+As a result, to add a remote repository, we can use a simple `g repo` command:
 
 ```shell 
 g repo https://github.com/pytorch/pytorch 
@@ -127,18 +127,18 @@ g repo + origin https://github.com/pytorch/pytorch
 g repo add origin https://github.com/pytorch/pytorch
 ```
 
-Since we all know, unless you are working on a big, complex project with lots of branches and collaborations, you will likely use a default remote repository with the default name `origin`. 
+Since we all know, unless we are working on a big, complex project with lots of branches and collaborators, we will likely use a default remote repository with the default name `origin`. 
 
 No need to state it explicitly.
 The tool will understand.
 
-Besides, for more complex use, you can always fallback to the original Git commands. [All Git commands](https://git-scm.com/docs) is applicable in **Git for Humans**.
+Besides, for more heavy and complex use, we can always fallback to the original Git commands. [All Git commands](https://git-scm.com/docs) is applicable in **Git for Humans**.
 
 ### Interactivity & Guidance
 
-Another principle is **interactivity and guidance**, which means the tool will guide you in an interactive way for some operations that needs your confirmation (or an additional input, such as file name or commit message).
+Another principle is **interactivity and guidance**, which means the tool will guide us in an interactive way for some operations that needs a confirmation (or an additional input, such as file name or commit message).
 
-As an example, when you upload changes to a remote repository using `g up` command, **Git for Humans** will check the status of your project. If you have some new or modified files, the tool will ask for confirmation whether you want to save and upload them. It will also show the list of changes so you can easily decide.
+As an example, when uploading changes to a remote repository using `g up` command, **Git for Humans** will check the status of our project. If we have some new or modified files, the tool will ask for confirmation whether we want to save and upload them. It will also show the list of changes so we can easily decide.
 
 ```shell
 On branch main
@@ -150,7 +150,7 @@ You have some unstaged changes in your project:
 
 Save the changes (Y/N)? _
 ```
-You may type `y` to confirm that yes, you want to save and upload the changes. Then the tool will ask you to type a commit message.
+We may type `y` to confirm that yes, we want to save and upload the changes. Then the tool will ask to type a commit message.
 
 ```shell
 Save the changes (Y/N)? y
@@ -158,13 +158,13 @@ Save the changes (Y/N)? y
 Saving with message: _
 ```
 
-This way, **Git for Humans** tries its best to guide you, and make your experience with Git more fun and enjoyable.
+This way, **Git for Humans** tries its best to guide us, and make our experience with Git more fun and enjoyable.
 
 ## Usage 
 
 The infamous [Pareto Principle](https://en.wikipedia.org/wiki/Pareto_principle) can be found to apply to [Git commands](https://git-scm.com/docs): roughly 80% of our experience with Git will be around 20% of all the commands. 
 
-**Git for Humans** is focusing on these 20% commands that we most likely will touch in everyday use. For more complex use, you can fallback to the original Git commands. [All Git commands](https://git-scm.com/docs) is applicable in **Git for Humans** (e.g., you can use `git fetch` and `g fetch` interchangeably).
+**Git for Humans** is focusing on these 20% commands that we most likely will touch in everyday use. For more advanced and complex use, we can fallback to the original Git commands. [All Git commands](https://git-scm.com/docs) is applicable in **Git for Humans** (e.g., we can use `git fetch` and `g fetch` interchangeably).
 
 **new** 
 
