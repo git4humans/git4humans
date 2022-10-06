@@ -218,7 +218,7 @@ or use the shortcut:
 g cp https://github.com/pytorch/pytorch
 ```
 
-It will create a new `pytorch` directory, and then fetch all data from the pytorch project into the `pytorch` directory. If you want to copy the repository into a different directory, you may specify the name of the target directory as follow: 
+It will create a new `pytorch` directory, and then fetch all data from the repository into the `pytorch` directory. If you want to copy the repository into a different directory, you may specify the name of the target directory as follow: 
 
 ```shell 
 g copy https://github.com/pytorch/pytorch torch
