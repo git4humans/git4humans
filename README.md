@@ -248,17 +248,35 @@ g r
 
 ### Checking Status
 
-### Tracking New Files 
+You may check the status of files in your working directory by using command as follow: 
 
-### Staging Modified Files 
+```shell 
+g status 
+```
 
-### Deleting Files 
+or use the shortcut: 
 
-### Moving Files 
+```shell 
+g st
+```
 
-### Renaming Files 
+It will show a complete status of your project. If you only want to review summary of the status of your project, you can use short status command as follow: 
 
-### Restoring Deleted Files
+```shell
+g sst
+```
+
+### Tracking New File(s) 
+
+### Staging Modified File(s) 
+
+### Deleting File(s)
+
+### Moving File(s) 
+
+### Renaming File(s) 
+
+### Restoring Deleted File(s)
 
 ### Saving Your Changes 
 
