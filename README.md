@@ -194,7 +194,7 @@ git commit -m "Initial commit"
 
 ### Copy an Existing Repository 
 
-### Refresh an Existing Git Repository 
+### Refresh a Git Repository 
 
 ### Checking Status
 
@@ -218,17 +218,17 @@ git commit -m "Initial commit"
 
 ### Unstaging a Staged File 
 
-### Discard Changes in a Modified File
+### Discard Changes
 
 ### Remote Repositories 
 
 ### Adding a Remote Repository 
 
-### Fetching from a Remote Repository 
+### Fetching a Remote Repository 
 
-### Syncing Data with a Remote Repository 
+### Syncing with a Remote Repository 
 
-### Uploading Changes to a Remote Repository 
+### Uploading to a Remote Repository 
 
 ### Inspecting a Remote Repository 
 
@@ -236,7 +236,7 @@ git commit -m "Initial commit"
 
 ### Renaming a Remote Repository 
 
-### Showing URL of a Remote Repository 
+### Show URL of a Remote Repository 
 
 ### Branching 
 
