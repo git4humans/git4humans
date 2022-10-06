@@ -184,7 +184,7 @@ You may use `g start` command to start a Git repository in an existing working d
 g start
 ```
 
-The tool will create a new Git repository in your `OldProject` directory, then automatically stage all files into the staging area (to be ready for commit), and then do an initial commit. Basically, it's doing an equivalent of the following Git commands: 
+The tool will create a new Git repository in your `OldProject` directory, then automatically stage all files into the staging area (to be ready for commit), and then do an initial commit. Basically, it's doing an equivalent of the following consecutive Git commands: 
 
 ```
 git init 
