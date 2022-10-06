@@ -262,6 +262,12 @@ g st
 
 It will show a complete status of your project. If you only want to review summary of the status of your project, you can use short status command as follow: 
 
+```shell 
+g status -s
+```
+
+or use the shortcut:
+
 ```shell
 g sst
 ```
