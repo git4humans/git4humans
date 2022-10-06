@@ -174,6 +174,12 @@ You may use `g new` command to create a Git repository in a new directory. For e
 g new MyProject
 ```
 
+or use the shortcut: 
+
+```shell 
+g n MyProject
+```
+
 It will create `MyProject` directory by utilizing the `mkdir` command, and then initialize a Git repository using `git init`. Lastly, it will add an empty `.gitignore` file into your new `MyProject` directory.
 
 ### Starting a Git Repository
@@ -182,6 +188,12 @@ You may use `g start` command to start a Git repository in an existing working d
 
 ```shell
 g start
+```
+
+or use the shortcut: 
+
+```shell 
+g s
 ```
 
 It will create a new Git repository in your `OldProject` directory, then automatically stage all files into the staging area (to be ready for commit), and then do an initial commit. Basically, it's doing an equivalent of the following consecutive Git commands: 
@@ -200,7 +212,7 @@ You may use `g copy` command (or the shortcut `g cp`) to copy (or clone, in Git 
 g copy https://github.com/pytorch/pytorch
 ```
 
-or:
+or use the shortcut:
 
 ```shell
 g cp https://github.com/pytorch/pytorch
@@ -212,7 +224,7 @@ It will create a new `pytorch` directory for you, and then fetch all data from t
 g copy https://github.com/pytorch/pytorch torch
 ```
 
-or: 
+or use the shortcut: 
 
 ```shell 
 g cp https://github.com/pytorch/pytorch torch
@@ -221,6 +233,18 @@ g cp https://github.com/pytorch/pytorch torch
 The above command will copy the data from pytorch repository into a new local `torch` directory.
 
 ### Refresh a Git Repository 
+
+You may use `g refresh` command to refresh (or reinitialize) an exisiting Git repository in your current working directory.
+
+```shell
+g refresh
+```
+
+or use the shortcut: 
+
+```shell 
+g r
+```
 
 ### Checking Status
 
