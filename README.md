@@ -230,7 +230,7 @@ or use the shortcut:
 g cp https://github.com/pytorch/pytorch torch
 ```
 
-The above command will copy the data from pytorch repository into a new local `torch` directory.
+The above command will copy the data from pytorch repository into a new `torch` directory.
 
 ### Refresh a Git Repository 
 
