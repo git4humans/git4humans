@@ -178,7 +178,7 @@ g new MyProject
 
 ### Starting a Git Repository in an Existing Directory 
 
-You may use `g start` command to start a Git repository in an existing directory of your choice. Suppose you already have a working project in the `OldProject` directory, you can use `cd OldProject` to move into the directory, and then running the command as follow: 
+You may use `g start` command to start a Git repository in an existing working directory. Suppose you already have a working project in the `OldProject` directory, you can use `cd OldProject` to move into the directory, and then running the command as follow: 
 
 ```
 g start
