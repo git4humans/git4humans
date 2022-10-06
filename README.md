@@ -166,7 +166,7 @@ The infamous [Pareto Principle](https://en.wikipedia.org/wiki/Pareto_principle) 
 
 **Git for Humans** is focusing on these 20% commands that we most likely touch in everyday use. For more advanced and complex use, we can fallback to the original Git commands. [All Git commands](https://git-scm.com/docs) is applicable in **Git for Humans** (e.g., we can use `git fetch` and `g fetch` interchangeably).
 
-### Creating a Git Repository in a New Directory 
+### Creating a new Git Repository
 
 You may use `g new` command to create a Git repository in a new directory. For example, if you want to create a Git repository in a new `MyProject` directory, you can use the command as follow: 
 
@@ -176,7 +176,7 @@ g new MyProject
 
 It will create `MyProject` directory by utilizing the `mkdir` command, and then initialize a Git repository using `git init`. Lastly, it will add an empty `.gitignore` file into your new `MyProject` directory.
 
-### Starting a Git Repository in an Existing Directory 
+### Starting a Git Repository
 
 You may use `g start` command to start a Git repository in an existing working directory. Suppose you already have a working project in the `OldProject` directory, you can use `cd OldProject` to move into the directory, and then running the command as follow: 
 
@@ -196,7 +196,7 @@ git commit -m "Initial commit"
 
 ### Refresh an Existing Git Repository 
 
-### Checking the Status of Your Project
+### Checking Status
 
 ### Tracking New Files 
 
