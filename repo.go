@@ -59,7 +59,7 @@ func add() {
 
 	var args []string
 
-	if command == "+" {
+	if command == "+" || command == "add" {
 		args = os.Args[3:]
 	} else {
 		args = os.Args[2:]
@@ -78,9 +78,11 @@ func add() {
 		}
 
 		Git("remote", "add", name, url)
-	}
 
-	list()
+		list()
+	} else {
+		fmt.Println("Abort: you should specify URL for the remote repository.")
+	}
 }
 
 func delete() {
@@ -91,19 +93,22 @@ func delete() {
 		name = args[0]
 	}
 
-	if HasRepo(name) {
-		message := GitStr("remote", "rm", name)
-		error := strings.Contains(message, "fatal:")
+	if NoRepo(name) {
+		fmt.Println()
+		fmt.Println("Remote repository with name " + name + " is not found.")
+		fmt.Println()
 
-		if error {
-			fmt.Println(message)
-		} else {
-			fmt.Println("Remote repository " + name + " has been removed.")
+		Git("remote", "-v")
+		return
+	}
 
-			Git("remote", "-v")
-		}
+	message := GitStr("remote", "rm", name)
+	error := strings.Contains(message, "fatal:")
+
+	if error {
+		fmt.Println(message)
 	} else {
-		fmt.Println("Abort: remote repository " + name + " is not found.")
+		fmt.Println("Remote repository " + name + " has been removed.")
 		fmt.Println()
 
 		Git("remote", "-v")
@@ -123,7 +128,7 @@ func rename() {
 		newName = args[0]
 	}
 
-	if oldName != "" && newName != "" {
+	if len(newName) > 0 {
 		message := GitStr("remote", "rename", oldName, newName)
 		error := strings.Contains(message, "fatal:")
 
@@ -134,6 +139,8 @@ func rename() {
 
 			Git("remote", "-v")
 		}
+	} else {
+		fmt.Println("Abort: you should specify new name for the remote repository you want to change.")
 	}
 }
 
@@ -156,6 +163,16 @@ func prune() {
 		name = args[0]
 	}
 
+	if NoRepo(name) {
+		fmt.Println()
+		fmt.Println("Remote repository with name " + name + " is not found.")
+		fmt.Println()
+
+		Git("remote", "-v")
+		return
+	}
+
+	fmt.Println()
 	Git("remote", "prune", name)
 }
 
@@ -166,6 +183,18 @@ func url() {
 	if len(args) > 0 {
 		name = args[0]
 	}
+
+	if NoRepo(name) {
+		fmt.Println()
+		fmt.Println("Remote repository with name " + name + " is not found.")
+		fmt.Println()
+
+		Git("remote", "-v")
+		return
+	}
+
+	fmt.Println()
+	fmt.Println("URL for remote " + name + ": ")
 
 	Git("remote", "get-url", name)
 }
