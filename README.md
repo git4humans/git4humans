@@ -180,19 +180,45 @@ It will create `MyProject` directory by utilizing the `mkdir` command, and then 
 
 You may use `g start` command to start a Git repository in an existing working directory. Suppose you already have a working project in the `OldProject` directory, you can use `cd OldProject` to move into the directory, and then running the command as follow: 
 
-```
+```shell
 g start
 ```
 
 It will create a new Git repository in your `OldProject` directory, then automatically stage all files into the staging area (to be ready for commit), and then do an initial commit. Basically, it's doing an equivalent of the following consecutive Git commands: 
 
-```
+```shell
 git init 
 git add . 
 git commit -m "Initial commit"
 ```
 
 ### Copy an Existing Repository 
+
+You may use `g copy` command (or the shortcut `g cp`) to copy (or clone, in a Git parlance) an existing remote repository into your local directory of your choice. For example, suppose you want to copy a PyTorch source code repository from it's official Github URL: https://github.com/pytorch/pytorch, you can use the command as follow: 
+
+```shell
+g copy https://github.com/pytorch/pytorch
+```
+
+or:
+
+```shell
+g cp https://github.com/pytorch/pytorch
+```
+
+It will create a new `pytorch` directory for you, and then fetch all data from the pytorch project into your new local `pytorch` directory. If you want to copy the repository into a different directory, you may specify the name of the target directory as follow: 
+
+```shell 
+g copy https://github.com/pytorch/pytorch torch
+```
+
+or: 
+
+```shell 
+g cp https://github.com/pytorch/pytorch torch
+```
+
+The above command will copy the data from pytorch repository into a new local `torch` directory.
 
 ### Refresh a Git Repository 
 
