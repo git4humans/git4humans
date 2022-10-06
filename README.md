@@ -168,13 +168,13 @@ The infamous [Pareto Principle](https://en.wikipedia.org/wiki/Pareto_principle) 
 
 ### Creating a Git Repository in a New Directory 
 
-You may use `g new` command to create a Git repository in a new directory. For example, if you want to create a Git repository in a directory `MyProject`, you can use the command as follow: 
+You may use `g new` command to create a Git repository in a new directory. For example, if you want to create a Git repository in a new `MyProject` directory, you can use the command as follow: 
 
 ```shell 
 g new MyProject
 ```
 
-***Git for Humans** will create the `MyProject` directory for you by utilizing the `mkdir` command, and then initialize a Git repository using `git init`. Lastly, it will also add an empty `.gitignore` file into your new `MyProject` directory.
+**Git for Humans** will create `MyProject` directory for you by utilizing the `mkdir` command, and then initialize a Git repository using `git init`. Lastly, it will add an empty `.gitignore` file into your new `MyProject` directory.
 
 ### Creating a Git Repository in an Existing Directory 
 
