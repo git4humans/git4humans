@@ -11,9 +11,9 @@ usage: %[2]s [<options>] <command> [<args]
 These are common commands you will most likely use in everyday situation.
 
 Starting point
-    copy  	Copy an existing Git repository to a new directory (short: '%[2]s cp')
-    new		Create a new Git repository in a new directory (short: '%[2]s n')
-    start	Start a new Git repository in the current working directory (short: '%[2]s s')
+    start	Start a Git repository in an existing directory (short: '%[2]s s')
+    new		Create a Git repository in a new directory (short: '%[2]s n')
+    copy  	Copy an existing Git repository into a new directory (short: '%[2]s cp')
     refresh     Refresh an existing Git repository (short: '%[2]s r')
 
 Managing changes 
