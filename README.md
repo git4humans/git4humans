@@ -166,47 +166,67 @@ The infamous [Pareto Principle](https://en.wikipedia.org/wiki/Pareto_principle) 
 
 **Git for Humans** is focusing on these 20% commands that we most likely touch in everyday use. For more advanced and complex use, we can fallback to the original Git commands. [All Git commands](https://git-scm.com/docs) is applicable in **Git for Humans** (e.g., we can use `git fetch` and `g fetch` interchangeably).
 
-**new** 
+### Creating a Git Repository in a New Directory 
 
-**start**
+### Creating a Git Repository in an Existing Directory 
 
-**copy**
+### Copy an Existing Repository 
 
-**refresh**
+### Refresh an Existing Git Repository 
 
-**add**
+### Checking the Status of Your Project
 
-**delete**
+### Tracking New Files 
 
-**move**
+### Staging Modified Files 
 
-**rename**
+### Deleting Files 
 
-**restore**
+### Moving Files 
 
-**save** 
+### Renaming Files 
 
-**repo** 
+### Restoring Deleted Files
 
-**sync**
+### Saving Your Changes 
 
-**up**
+### Viewing Commit History 
 
-**branch** 
+### Showing Last Commit 
 
-**switch**
+### Unstaging a Staged File 
 
-**merge**
+### Discard Changes in a Modified File
 
-**reset**
+### Remote Repositories 
 
-**tag** 
+### Adding a Remote Repository 
 
-**status**
+### Fetching from a Remote Repository 
 
-**log**
+### Syncing Data with a Remote Repository 
 
-**last**
+### Uploading Changes to a Remote Repository 
+
+### Inspecting a Remote Repository 
+
+### Removing a Remote Repository 
+
+### Renaming a Remote Repository 
+
+### Showing URL of a Remote Repository 
+
+### Branching 
+
+### Create a New Branch 
+
+### Switching Branches 
+
+### Merging Branch
+
+### Deleting a Local Branch
+
+### Deleting a Remote Branch
 
 ## Tutorial for Everyday Use
 
