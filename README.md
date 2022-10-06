@@ -190,7 +190,7 @@ You may use `g start` command to start a Git repository in an existing working d
 g start
 ```
 
-or use the shortcut: 
+or the shortcut: 
 
 ```shell 
 g s
@@ -212,7 +212,7 @@ You may use `g copy` command to copy (or clone, in Git parlance) an existing rem
 g copy https://github.com/pytorch/pytorch
 ```
 
-or use the shortcut:
+or the shortcut:
 
 ```shell
 g cp https://github.com/pytorch/pytorch
@@ -224,7 +224,7 @@ It will create a new `pytorch` directory, and then fetch all data from the repos
 g copy https://github.com/pytorch/pytorch torch
 ```
 
-or use the shortcut: 
+or the shortcut: 
 
 ```shell 
 g cp https://github.com/pytorch/pytorch torch
@@ -240,7 +240,7 @@ You may use `g refresh` command to refresh (or reinitialize) an exisiting Git re
 g refresh
 ```
 
-or use the shortcut: 
+or the shortcut: 
 
 ```shell 
 g r
@@ -254,7 +254,7 @@ You may check the status of files in your working directory by using command as 
 g status 
 ```
 
-or use the shortcut: 
+or the shortcut: 
 
 ```shell 
 g st
@@ -266,7 +266,7 @@ It will show a complete status of your project. If you only want to review summa
 g status -s
 ```
 
-or use the shortcut:
+or the shortcut:
 
 ```shell
 g sst
