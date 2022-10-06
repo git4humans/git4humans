@@ -184,7 +184,7 @@ It will create `MyProject` directory by utilizing the `mkdir` command, and then 
 
 ### Starting a Git Repository
 
-You may use `g start` command to start a Git repository in an existing working directory. Suppose you already have a working project in the `OldProject` directory, you can use `cd OldProject` to move into the directory, and then running the command as follow: 
+You may use `g start` command to start a Git repository into an existing directory. Suppose you already have a working project in the `OldProject` directory, you can use `cd OldProject` to move into the directory, and then running the command as follow: 
 
 ```shell
 g start
