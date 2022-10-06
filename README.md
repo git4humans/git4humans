@@ -206,7 +206,7 @@ git commit -m "Initial commit"
 
 ### Copy an Existing Repository 
 
-You may use `g copy` command (or the shortcut `g cp`) to copy (or clone, in Git parlance) an existing remote repository into a local directory of your choice. For example, suppose you want to copy PyTorch source code repository from https://github.com/pytorch/pytorch, you can use the command as follow: 
+You may use `g copy` command to copy (or clone, in Git parlance) an existing remote repository into a local directory of your choice. For example, suppose you want to copy PyTorch source code repository from https://github.com/pytorch/pytorch, you can use the command as follow: 
 
 ```shell
 g copy https://github.com/pytorch/pytorch
