@@ -174,7 +174,7 @@ You may use `g new` command to create a Git repository in a new directory. For e
 g new MyProject
 ```
 
-**Git for Humans** will create `MyProject` directory for you by utilizing the `mkdir` command, and then initialize a Git repository using `git init`. Lastly, it will add an empty `.gitignore` file into your new `MyProject` directory.
+It will create `MyProject` directory for you by utilizing the `mkdir` command, and then initialize a Git repository using `git init`. Lastly, it will add an empty `.gitignore` file into your new `MyProject` directory.
 
 ### Starting a Git Repository in an Existing Directory 
 
