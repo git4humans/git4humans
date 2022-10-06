@@ -176,7 +176,21 @@ g new MyProject
 
 **Git for Humans** will create `MyProject` directory for you by utilizing the `mkdir` command, and then initialize a Git repository using `git init`. Lastly, it will add an empty `.gitignore` file into your new `MyProject` directory.
 
-### Creating a Git Repository in an Existing Directory 
+### Starting a Git Repository in an Existing Directory 
+
+You may use `g start` command to start a Git repository in an existing directory of your choice. Suppose you already have a working project in the `OldProject` directory, you can use `cd OldProject` to move into the directory, and then running the command as follow: 
+
+```
+g start
+```
+
+The tool will create a new Git repository in your `OldProject` directory, then automatically stage all files into staging area, and then do an initial commit. Basically, it's doing an equivalent of the following Git commands: 
+
+```
+git init 
+git add . 
+git commit -m "Initial commit"
+```
 
 ### Copy an Existing Repository 
 
